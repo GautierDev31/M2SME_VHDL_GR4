@@ -20,39 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-Compteur
-# storage
-db|Compteur.(0).cnf
-db|Compteur.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-compteur.vhd
-309f8f67b9bb9ee3824e2804647c9dd
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-|
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 Diviseur_frequence
 # storage
 db|Compteur.(1).cnf
@@ -64,7 +31,7 @@ ON
 # case_insensitive
 # source_file
 diviseur_frequence|diviseur_frequence.vhd
-25875e67c7e6863bbf87209e2ce1
+15d6c28176bb038b865c2ff7746f9e
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -86,45 +53,6 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-Compteur_BCD
-# storage
-db|Compteur.(2).cnf
-db|Compteur.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-compteur_bcd|compteur_bcd.vhd
-a9cd7d214766f4f75fa5b22390bfe8
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(cpt)
-3 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-Compteur_BCD:ucpt
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 Decodeur
 # storage
 db|Compteur.(3).cnf
@@ -136,7 +64,7 @@ ON
 # case_insensitive
 # source_file
 decodeur|decodeur.vhd
-62db50baf59c70e14d4d74859de221b
+ce714394325591770ec388e9e7a89af
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -156,6 +84,78 @@ USR
 }
 # hierarchies {
 Decodeur:udec
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Compteur
+# storage
+db|Compteur.(0).cnf
+db|Compteur.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+compteur.vhd
+7f744160e65af186b42e9a218618be8f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Compteur_BCD
+# storage
+db|Compteur.(2).cnf
+db|Compteur.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+compteur_bcd|compteur_bcd.vhd
+932724ee5441d5bc259acde2ddd9906f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(cpt)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Compteur_BCD:ucpt
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf

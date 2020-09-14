@@ -11,7 +11,7 @@ end Compteur_BCD ;
 
 
 architecture compteur of Compteur_BCD is
-	signal compteur : integer; 
+	signal compteur : integer := 0; 
 begin
 process (clkinBCD, compteur)
 begin
@@ -40,10 +40,10 @@ begin
 	else cpt(3) <= '0'; 
 	end if;
 	
-	--if compteur > 9
-	--then cpt <= "0000";
-	--compteur <= 0;
-	--end if;
+	if compteur = 10
+	then cpt <= "0000";
+	compteur <= 0;
+	end if;
 	
 end process;
 end compteur;

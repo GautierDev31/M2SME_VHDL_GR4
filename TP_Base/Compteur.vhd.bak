@@ -56,7 +56,7 @@ ucpt : Compteur_BCD PORT MAP(
 
 udec : Decodeur PORT MAP(
 	Number => Vect,
-	Sa => A,
+	A => Sa,
 	B => Sb,
 	C => Sc,
 	D => Sd,

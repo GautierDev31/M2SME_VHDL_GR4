@@ -1,4 +1,4 @@
- -- Copyright (C) 1991-2009 Altera Corporation
+ -- Copyright (C) 1991-2010 Altera Corporation
  -- Your use of Altera Corporation's design tools, logic functions 
  -- and other software and tools, and its AMPP partner logic 
  -- functions, and any output files from any of the foregoing 
@@ -44,10 +44,9 @@
  --					This pin should be connected to GND. It may also be connected  to a
  --					valid signal  on the board  (low, high, or toggling)  if that signal
  --					is required for a different revision of the design.
- -- GND*          : Unused  I/O  pin.   For transceiver I/O banks (Bank 13, 14, 15, 16 and 17),
- --           	    connect each pin marked GND* either individually through a 10k Ohm resistor
- --           	    to GND or tie all pins together and connect through a single 10k Ohm resistor
- --           	    to GND.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks, connect each pin marked GND*
+ --           	    either individually through a 10k Ohm resistor to GND or tie all pins
+ --           	    together and connect through a single 10k Ohm resistor to GND.
  --           	    For non-transceiver I/O banks, connect each pin marked GND* directly to GND
  --           	    or leave it unconnected.
  -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
@@ -63,7 +62,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 CHIP  "Diviseur_frequence"  ASSIGNED TO AN: EP2C5F256C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -87,7 +86,7 @@ GND                          : A16       : gnd    :                   :         
 VCCIO1                       : B1        : power  :                   : 3.3V    : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
 GND*                         : B3        :        :                   :         : 2         :                
-GND*                         : B4        :        :                   :         : 2         :                
+clkout                       : B4        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : B5        :        :                   :         : 2         :                
 GND*                         : B6        :        :                   :         : 2         :                
 GND*                         : B7        :        :                   :         : 2         :                
@@ -180,7 +179,7 @@ GND*                         : G13       :        :                   :         
 VCCIO3                       : G14       : power  :                   : 3.3V    : 3         :                
 GND*                         : G15       :        :                   :         : 3         :                
 GND*                         : G16       :        :                   :         : 3         :                
-reset                        : H1        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND+                         : H1        :        :                   :         : 1         :                
 clkin                        : H2        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : H3        : gnd    :                   :         :           :                
 DCLK                         : H4        :        :                   :         : 1         :                
@@ -260,7 +259,7 @@ nSTATUS                      : M13       :        :                   :         
 GND*                         : M14       :        :                   :         : 3         :                
 GND*                         : M15       :        :                   :         : 3         :                
 GND*                         : M16       :        :                   :         : 3         :                
-clkout                       : N1        : bidir  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : N1        :        :                   :         : 1         :                
 GND*                         : N2        :        :                   :         : 1         :                
 NC                           : N3        :        :                   :         :           :                
 NC                           : N4        :        :                   :         :           :                

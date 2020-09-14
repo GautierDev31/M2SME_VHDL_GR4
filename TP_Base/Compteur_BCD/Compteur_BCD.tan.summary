@@ -5,21 +5,21 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.608 ns
-From           : compteur[26]
+Actual Time    : 12.144 ns
+From           : compteur[17]
 To             : cpt[0]
-From Clock     : clkin
+From Clock     : clkinBCD
 To Clock       : --
 Failed Paths   : 0
 
-Type           : Clock Setup: 'clkin'
+Type           : Clock Setup: 'clkinBCD'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 222.77 MHz ( period = 4.489 ns )
+Actual Time    : 222.22 MHz ( period = 4.500 ns )
 From           : compteur[0]
 To             : compteur[31]
-From Clock     : clkin
-To Clock       : clkin
+From Clock     : clkinBCD
+To Clock       : clkinBCD
 Failed Paths   : 0
 
 Type           : Total number of failed paths

@@ -1,4 +1,5 @@
-Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 11
 909
 OFF
@@ -29,8 +30,8 @@ ON
 }
 # case_insensitive
 # source_file
-Compteur_BCD.vhd
-940e6ced592dd5254140505a91cb63
+compteur_bcd.vhd
+932724ee5441d5bc259acde2ddd9906f
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -46,8 +47,8 @@ ON
 |
 }
 # lmf
-..|..|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end

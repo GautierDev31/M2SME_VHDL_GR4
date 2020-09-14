@@ -11,9 +11,9 @@ end Compteur_BCD ;
 
 
 architecture compteur of Compteur_BCD is
-	signal compteur : integer; 
+	signal compteur : integer := 0; 
 begin
-process (clkinBCD)
+process (clkinBCD, compteur)
 begin
 
 	if rising_edge(clkinBCD)

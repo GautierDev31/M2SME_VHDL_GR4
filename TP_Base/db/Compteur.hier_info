@@ -10,39 +10,39 @@ clockIN => Diviseur_frequence:udiv.clkin
 
 
 |Compteur|Diviseur_frequence:udiv
+clkin => state[0].CLK
+clkin => state[1].CLK
+clkin => state[2].CLK
+clkin => state[3].CLK
+clkin => state[4].CLK
+clkin => state[5].CLK
+clkin => state[6].CLK
+clkin => state[7].CLK
+clkin => state[8].CLK
+clkin => state[9].CLK
+clkin => state[10].CLK
+clkin => state[11].CLK
+clkin => state[12].CLK
+clkin => state[13].CLK
+clkin => state[14].CLK
+clkin => state[15].CLK
+clkin => state[16].CLK
+clkin => state[17].CLK
+clkin => state[18].CLK
+clkin => state[19].CLK
+clkin => state[20].CLK
+clkin => state[21].CLK
+clkin => state[22].CLK
+clkin => state[23].CLK
+clkin => state[24].CLK
+clkin => state[25].CLK
+clkin => state[26].CLK
+clkin => state[27].CLK
+clkin => state[28].CLK
+clkin => state[29].CLK
+clkin => state[30].CLK
+clkin => state[31].CLK
 clkin => clkout~reg0.CLK
-clkin => cpt2[0].CLK
-clkin => cpt2[1].CLK
-clkin => cpt2[2].CLK
-clkin => cpt2[3].CLK
-clkin => cpt2[4].CLK
-clkin => cpt2[5].CLK
-clkin => cpt2[6].CLK
-clkin => cpt2[7].CLK
-clkin => cpt2[8].CLK
-clkin => cpt2[9].CLK
-clkin => cpt2[10].CLK
-clkin => cpt2[11].CLK
-clkin => cpt2[12].CLK
-clkin => cpt2[13].CLK
-clkin => cpt2[14].CLK
-clkin => cpt2[15].CLK
-clkin => cpt2[16].CLK
-clkin => cpt2[17].CLK
-clkin => cpt2[18].CLK
-clkin => cpt2[19].CLK
-clkin => cpt2[20].CLK
-clkin => cpt2[21].CLK
-clkin => cpt2[22].CLK
-clkin => cpt2[23].CLK
-clkin => cpt2[24].CLK
-clkin => cpt2[25].CLK
-clkin => cpt2[26].CLK
-clkin => cpt2[27].CLK
-clkin => cpt2[28].CLK
-clkin => cpt2[29].CLK
-clkin => cpt2[30].CLK
-clkin => cpt2[31].CLK
 clkin => cpt1[0].CLK
 clkin => cpt1[1].CLK
 clkin => cpt1[2].CLK
@@ -75,7 +75,7 @@ clkin => cpt1[28].CLK
 clkin => cpt1[29].CLK
 clkin => cpt1[30].CLK
 clkin => cpt1[31].CLK
-clkout <> clkout~reg0
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Compteur|Compteur_BCD:ucpt
@@ -111,10 +111,10 @@ clkinBCD => compteur[28].CLK
 clkinBCD => compteur[29].CLK
 clkinBCD => compteur[30].CLK
 clkinBCD => compteur[31].CLK
-cpt[0] <= process_0~3.DB_MAX_OUTPUT_PORT_TYPE
-cpt[1] <= process_0~6.DB_MAX_OUTPUT_PORT_TYPE
-cpt[2] <= process_0~9.DB_MAX_OUTPUT_PORT_TYPE
-cpt[3] <= process_0~10.DB_MAX_OUTPUT_PORT_TYPE
+cpt[0] <= cpt~3.DB_MAX_OUTPUT_PORT_TYPE
+cpt[1] <= cpt~2.DB_MAX_OUTPUT_PORT_TYPE
+cpt[2] <= cpt~1.DB_MAX_OUTPUT_PORT_TYPE
+cpt[3] <= cpt~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Compteur|Decodeur:udec
@@ -158,12 +158,12 @@ Number[3] => Equal6.IN4
 Number[3] => Equal7.IN4
 Number[3] => Equal8.IN4
 Number[3] => Equal9.IN4
-A <= Segment~40.DB_MAX_OUTPUT_PORT_TYPE
-B <= Segment~41.DB_MAX_OUTPUT_PORT_TYPE
-C <= Segment~42.DB_MAX_OUTPUT_PORT_TYPE
-D <= Segment~43.DB_MAX_OUTPUT_PORT_TYPE
-E <= Segment~44.DB_MAX_OUTPUT_PORT_TYPE
-F <= Segment~45.DB_MAX_OUTPUT_PORT_TYPE
-G <= Segment~46.DB_MAX_OUTPUT_PORT_TYPE
+A <= Segment~41.DB_MAX_OUTPUT_PORT_TYPE
+B <= Segment~42.DB_MAX_OUTPUT_PORT_TYPE
+C <= Segment~43.DB_MAX_OUTPUT_PORT_TYPE
+D <= Segment~44.DB_MAX_OUTPUT_PORT_TYPE
+E <= Segment~45.DB_MAX_OUTPUT_PORT_TYPE
+F <= Segment~46.DB_MAX_OUTPUT_PORT_TYPE
+G <= Segment~47.DB_MAX_OUTPUT_PORT_TYPE
 
 

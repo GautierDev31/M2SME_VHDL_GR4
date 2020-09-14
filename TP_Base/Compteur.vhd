@@ -25,7 +25,7 @@ end component;
 
 component Diviseur_frequence
 	port ( clkin : in std_logic;
-	clkout : inout std_logic);
+	clkout : out std_logic);
 end component;
 
 component Decodeur 

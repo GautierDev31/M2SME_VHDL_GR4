@@ -5,8 +5,8 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.126 ns
-From           : clkout~reg0
+Actual Time    : 7.865 ns
+From           : state[0]
 To             : clkout
 From Clock     : clkin
 To Clock       : --
@@ -15,7 +15,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clkin'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 151.52 MHz ( period = 6.600 ns )
+Actual Time    : 181.85 MHz ( period = 5.499 ns )
 From           : cpt1[0]
 To             : cpt1[31]
 From Clock     : clkin

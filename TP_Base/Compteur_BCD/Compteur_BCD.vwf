@@ -5,7 +5,7 @@ the Block Editor! File corruption is VERY likely to occur.
 */
 
 /*
-Copyright (C) 1991-2009 Altera Corporation
+Copyright (C) 1991-2010 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -32,7 +32,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("clkin")
+SIGNAL("clkinBCD")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -92,26 +92,16 @@ SIGNAL("cpt[0]")
 	PARENT = "cpt";
 }
 
-SIGNAL("reset")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-TRANSITION_LIST("clkin")
+TRANSITION_LIST("clkinBCD")
 {
 	NODE
 	{
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 10;
-			LEVEL 0 FOR 50.0;
-			LEVEL 1 FOR 50.0;
+			REPEAT = 100;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
 		}
 	}
 }
@@ -152,20 +142,11 @@ TRANSITION_LIST("cpt[0]")
 	}
 }
 
-TRANSITION_LIST("reset")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
 DISPLAY_LINE
 {
-	CHANNEL = "clkin";
+	CHANNEL = "clkinBCD";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
 }
@@ -220,24 +201,9 @@ DISPLAY_LINE
 	PARENT = 1;
 }
 
-DISPLAY_LINE
-{
-	CHANNEL = "reset";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 6;
-	TREE_LEVEL = 0;
-}
-
 TIME_BAR
 {
-	TIME = 164308;
+	TIME = 14875;
 	MASTER = TRUE;
-}
-
-TIME_BAR
-{
-	TIME = 164308;
-	MASTER = FALSE;
 }
 ;
