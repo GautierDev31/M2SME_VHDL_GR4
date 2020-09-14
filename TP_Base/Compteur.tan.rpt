@@ -1,0 +1,615 @@
+Classic Timing Analyzer report for Compteur
+Fri Sep 11 11:34:28 2020
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clockIN'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                             ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+----------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                            ; To                               ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+----------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 16.235 ns                        ; Compteur_BCD:ucpt|compteur[15]  ; Sb                               ; clockIN    ; --       ; 0            ;
+; Clock Setup: 'clockIN'       ; N/A   ; None          ; 200.60 MHz ( period = 4.985 ns ) ; Diviseur_frequence:udiv|cpt1[0] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                 ;                                  ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+----------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clockIN         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clockIN'                                                                                                                                                                                                                                                          ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                             ; To                               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.771 ns                ;
+; N/A                                     ; 202.72 MHz ( period = 4.933 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.719 ns                ;
+; N/A                                     ; 205.97 MHz ( period = 4.855 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.641 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.556 ns                ;
+; N/A                                     ; 210.04 MHz ( period = 4.761 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.550 ns                ;
+; N/A                                     ; 212.09 MHz ( period = 4.715 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.501 ns                ;
+; N/A                                     ; 212.36 MHz ( period = 4.709 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.498 ns                ;
+; N/A                                     ; 215.19 MHz ( period = 4.647 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.430 ns                ;
+; N/A                                     ; 215.94 MHz ( period = 4.631 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.420 ns                ;
+; N/A                                     ; 218.34 MHz ( period = 4.580 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.363 ns                ;
+; N/A                                     ; 219.97 MHz ( period = 4.546 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.335 ns                ;
+; N/A                                     ; 220.26 MHz ( period = 4.540 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.323 ns                ;
+; N/A                                     ; 220.31 MHz ( period = 4.539 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.322 ns                ;
+; N/A                                     ; 222.67 MHz ( period = 4.491 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.280 ns                ;
+; N/A                                     ; 222.77 MHz ( period = 4.489 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.272 ns                ;
+; N/A                                     ; 222.82 MHz ( period = 4.488 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.271 ns                ;
+; N/A                                     ; 223.06 MHz ( period = 4.483 ns )                    ; Compteur_BCD:ucpt|compteur[0]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 4.275 ns                ;
+; N/A                                     ; 225.38 MHz ( period = 4.437 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.220 ns                ;
+; N/A                                     ; 226.09 MHz ( period = 4.423 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.209 ns                ;
+; N/A                                     ; 226.76 MHz ( period = 4.410 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.193 ns                ;
+; N/A                                     ; 229.41 MHz ( period = 4.359 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.142 ns                ;
+; N/A                                     ; 229.57 MHz ( period = 4.356 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.142 ns                ;
+; N/A                                     ; 230.10 MHz ( period = 4.346 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.129 ns                ;
+; N/A                                     ; 231.21 MHz ( period = 4.325 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.108 ns                ;
+; N/A                                     ; 231.75 MHz ( period = 4.315 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.101 ns                ;
+; N/A                                     ; 232.40 MHz ( period = 4.303 ns )                    ; Diviseur_frequence:udiv|cpt1[8]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.086 ns                ;
+; N/A                                     ; 232.88 MHz ( period = 4.294 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.077 ns                ;
+; N/A                                     ; 233.92 MHz ( period = 4.275 ns )                    ; Compteur_BCD:ucpt|compteur[1]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 4.067 ns                ;
+; N/A                                     ; 233.97 MHz ( period = 4.274 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.057 ns                ;
+; N/A                                     ; 233.97 MHz ( period = 4.274 ns )                    ; Diviseur_frequence:udiv|cpt1[9]  ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.057 ns                ;
+; N/A                                     ; 234.19 MHz ( period = 4.270 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.053 ns                ;
+; N/A                                     ; 236.18 MHz ( period = 4.234 ns )                    ; Diviseur_frequence:udiv|cpt1[10] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.017 ns                ;
+; N/A                                     ; 237.02 MHz ( period = 4.219 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 4.002 ns                ;
+; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.999 ns                ;
+; N/A                                     ; 237.81 MHz ( period = 4.205 ns )                    ; Compteur_BCD:ucpt|compteur[2]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.997 ns                ;
+; N/A                                     ; 237.87 MHz ( period = 4.204 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.987 ns                ;
+; N/A                                     ; 237.98 MHz ( period = 4.202 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.982 ns                ;
+; N/A                                     ; 238.83 MHz ( period = 4.187 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.970 ns                ;
+; N/A                                     ; 239.87 MHz ( period = 4.169 ns )                    ; Compteur_BCD:ucpt|compteur[3]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.961 ns                ;
+; N/A                                     ; 240.85 MHz ( period = 4.152 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.935 ns                ;
+; N/A                                     ; 240.91 MHz ( period = 4.151 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.931 ns                ;
+; N/A                                     ; 241.84 MHz ( period = 4.135 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.918 ns                ;
+; N/A                                     ; 241.84 MHz ( period = 4.135 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.915 ns                ;
+; N/A                                     ; 241.90 MHz ( period = 4.134 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.917 ns                ;
+; N/A                                     ; 242.07 MHz ( period = 4.131 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.914 ns                ;
+; N/A                                     ; 242.13 MHz ( period = 4.130 ns )                    ; Diviseur_frequence:udiv|cpt1[11] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.913 ns                ;
+; N/A                                     ; 244.26 MHz ( period = 4.094 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 244.86 MHz ( period = 4.084 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.864 ns                ;
+; N/A                                     ; 244.98 MHz ( period = 4.082 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.865 ns                ;
+; N/A                                     ; 245.16 MHz ( period = 4.079 ns )                    ; Diviseur_frequence:udiv|cpt1[8]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.865 ns                ;
+; N/A                                     ; 245.34 MHz ( period = 4.076 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.859 ns                ;
+; N/A                                     ; 245.46 MHz ( period = 4.074 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.857 ns                ;
+; N/A                                     ; 246.12 MHz ( period = 4.063 ns )                    ; Compteur_BCD:ucpt|compteur[4]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.855 ns                ;
+; N/A                                     ; 246.49 MHz ( period = 4.057 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.840 ns                ;
+; N/A                                     ; 246.91 MHz ( period = 4.050 ns )                    ; Diviseur_frequence:udiv|cpt1[9]  ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.836 ns                ;
+; N/A                                     ; 247.34 MHz ( period = 4.043 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.823 ns                ;
+; N/A                                     ; 248.08 MHz ( period = 4.031 ns )                    ; Diviseur_frequence:udiv|cpt1[12] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.814 ns                ;
+; N/A                                     ; 248.26 MHz ( period = 4.028 ns )                    ; Compteur_BCD:ucpt|compteur[5]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.820 ns                ;
+; N/A                                     ; 249.38 MHz ( period = 4.010 ns )                    ; Diviseur_frequence:udiv|cpt1[10] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.796 ns                ;
+; N/A                                     ; 249.50 MHz ( period = 4.008 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.788 ns                ;
+; N/A                                     ; 249.75 MHz ( period = 4.004 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.787 ns                ;
+; N/A                                     ; 250.25 MHz ( period = 3.996 ns )                    ; Diviseur_frequence:udiv|cpt1[13] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.779 ns                ;
+; N/A                                     ; 250.50 MHz ( period = 3.992 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[23] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.775 ns                ;
+; N/A                                     ; 250.69 MHz ( period = 3.989 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.772 ns                ;
+; N/A                                     ; 251.76 MHz ( period = 3.972 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.755 ns                ;
+; N/A                                     ; 252.53 MHz ( period = 3.960 ns )                    ; Diviseur_frequence:udiv|cpt1[16] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.743 ns                ;
+; N/A                                     ; 252.72 MHz ( period = 3.957 ns )                    ; Compteur_BCD:ucpt|compteur[6]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.749 ns                ;
+; N/A                                     ; 252.91 MHz ( period = 3.954 ns )                    ; Diviseur_frequence:udiv|cpt1[14] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.737 ns                ;
+; N/A                                     ; 253.04 MHz ( period = 3.952 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[22] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.735 ns                ;
+; N/A                                     ; 253.74 MHz ( period = 3.941 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.721 ns                ;
+; N/A                                     ; 253.81 MHz ( period = 3.940 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[23] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.723 ns                ;
+; N/A                                     ; 254.19 MHz ( period = 3.934 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.717 ns                ;
+; N/A                                     ; 255.17 MHz ( period = 3.919 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.702 ns                ;
+; N/A                                     ; 255.30 MHz ( period = 3.917 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; 256.02 MHz ( period = 3.906 ns )                    ; Diviseur_frequence:udiv|cpt1[11] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.692 ns                ;
+; N/A                                     ; 256.41 MHz ( period = 3.900 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.680 ns                ;
+; N/A                                     ; 256.41 MHz ( period = 3.900 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[22] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.683 ns                ;
+; N/A                                     ; 257.53 MHz ( period = 3.883 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[21] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.666 ns                ;
+; N/A                                     ; 258.13 MHz ( period = 3.874 ns )                    ; Diviseur_frequence:udiv|cpt1[18] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.657 ns                ;
+; N/A                                     ; 258.46 MHz ( period = 3.869 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[17] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.658 ns                ;
+; N/A                                     ; 258.67 MHz ( period = 3.866 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.67 MHz ( period = 3.866 ns )                    ; Diviseur_frequence:udiv|cpt1[15] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.649 ns                ;
+; N/A                                     ; 258.80 MHz ( period = 3.864 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.647 ns                ;
+; N/A                                     ; 258.80 MHz ( period = 3.864 ns )                    ; Compteur_BCD:ucpt|compteur[8]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.656 ns                ;
+; N/A                                     ; 258.93 MHz ( period = 3.862 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[23] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.645 ns                ;
+; N/A                                     ; 259.20 MHz ( period = 3.858 ns )                    ; Diviseur_frequence:udiv|cpt1[8]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.638 ns                ;
+; N/A                                     ; 259.20 MHz ( period = 3.858 ns )                    ; Compteur_BCD:ucpt|compteur[0]    ; Compteur_BCD:ucpt|compteur[30]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.651 ns                ;
+; N/A                                     ; 259.47 MHz ( period = 3.854 ns )                    ; Compteur_BCD:ucpt|compteur[7]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 259.81 MHz ( period = 3.849 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.629 ns                ;
+; N/A                                     ; 260.35 MHz ( period = 3.841 ns )                    ; Diviseur_frequence:udiv|cpt1[17] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.624 ns                ;
+; N/A                                     ; 260.96 MHz ( period = 3.832 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[18] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.621 ns                ;
+; N/A                                     ; 261.03 MHz ( period = 3.831 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[21] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.614 ns                ;
+; N/A                                     ; 261.16 MHz ( period = 3.829 ns )                    ; Diviseur_frequence:udiv|cpt1[9]  ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.609 ns                ;
+; N/A                                     ; 261.30 MHz ( period = 3.827 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[16] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.616 ns                ;
+; N/A                                     ; 261.64 MHz ( period = 3.822 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[22] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.605 ns                ;
+; N/A                                     ; 261.99 MHz ( period = 3.817 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[17] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.606 ns                ;
+; N/A                                     ; 262.12 MHz ( period = 3.815 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[20] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.598 ns                ;
+; N/A                                     ; 262.67 MHz ( period = 3.807 ns )                    ; Diviseur_frequence:udiv|cpt1[8]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.587 ns                ;
+; N/A                                     ; 262.67 MHz ( period = 3.807 ns )                    ; Diviseur_frequence:udiv|cpt1[12] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.593 ns                ;
+; N/A                                     ; 263.23 MHz ( period = 3.799 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.579 ns                ;
+; N/A                                     ; 263.44 MHz ( period = 3.796 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.576 ns                ;
+; N/A                                     ; 263.92 MHz ( period = 3.789 ns )                    ; Diviseur_frequence:udiv|cpt1[10] ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.569 ns                ;
+; N/A                                     ; 264.06 MHz ( period = 3.787 ns )                    ; Compteur_BCD:ucpt|compteur[0]    ; Compteur_BCD:ucpt|compteur[29]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.580 ns                ;
+; N/A                                     ; 264.41 MHz ( period = 3.782 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.562 ns                ;
+; N/A                                     ; 264.55 MHz ( period = 3.780 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[18] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.569 ns                ;
+; N/A                                     ; 264.69 MHz ( period = 3.778 ns )                    ; Diviseur_frequence:udiv|cpt1[9]  ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.558 ns                ;
+; N/A                                     ; 264.76 MHz ( period = 3.777 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[23] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[16] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.564 ns                ;
+; N/A                                     ; 265.11 MHz ( period = 3.772 ns )                    ; Diviseur_frequence:udiv|cpt1[13] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.558 ns                ;
+; N/A                                     ; 265.75 MHz ( period = 3.763 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[20] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.546 ns                ;
+; N/A                                     ; 266.10 MHz ( period = 3.758 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.538 ns                ;
+; N/A                                     ; 266.45 MHz ( period = 3.753 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[21] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.536 ns                ;
+; N/A                                     ; 267.31 MHz ( period = 3.741 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.521 ns                ;
+; N/A                                     ; 267.45 MHz ( period = 3.739 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[17] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.528 ns                ;
+; N/A                                     ; 267.52 MHz ( period = 3.738 ns )                    ; Diviseur_frequence:udiv|cpt1[10] ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.518 ns                ;
+; N/A                                     ; 267.59 MHz ( period = 3.737 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[22] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.520 ns                ;
+; N/A                                     ; 267.67 MHz ( period = 3.736 ns )                    ; Diviseur_frequence:udiv|cpt1[16] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.522 ns                ;
+; N/A                                     ; 268.10 MHz ( period = 3.730 ns )                    ; Diviseur_frequence:udiv|cpt1[14] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.516 ns                ;
+; N/A                                     ; 268.17 MHz ( period = 3.729 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.509 ns                ;
+; N/A                                     ; 268.67 MHz ( period = 3.722 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[23] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.505 ns                ;
+; N/A                                     ; 269.11 MHz ( period = 3.716 ns )                    ; Compteur_BCD:ucpt|compteur[0]    ; Compteur_BCD:ucpt|compteur[28]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.509 ns                ;
+; N/A                                     ; 270.12 MHz ( period = 3.702 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[18] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.491 ns                ;
+; N/A                                     ; 270.49 MHz ( period = 3.697 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[16] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.486 ns                ;
+; N/A                                     ; 271.15 MHz ( period = 3.688 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.468 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Diviseur_frequence:udiv|cpt1[11] ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.465 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[20] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.468 ns                ;
+; N/A                                     ; 271.59 MHz ( period = 3.682 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[22] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.465 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[21] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.451 ns                ;
+; N/A                                     ; 272.93 MHz ( period = 3.664 ns )                    ; Diviseur_frequence:udiv|cpt1[8]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.444 ns                ;
+; N/A                                     ; 273.00 MHz ( period = 3.663 ns )                    ; Diviseur_frequence:udiv|cpt1[20] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.452 ns                ;
+; N/A                                     ; 273.67 MHz ( period = 3.654 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[17] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.443 ns                ;
+; N/A                                     ; 273.67 MHz ( period = 3.654 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[23] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.434 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; Diviseur_frequence:udiv|cpt1[18] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; Compteur_BCD:ucpt|compteur[1]    ; Compteur_BCD:ucpt|compteur[30]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.443 ns                ;
+; N/A                                     ; 274.35 MHz ( period = 3.645 ns )                    ; Compteur_BCD:ucpt|compteur[0]    ; Compteur_BCD:ucpt|compteur[27]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.438 ns                ;
+; N/A                                     ; 274.57 MHz ( period = 3.642 ns )                    ; Diviseur_frequence:udiv|cpt1[15] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.428 ns                ;
+; N/A                                     ; 275.10 MHz ( period = 3.635 ns )                    ; Diviseur_frequence:udiv|cpt1[9]  ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.415 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; Diviseur_frequence:udiv|cpt1[11] ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.414 ns                ;
+; N/A                                     ; 276.24 MHz ( period = 3.620 ns )                    ; Compteur_BCD:ucpt|compteur[9]    ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.412 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Diviseur_frequence:udiv|cpt1[17] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.403 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[18] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.406 ns                ;
+; N/A                                     ; 276.70 MHz ( period = 3.614 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[22] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.394 ns                ;
+; N/A                                     ; 276.78 MHz ( period = 3.613 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[21] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.85 MHz ( period = 3.612 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[16] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.401 ns                ;
+; N/A                                     ; 277.16 MHz ( period = 3.608 ns )                    ; Diviseur_frequence:udiv|cpt1[0]  ; Diviseur_frequence:udiv|cpt1[19] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.391 ns                ;
+; N/A                                     ; 277.78 MHz ( period = 3.600 ns )                    ; Diviseur_frequence:udiv|cpt1[3]  ; Diviseur_frequence:udiv|cpt1[20] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.383 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[17] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.388 ns                ;
+; N/A                                     ; 278.16 MHz ( period = 3.595 ns )                    ; Diviseur_frequence:udiv|cpt1[10] ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.375 ns                ;
+; N/A                                     ; 278.78 MHz ( period = 3.587 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[23] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.367 ns                ;
+; N/A                                     ; 278.86 MHz ( period = 3.586 ns )                    ; Diviseur_frequence:udiv|cpt1[12] ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.366 ns                ;
+; N/A                                     ; 279.33 MHz ( period = 3.580 ns )                    ; Compteur_BCD:ucpt|compteur[2]    ; Compteur_BCD:ucpt|compteur[30]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.373 ns                ;
+; N/A                                     ; 279.41 MHz ( period = 3.579 ns )                    ; Compteur_BCD:ucpt|compteur[1]    ; Compteur_BCD:ucpt|compteur[29]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.372 ns                ;
+; N/A                                     ; 279.41 MHz ( period = 3.579 ns )                    ; Compteur_BCD:ucpt|compteur[12]   ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.371 ns                ;
+; N/A                                     ; 279.80 MHz ( period = 3.574 ns )                    ; Compteur_BCD:ucpt|compteur[0]    ; Compteur_BCD:ucpt|compteur[26]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.367 ns                ;
+; N/A                                     ; 279.88 MHz ( period = 3.573 ns )                    ; Compteur_BCD:ucpt|compteur[10]   ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 280.74 MHz ( period = 3.562 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[18] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.351 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[16] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.346 ns                ;
+; N/A                                     ; 281.21 MHz ( period = 3.556 ns )                    ; Diviseur_frequence:udiv|cpt1[1]  ; Diviseur_frequence:udiv|cpt1[19] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.339 ns                ;
+; N/A                                     ; 281.61 MHz ( period = 3.551 ns )                    ; Diviseur_frequence:udiv|cpt1[13] ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.331 ns                ;
+; N/A                                     ; 281.93 MHz ( period = 3.547 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[22] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.327 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[23] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.326 ns                ;
+; N/A                                     ; 282.09 MHz ( period = 3.545 ns )                    ; Diviseur_frequence:udiv|cpt1[4]  ; Diviseur_frequence:udiv|cpt1[20] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.328 ns                ;
+; N/A                                     ; 282.09 MHz ( period = 3.545 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[21] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.325 ns                ;
+; N/A                                     ; 282.17 MHz ( period = 3.544 ns )                    ; Compteur_BCD:ucpt|compteur[3]    ; Compteur_BCD:ucpt|compteur[30]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.337 ns                ;
+; N/A                                     ; 282.89 MHz ( period = 3.535 ns )                    ; Diviseur_frequence:udiv|cpt1[12] ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.315 ns                ;
+; N/A                                     ; 283.21 MHz ( period = 3.531 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[17] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.317 ns                ;
+; N/A                                     ; 283.93 MHz ( period = 3.522 ns )                    ; Diviseur_frequence:udiv|cpt1[8]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.302 ns                ;
+; N/A                                     ; 284.33 MHz ( period = 3.517 ns )                    ; Diviseur_frequence:udiv|cpt1[19] ; Diviseur_frequence:udiv|cpt1[31] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.306 ns                ;
+; N/A                                     ; 284.50 MHz ( period = 3.515 ns )                    ; Diviseur_frequence:udiv|cpt1[16] ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.295 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; Diviseur_frequence:udiv|cpt1[14] ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.289 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; Compteur_BCD:ucpt|compteur[2]    ; Compteur_BCD:ucpt|compteur[29]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.302 ns                ;
+; N/A                                     ; 285.06 MHz ( period = 3.508 ns )                    ; Compteur_BCD:ucpt|compteur[1]    ; Compteur_BCD:ucpt|compteur[28]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.301 ns                ;
+; N/A                                     ; 285.23 MHz ( period = 3.506 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[22] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.286 ns                ;
+; N/A                                     ; 285.31 MHz ( period = 3.505 ns )                    ; Diviseur_frequence:udiv|cpt1[8]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.285 ns                ;
+; N/A                                     ; 285.47 MHz ( period = 3.503 ns )                    ; Compteur_BCD:ucpt|compteur[0]    ; Compteur_BCD:ucpt|compteur[25]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.296 ns                ;
+; N/A                                     ; 285.71 MHz ( period = 3.500 ns )                    ; Diviseur_frequence:udiv|cpt1[13] ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.280 ns                ;
+; N/A                                     ; 286.20 MHz ( period = 3.494 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[18] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.280 ns                ;
+; N/A                                     ; 286.29 MHz ( period = 3.493 ns )                    ; Diviseur_frequence:udiv|cpt1[9]  ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.273 ns                ;
+; N/A                                     ; 286.45 MHz ( period = 3.491 ns )                    ; Diviseur_frequence:udiv|cpt1[11] ; Diviseur_frequence:udiv|cpt1[28] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.271 ns                ;
+; N/A                                     ; 286.62 MHz ( period = 3.489 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[16] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.275 ns                ;
+; N/A                                     ; 287.52 MHz ( period = 3.478 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[21] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.258 ns                ;
+; N/A                                     ; 287.52 MHz ( period = 3.478 ns )                    ; Diviseur_frequence:udiv|cpt1[2]  ; Diviseur_frequence:udiv|cpt1[19] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.261 ns                ;
+; N/A                                     ; 287.52 MHz ( period = 3.478 ns )                    ; Compteur_BCD:ucpt|compteur[11]   ; Compteur_BCD:ucpt|compteur[31]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.270 ns                ;
+; N/A                                     ; 287.60 MHz ( period = 3.477 ns )                    ; Diviseur_frequence:udiv|cpt1[5]  ; Diviseur_frequence:udiv|cpt1[20] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.257 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; Diviseur_frequence:udiv|cpt1[9]  ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.256 ns                ;
+; N/A                                     ; 287.94 MHz ( period = 3.473 ns )                    ; Compteur_BCD:ucpt|compteur[3]    ; Compteur_BCD:ucpt|compteur[29]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.266 ns                ;
+; N/A                                     ; 288.68 MHz ( period = 3.464 ns )                    ; Diviseur_frequence:udiv|cpt1[16] ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.244 ns                ;
+; N/A                                     ; 288.68 MHz ( period = 3.464 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[17] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.250 ns                ;
+; N/A                                     ; 289.18 MHz ( period = 3.458 ns )                    ; Diviseur_frequence:udiv|cpt1[14] ; Diviseur_frequence:udiv|cpt1[27] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.238 ns                ;
+; N/A                                     ; 289.60 MHz ( period = 3.453 ns )                    ; Diviseur_frequence:udiv|cpt1[10] ; Diviseur_frequence:udiv|cpt1[26] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.233 ns                ;
+; N/A                                     ; 289.69 MHz ( period = 3.452 ns )                    ; Diviseur_frequence:udiv|cpt1[8]  ; Diviseur_frequence:udiv|cpt1[25] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.232 ns                ;
+; N/A                                     ; 290.78 MHz ( period = 3.439 ns )                    ; Diviseur_frequence:udiv|cpt1[20] ; Diviseur_frequence:udiv|cpt1[30] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.231 ns                ;
+; N/A                                     ; 290.87 MHz ( period = 3.438 ns )                    ; Compteur_BCD:ucpt|compteur[2]    ; Compteur_BCD:ucpt|compteur[28]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.231 ns                ;
+; N/A                                     ; 290.87 MHz ( period = 3.438 ns )                    ; Compteur_BCD:ucpt|compteur[4]    ; Compteur_BCD:ucpt|compteur[30]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.231 ns                ;
+; N/A                                     ; 290.95 MHz ( period = 3.437 ns )                    ; Diviseur_frequence:udiv|cpt1[7]  ; Diviseur_frequence:udiv|cpt1[21] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.217 ns                ;
+; N/A                                     ; 290.95 MHz ( period = 3.437 ns )                    ; Compteur_BCD:ucpt|compteur[1]    ; Compteur_BCD:ucpt|compteur[27]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.230 ns                ;
+; N/A                                     ; 291.04 MHz ( period = 3.436 ns )                    ; Diviseur_frequence:udiv|cpt1[10] ; Diviseur_frequence:udiv|cpt1[24] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.216 ns                ;
+; N/A                                     ; 291.38 MHz ( period = 3.432 ns )                    ; Compteur_BCD:ucpt|compteur[0]    ; Compteur_BCD:ucpt|compteur[24]   ; clockIN    ; clockIN  ; None                        ; None                      ; 3.225 ns                ;
+; N/A                                     ; 291.63 MHz ( period = 3.429 ns )                    ; Diviseur_frequence:udiv|cpt1[18] ; Diviseur_frequence:udiv|cpt1[29] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.209 ns                ;
+; N/A                                     ; 291.80 MHz ( period = 3.427 ns )                    ; Diviseur_frequence:udiv|cpt1[6]  ; Diviseur_frequence:udiv|cpt1[18] ; clockIN    ; clockIN  ; None                        ; None                      ; 3.213 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                  ;                                  ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                           ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------------------+----+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From                           ; To ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------------------+----+------------+
+; N/A                                     ; None                                                ; 16.235 ns  ; Compteur_BCD:ucpt|compteur[15] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.975 ns  ; Compteur_BCD:ucpt|compteur[1]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.963 ns  ; Compteur_BCD:ucpt|compteur[22] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.953 ns  ; Compteur_BCD:ucpt|compteur[5]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.943 ns  ; Compteur_BCD:ucpt|compteur[13] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.906 ns  ; Compteur_BCD:ucpt|compteur[14] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.906 ns  ; Compteur_BCD:ucpt|compteur[20] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.856 ns  ; Compteur_BCD:ucpt|compteur[18] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.830 ns  ; Compteur_BCD:ucpt|compteur[29] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.829 ns  ; Compteur_BCD:ucpt|compteur[10] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.827 ns  ; Compteur_BCD:ucpt|compteur[24] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.824 ns  ; Compteur_BCD:ucpt|compteur[23] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.810 ns  ; Compteur_BCD:ucpt|compteur[4]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.786 ns  ; Compteur_BCD:ucpt|compteur[8]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.770 ns  ; Compteur_BCD:ucpt|compteur[19] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.749 ns  ; Compteur_BCD:ucpt|compteur[16] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.744 ns  ; Compteur_BCD:ucpt|compteur[11] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.709 ns  ; Compteur_BCD:ucpt|compteur[12] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.698 ns  ; Compteur_BCD:ucpt|compteur[9]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.659 ns  ; Compteur_BCD:ucpt|compteur[7]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.639 ns  ; Compteur_BCD:ucpt|compteur[21] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.636 ns  ; Compteur_BCD:ucpt|compteur[3]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.608 ns  ; Compteur_BCD:ucpt|compteur[25] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.587 ns  ; Compteur_BCD:ucpt|compteur[28] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.587 ns  ; Compteur_BCD:ucpt|compteur[15] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.494 ns  ; Compteur_BCD:ucpt|compteur[17] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.494 ns  ; Compteur_BCD:ucpt|compteur[26] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.450 ns  ; Compteur_BCD:ucpt|compteur[5]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.440 ns  ; Compteur_BCD:ucpt|compteur[13] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.433 ns  ; Compteur_BCD:ucpt|compteur[31] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.361 ns  ; Compteur_BCD:ucpt|compteur[27] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.344 ns  ; Compteur_BCD:ucpt|compteur[6]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.326 ns  ; Compteur_BCD:ucpt|compteur[10] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.317 ns  ; Compteur_BCD:ucpt|compteur[30] ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.315 ns  ; Compteur_BCD:ucpt|compteur[22] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.307 ns  ; Compteur_BCD:ucpt|compteur[4]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.283 ns  ; Compteur_BCD:ucpt|compteur[8]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.261 ns  ; Compteur_BCD:ucpt|compteur[2]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 15.258 ns  ; Compteur_BCD:ucpt|compteur[14] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.258 ns  ; Compteur_BCD:ucpt|compteur[20] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.255 ns  ; Compteur_BCD:ucpt|compteur[15] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 15.241 ns  ; Compteur_BCD:ucpt|compteur[11] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.208 ns  ; Compteur_BCD:ucpt|compteur[18] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.206 ns  ; Compteur_BCD:ucpt|compteur[12] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.195 ns  ; Compteur_BCD:ucpt|compteur[9]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.182 ns  ; Compteur_BCD:ucpt|compteur[29] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.179 ns  ; Compteur_BCD:ucpt|compteur[24] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.176 ns  ; Compteur_BCD:ucpt|compteur[23] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.156 ns  ; Compteur_BCD:ucpt|compteur[7]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.122 ns  ; Compteur_BCD:ucpt|compteur[19] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 15.101 ns  ; Compteur_BCD:ucpt|compteur[16] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.995 ns  ; Compteur_BCD:ucpt|compteur[1]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.991 ns  ; Compteur_BCD:ucpt|compteur[21] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.983 ns  ; Compteur_BCD:ucpt|compteur[22] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.973 ns  ; Compteur_BCD:ucpt|compteur[5]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.963 ns  ; Compteur_BCD:ucpt|compteur[13] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.960 ns  ; Compteur_BCD:ucpt|compteur[25] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.940 ns  ; Compteur_BCD:ucpt|compteur[1]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.939 ns  ; Compteur_BCD:ucpt|compteur[28] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.930 ns  ; Compteur_BCD:ucpt|compteur[31] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.926 ns  ; Compteur_BCD:ucpt|compteur[14] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.926 ns  ; Compteur_BCD:ucpt|compteur[20] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.876 ns  ; Compteur_BCD:ucpt|compteur[18] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.850 ns  ; Compteur_BCD:ucpt|compteur[29] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.849 ns  ; Compteur_BCD:ucpt|compteur[10] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.847 ns  ; Compteur_BCD:ucpt|compteur[24] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.846 ns  ; Compteur_BCD:ucpt|compteur[17] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.846 ns  ; Compteur_BCD:ucpt|compteur[26] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.844 ns  ; Compteur_BCD:ucpt|compteur[23] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.841 ns  ; Compteur_BCD:ucpt|compteur[6]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.830 ns  ; Compteur_BCD:ucpt|compteur[4]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.814 ns  ; Compteur_BCD:ucpt|compteur[30] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.806 ns  ; Compteur_BCD:ucpt|compteur[8]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.790 ns  ; Compteur_BCD:ucpt|compteur[19] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.769 ns  ; Compteur_BCD:ucpt|compteur[16] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.764 ns  ; Compteur_BCD:ucpt|compteur[11] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.729 ns  ; Compteur_BCD:ucpt|compteur[12] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.718 ns  ; Compteur_BCD:ucpt|compteur[9]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.713 ns  ; Compteur_BCD:ucpt|compteur[27] ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.679 ns  ; Compteur_BCD:ucpt|compteur[7]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.659 ns  ; Compteur_BCD:ucpt|compteur[21] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.656 ns  ; Compteur_BCD:ucpt|compteur[3]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.628 ns  ; Compteur_BCD:ucpt|compteur[25] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.607 ns  ; Compteur_BCD:ucpt|compteur[28] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.601 ns  ; Compteur_BCD:ucpt|compteur[3]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.514 ns  ; Compteur_BCD:ucpt|compteur[17] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.514 ns  ; Compteur_BCD:ucpt|compteur[26] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.453 ns  ; Compteur_BCD:ucpt|compteur[31] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.381 ns  ; Compteur_BCD:ucpt|compteur[27] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.364 ns  ; Compteur_BCD:ucpt|compteur[6]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.337 ns  ; Compteur_BCD:ucpt|compteur[30] ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.281 ns  ; Compteur_BCD:ucpt|compteur[2]  ; Sc ; clockIN    ;
+; N/A                                     ; None                                                ; 14.226 ns  ; Compteur_BCD:ucpt|compteur[2]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 14.122 ns  ; Compteur_BCD:ucpt|compteur[15] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 14.116 ns  ; Compteur_BCD:ucpt|compteur[15] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 14.115 ns  ; Compteur_BCD:ucpt|compteur[15] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.985 ns  ; Compteur_BCD:ucpt|compteur[5]  ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.980 ns  ; Compteur_BCD:ucpt|compteur[5]  ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.979 ns  ; Compteur_BCD:ucpt|compteur[5]  ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.975 ns  ; Compteur_BCD:ucpt|compteur[13] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.970 ns  ; Compteur_BCD:ucpt|compteur[13] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.969 ns  ; Compteur_BCD:ucpt|compteur[13] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.861 ns  ; Compteur_BCD:ucpt|compteur[10] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.856 ns  ; Compteur_BCD:ucpt|compteur[10] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.856 ns  ; Compteur_BCD:ucpt|compteur[0]  ; Sb ; clockIN    ;
+; N/A                                     ; None                                                ; 13.855 ns  ; Compteur_BCD:ucpt|compteur[10] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.850 ns  ; Compteur_BCD:ucpt|compteur[22] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.844 ns  ; Compteur_BCD:ucpt|compteur[22] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.843 ns  ; Compteur_BCD:ucpt|compteur[22] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.842 ns  ; Compteur_BCD:ucpt|compteur[4]  ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.837 ns  ; Compteur_BCD:ucpt|compteur[4]  ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.836 ns  ; Compteur_BCD:ucpt|compteur[4]  ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.818 ns  ; Compteur_BCD:ucpt|compteur[8]  ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.813 ns  ; Compteur_BCD:ucpt|compteur[8]  ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.812 ns  ; Compteur_BCD:ucpt|compteur[8]  ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.807 ns  ; Compteur_BCD:ucpt|compteur[15] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.793 ns  ; Compteur_BCD:ucpt|compteur[14] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.793 ns  ; Compteur_BCD:ucpt|compteur[20] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.793 ns  ; Compteur_BCD:ucpt|compteur[0]  ; Sa ; clockIN    ;
+; N/A                                     ; None                                                ; 13.787 ns  ; Compteur_BCD:ucpt|compteur[14] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.787 ns  ; Compteur_BCD:ucpt|compteur[20] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.786 ns  ; Compteur_BCD:ucpt|compteur[14] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.786 ns  ; Compteur_BCD:ucpt|compteur[20] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.776 ns  ; Compteur_BCD:ucpt|compteur[11] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.771 ns  ; Compteur_BCD:ucpt|compteur[11] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.770 ns  ; Compteur_BCD:ucpt|compteur[11] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.743 ns  ; Compteur_BCD:ucpt|compteur[18] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.741 ns  ; Compteur_BCD:ucpt|compteur[12] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.737 ns  ; Compteur_BCD:ucpt|compteur[18] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.736 ns  ; Compteur_BCD:ucpt|compteur[12] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.736 ns  ; Compteur_BCD:ucpt|compteur[18] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.735 ns  ; Compteur_BCD:ucpt|compteur[12] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.730 ns  ; Compteur_BCD:ucpt|compteur[9]  ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.725 ns  ; Compteur_BCD:ucpt|compteur[9]  ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.724 ns  ; Compteur_BCD:ucpt|compteur[9]  ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.717 ns  ; Compteur_BCD:ucpt|compteur[29] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.714 ns  ; Compteur_BCD:ucpt|compteur[24] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.711 ns  ; Compteur_BCD:ucpt|compteur[29] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.711 ns  ; Compteur_BCD:ucpt|compteur[23] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.710 ns  ; Compteur_BCD:ucpt|compteur[29] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.708 ns  ; Compteur_BCD:ucpt|compteur[24] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.707 ns  ; Compteur_BCD:ucpt|compteur[24] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.705 ns  ; Compteur_BCD:ucpt|compteur[23] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.704 ns  ; Compteur_BCD:ucpt|compteur[23] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.691 ns  ; Compteur_BCD:ucpt|compteur[7]  ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.686 ns  ; Compteur_BCD:ucpt|compteur[7]  ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.685 ns  ; Compteur_BCD:ucpt|compteur[7]  ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.684 ns  ; Compteur_BCD:ucpt|compteur[1]  ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.673 ns  ; Compteur_BCD:ucpt|compteur[1]  ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.670 ns  ; Compteur_BCD:ucpt|compteur[5]  ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.660 ns  ; Compteur_BCD:ucpt|compteur[13] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.657 ns  ; Compteur_BCD:ucpt|compteur[19] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.651 ns  ; Compteur_BCD:ucpt|compteur[19] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.650 ns  ; Compteur_BCD:ucpt|compteur[19] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.636 ns  ; Compteur_BCD:ucpt|compteur[16] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.630 ns  ; Compteur_BCD:ucpt|compteur[16] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.629 ns  ; Compteur_BCD:ucpt|compteur[16] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.546 ns  ; Compteur_BCD:ucpt|compteur[10] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.535 ns  ; Compteur_BCD:ucpt|compteur[22] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.527 ns  ; Compteur_BCD:ucpt|compteur[4]  ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.526 ns  ; Compteur_BCD:ucpt|compteur[21] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.520 ns  ; Compteur_BCD:ucpt|compteur[21] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.519 ns  ; Compteur_BCD:ucpt|compteur[21] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.503 ns  ; Compteur_BCD:ucpt|compteur[8]  ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.495 ns  ; Compteur_BCD:ucpt|compteur[25] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.489 ns  ; Compteur_BCD:ucpt|compteur[25] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.488 ns  ; Compteur_BCD:ucpt|compteur[25] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.478 ns  ; Compteur_BCD:ucpt|compteur[14] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.478 ns  ; Compteur_BCD:ucpt|compteur[20] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.474 ns  ; Compteur_BCD:ucpt|compteur[28] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.468 ns  ; Compteur_BCD:ucpt|compteur[28] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.467 ns  ; Compteur_BCD:ucpt|compteur[28] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.465 ns  ; Compteur_BCD:ucpt|compteur[31] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.461 ns  ; Compteur_BCD:ucpt|compteur[11] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.460 ns  ; Compteur_BCD:ucpt|compteur[31] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.459 ns  ; Compteur_BCD:ucpt|compteur[31] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.428 ns  ; Compteur_BCD:ucpt|compteur[18] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.426 ns  ; Compteur_BCD:ucpt|compteur[12] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.415 ns  ; Compteur_BCD:ucpt|compteur[9]  ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.402 ns  ; Compteur_BCD:ucpt|compteur[29] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.399 ns  ; Compteur_BCD:ucpt|compteur[24] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.396 ns  ; Compteur_BCD:ucpt|compteur[23] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.381 ns  ; Compteur_BCD:ucpt|compteur[17] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.381 ns  ; Compteur_BCD:ucpt|compteur[26] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.376 ns  ; Compteur_BCD:ucpt|compteur[6]  ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.376 ns  ; Compteur_BCD:ucpt|compteur[7]  ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.375 ns  ; Compteur_BCD:ucpt|compteur[17] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.375 ns  ; Compteur_BCD:ucpt|compteur[26] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.374 ns  ; Compteur_BCD:ucpt|compteur[17] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.374 ns  ; Compteur_BCD:ucpt|compteur[26] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.371 ns  ; Compteur_BCD:ucpt|compteur[6]  ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.370 ns  ; Compteur_BCD:ucpt|compteur[6]  ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.349 ns  ; Compteur_BCD:ucpt|compteur[30] ; Sf ; clockIN    ;
+; N/A                                     ; None                                                ; 13.345 ns  ; Compteur_BCD:ucpt|compteur[3]  ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.344 ns  ; Compteur_BCD:ucpt|compteur[30] ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.343 ns  ; Compteur_BCD:ucpt|compteur[30] ; Se ; clockIN    ;
+; N/A                                     ; None                                                ; 13.342 ns  ; Compteur_BCD:ucpt|compteur[19] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.334 ns  ; Compteur_BCD:ucpt|compteur[3]  ; Sg ; clockIN    ;
+; N/A                                     ; None                                                ; 13.321 ns  ; Compteur_BCD:ucpt|compteur[16] ; Sd ; clockIN    ;
+; N/A                                     ; None                                                ; 13.270 ns  ; Compteur_BCD:ucpt|compteur[1]  ; Sf ; clockIN    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                                ;    ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------------------+----+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Sep 11 11:34:28 2020
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Compteur -c Compteur --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clockIN" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "Diviseur_frequence:udiv|clkout~reg0" as buffer
+Info: Clock "clockIN" has Internal fmax of 200.6 MHz between source register "Diviseur_frequence:udiv|cpt1[0]" and destination register "Diviseur_frequence:udiv|cpt1[31]" (period= 4.985 ns)
+    Info: + Longest register to register delay is 4.771 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X18_Y16_N15; Fanout = 3; REG Node = 'Diviseur_frequence:udiv|cpt1[0]'
+        Info: 2: + IC(0.467 ns) + CELL(0.414 ns) = 0.881 ns; Loc. = LCCOMB_X19_Y16_N0; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~1'
+        Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 0.952 ns; Loc. = LCCOMB_X19_Y16_N2; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~3'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.023 ns; Loc. = LCCOMB_X19_Y16_N4; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~5'
+        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.094 ns; Loc. = LCCOMB_X19_Y16_N6; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~7'
+        Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.165 ns; Loc. = LCCOMB_X19_Y16_N8; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~13'
+        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.236 ns; Loc. = LCCOMB_X19_Y16_N10; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~16'
+        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.307 ns; Loc. = LCCOMB_X19_Y16_N12; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~19'
+        Info: 9: + IC(0.000 ns) + CELL(0.159 ns) = 1.466 ns; Loc. = LCCOMB_X19_Y16_N14; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~22'
+        Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 1.537 ns; Loc. = LCCOMB_X19_Y16_N16; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~25'
+        Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 1.608 ns; Loc. = LCCOMB_X19_Y16_N18; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~28'
+        Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 1.679 ns; Loc. = LCCOMB_X19_Y16_N20; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~31'
+        Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 1.750 ns; Loc. = LCCOMB_X19_Y16_N22; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~34'
+        Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 1.821 ns; Loc. = LCCOMB_X19_Y16_N24; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~37'
+        Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 1.892 ns; Loc. = LCCOMB_X19_Y16_N26; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~40'
+        Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 1.963 ns; Loc. = LCCOMB_X19_Y16_N28; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~43'
+        Info: 17: + IC(0.000 ns) + CELL(0.146 ns) = 2.109 ns; Loc. = LCCOMB_X19_Y16_N30; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~46'
+        Info: 18: + IC(0.000 ns) + CELL(0.071 ns) = 2.180 ns; Loc. = LCCOMB_X19_Y15_N0; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~49'
+        Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 2.251 ns; Loc. = LCCOMB_X19_Y15_N2; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~52'
+        Info: 20: + IC(0.000 ns) + CELL(0.071 ns) = 2.322 ns; Loc. = LCCOMB_X19_Y15_N4; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~55'
+        Info: 21: + IC(0.000 ns) + CELL(0.071 ns) = 2.393 ns; Loc. = LCCOMB_X19_Y15_N6; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~58'
+        Info: 22: + IC(0.000 ns) + CELL(0.071 ns) = 2.464 ns; Loc. = LCCOMB_X19_Y15_N8; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~61'
+        Info: 23: + IC(0.000 ns) + CELL(0.071 ns) = 2.535 ns; Loc. = LCCOMB_X19_Y15_N10; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~63'
+        Info: 24: + IC(0.000 ns) + CELL(0.071 ns) = 2.606 ns; Loc. = LCCOMB_X19_Y15_N12; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~65'
+        Info: 25: + IC(0.000 ns) + CELL(0.159 ns) = 2.765 ns; Loc. = LCCOMB_X19_Y15_N14; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~68'
+        Info: 26: + IC(0.000 ns) + CELL(0.071 ns) = 2.836 ns; Loc. = LCCOMB_X19_Y15_N16; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~73'
+        Info: 27: + IC(0.000 ns) + CELL(0.071 ns) = 2.907 ns; Loc. = LCCOMB_X19_Y15_N18; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~76'
+        Info: 28: + IC(0.000 ns) + CELL(0.071 ns) = 2.978 ns; Loc. = LCCOMB_X19_Y15_N20; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~79'
+        Info: 29: + IC(0.000 ns) + CELL(0.071 ns) = 3.049 ns; Loc. = LCCOMB_X19_Y15_N22; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~82'
+        Info: 30: + IC(0.000 ns) + CELL(0.071 ns) = 3.120 ns; Loc. = LCCOMB_X19_Y15_N24; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~85'
+        Info: 31: + IC(0.000 ns) + CELL(0.071 ns) = 3.191 ns; Loc. = LCCOMB_X19_Y15_N26; Fanout = 2; COMB Node = 'Diviseur_frequence:udiv|Add0~87'
+        Info: 32: + IC(0.000 ns) + CELL(0.071 ns) = 3.262 ns; Loc. = LCCOMB_X19_Y15_N28; Fanout = 1; COMB Node = 'Diviseur_frequence:udiv|Add0~89'
+        Info: 33: + IC(0.000 ns) + CELL(0.410 ns) = 3.672 ns; Loc. = LCCOMB_X19_Y15_N30; Fanout = 1; COMB Node = 'Diviseur_frequence:udiv|Add0~90'
+        Info: 34: + IC(0.740 ns) + CELL(0.275 ns) = 4.687 ns; Loc. = LCCOMB_X18_Y16_N6; Fanout = 1; COMB Node = 'Diviseur_frequence:udiv|Add0~92'
+        Info: 35: + IC(0.000 ns) + CELL(0.084 ns) = 4.771 ns; Loc. = LCFF_X18_Y16_N7; Fanout = 2; REG Node = 'Diviseur_frequence:udiv|cpt1[31]'
+        Info: Total cell delay = 3.564 ns ( 74.70 % )
+        Info: Total interconnect delay = 1.207 ns ( 25.30 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clockIN" to destination register is 2.680 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clockIN'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 34; COMB Node = 'clockIN~clkctrl'
+            Info: 3: + IC(1.026 ns) + CELL(0.537 ns) = 2.680 ns; Loc. = LCFF_X18_Y16_N7; Fanout = 2; REG Node = 'Diviseur_frequence:udiv|cpt1[31]'
+            Info: Total cell delay = 1.536 ns ( 57.31 % )
+            Info: Total interconnect delay = 1.144 ns ( 42.69 % )
+        Info: - Longest clock path from clock "clockIN" to source register is 2.680 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clockIN'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 34; COMB Node = 'clockIN~clkctrl'
+            Info: 3: + IC(1.026 ns) + CELL(0.537 ns) = 2.680 ns; Loc. = LCFF_X18_Y16_N15; Fanout = 3; REG Node = 'Diviseur_frequence:udiv|cpt1[0]'
+            Info: Total cell delay = 1.536 ns ( 57.31 % )
+            Info: Total interconnect delay = 1.144 ns ( 42.69 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tco from clock "clockIN" to destination pin "Sb" through register "Compteur_BCD:ucpt|compteur[15]" is 16.235 ns
+    Info: + Longest clock path from clock "clockIN" to source register is 5.922 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clockIN'
+        Info: 2: + IC(1.044 ns) + CELL(0.787 ns) = 2.830 ns; Loc. = LCFF_X18_Y16_N3; Fanout = 2; REG Node = 'Diviseur_frequence:udiv|clkout~reg0'
+        Info: 3: + IC(1.555 ns) + CELL(0.000 ns) = 4.385 ns; Loc. = CLKCTRL_G1; Fanout = 32; COMB Node = 'Diviseur_frequence:udiv|clkout~reg0clkctrl'
+        Info: 4: + IC(1.000 ns) + CELL(0.537 ns) = 5.922 ns; Loc. = LCFF_X35_Y8_N31; Fanout = 3; REG Node = 'Compteur_BCD:ucpt|compteur[15]'
+        Info: Total cell delay = 2.323 ns ( 39.23 % )
+        Info: Total interconnect delay = 3.599 ns ( 60.77 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 10.063 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X35_Y8_N31; Fanout = 3; REG Node = 'Compteur_BCD:ucpt|compteur[15]'
+        Info: 2: + IC(1.027 ns) + CELL(0.371 ns) = 1.398 ns; Loc. = LCCOMB_X36_Y7_N14; Fanout = 1; COMB Node = 'Compteur_BCD:ucpt|Equal0~3'
+        Info: 3: + IC(0.248 ns) + CELL(0.275 ns) = 1.921 ns; Loc. = LCCOMB_X36_Y7_N24; Fanout = 6; COMB Node = 'Compteur_BCD:ucpt|Equal0~4'
+        Info: 4: + IC(0.708 ns) + CELL(0.150 ns) = 2.779 ns; Loc. = LCCOMB_X34_Y7_N18; Fanout = 4; COMB Node = 'Decodeur:udec|Segment~0'
+        Info: 5: + IC(0.469 ns) + CELL(0.438 ns) = 3.686 ns; Loc. = LCCOMB_X34_Y7_N16; Fanout = 4; COMB Node = 'Decodeur:udec|C~0'
+        Info: 6: + IC(0.722 ns) + CELL(0.275 ns) = 4.683 ns; Loc. = LCCOMB_X32_Y7_N12; Fanout = 2; COMB Node = 'Decodeur:udec|B~0'
+        Info: 7: + IC(0.281 ns) + CELL(0.413 ns) = 5.377 ns; Loc. = LCCOMB_X32_Y7_N16; Fanout = 1; COMB Node = 'Decodeur:udec|B~2'
+        Info: 8: + IC(0.251 ns) + CELL(0.245 ns) = 5.873 ns; Loc. = LCCOMB_X32_Y7_N18; Fanout = 1; COMB Node = 'Decodeur:udec|B~3'
+        Info: 9: + IC(1.422 ns) + CELL(2.768 ns) = 10.063 ns; Loc. = PIN_AB12; Fanout = 0; PIN Node = 'Sb'
+        Info: Total cell delay = 4.935 ns ( 49.04 % )
+        Info: Total interconnect delay = 5.128 ns ( 50.96 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 177 megabytes
+    Info: Processing ended: Fri Sep 11 11:34:28 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

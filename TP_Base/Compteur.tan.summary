@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.235 ns
+From           : Compteur_BCD:ucpt|compteur[15]
+To             : Sb
+From Clock     : clockIN
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clockIN'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 200.60 MHz ( period = 4.985 ns )
+From           : Diviseur_frequence:udiv|cpt1[0]
+To             : Diviseur_frequence:udiv|cpt1[31]
+From Clock     : clockIN
+To Clock       : clockIN
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,438 @@
+Simulator report for Diviseur_frequence
+Tue Sep 08 09:27:14 2020
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 116 nodes    ;
+; Simulation Coverage         ;      11.64 % ;
+; Total Number of Transitions ; 170          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5F256C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      11.64 % ;
+; Total nodes checked                                 ; 116          ;
+; Total output ports checked                          ; 146          ;
+; Total output ports with complete 1/0-value coverage ; 17           ;
+; Total output ports with no 1/0-value coverage       ; 128          ;
+; Total output ports with no 1-value coverage         ; 128          ;
+; Total output ports with no 0-value coverage         ; 129          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                              ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Diviseur_frequence|Add0~0        ; |Diviseur_frequence|Add0~0        ; combout          ;
+; |Diviseur_frequence|Add0~0        ; |Diviseur_frequence|Add0~1        ; cout             ;
+; |Diviseur_frequence|Add0~2        ; |Diviseur_frequence|Add0~2        ; combout          ;
+; |Diviseur_frequence|Add0~2        ; |Diviseur_frequence|Add0~3        ; cout             ;
+; |Diviseur_frequence|Add0~4        ; |Diviseur_frequence|Add0~4        ; combout          ;
+; |Diviseur_frequence|Add0~4        ; |Diviseur_frequence|Add0~5        ; cout             ;
+; |Diviseur_frequence|Add0~6        ; |Diviseur_frequence|Add0~6        ; combout          ;
+; |Diviseur_frequence|cpt1[0]       ; |Diviseur_frequence|cpt1[0]       ; regout           ;
+; |Diviseur_frequence|cpt1[2]       ; |Diviseur_frequence|cpt1[2]       ; regout           ;
+; |Diviseur_frequence|cpt1[1]       ; |Diviseur_frequence|cpt1[1]       ; regout           ;
+; |Diviseur_frequence|Equal0~9      ; |Diviseur_frequence|Equal0~9      ; combout          ;
+; |Diviseur_frequence|Add0~92       ; |Diviseur_frequence|Add0~92       ; combout          ;
+; |Diviseur_frequence|Add0~93       ; |Diviseur_frequence|Add0~93       ; combout          ;
+; |Diviseur_frequence|Add0~94       ; |Diviseur_frequence|Add0~94       ; combout          ;
+; |Diviseur_frequence|Add0~95       ; |Diviseur_frequence|Add0~95       ; combout          ;
+; |Diviseur_frequence|clkin         ; |Diviseur_frequence|clkin~corein  ; combout          ;
+; |Diviseur_frequence|clkin~clkctrl ; |Diviseur_frequence|clkin~clkctrl ; outclk           ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Diviseur_frequence|Add0~6        ; |Diviseur_frequence|Add0~7        ; cout             ;
+; |Diviseur_frequence|Add0~8        ; |Diviseur_frequence|Add0~8        ; combout          ;
+; |Diviseur_frequence|Add0~8        ; |Diviseur_frequence|Add0~9        ; cout             ;
+; |Diviseur_frequence|Add0~10       ; |Diviseur_frequence|Add0~10       ; combout          ;
+; |Diviseur_frequence|Add0~10       ; |Diviseur_frequence|Add0~11       ; cout             ;
+; |Diviseur_frequence|Add0~12       ; |Diviseur_frequence|Add0~12       ; combout          ;
+; |Diviseur_frequence|Add0~12       ; |Diviseur_frequence|Add0~13       ; cout             ;
+; |Diviseur_frequence|Add0~14       ; |Diviseur_frequence|Add0~14       ; combout          ;
+; |Diviseur_frequence|Add0~14       ; |Diviseur_frequence|Add0~15       ; cout             ;
+; |Diviseur_frequence|Add0~16       ; |Diviseur_frequence|Add0~16       ; combout          ;
+; |Diviseur_frequence|Add0~16       ; |Diviseur_frequence|Add0~17       ; cout             ;
+; |Diviseur_frequence|Add0~18       ; |Diviseur_frequence|Add0~18       ; combout          ;
+; |Diviseur_frequence|Add0~18       ; |Diviseur_frequence|Add0~19       ; cout             ;
+; |Diviseur_frequence|Add0~20       ; |Diviseur_frequence|Add0~20       ; combout          ;
+; |Diviseur_frequence|Add0~20       ; |Diviseur_frequence|Add0~21       ; cout             ;
+; |Diviseur_frequence|Add0~22       ; |Diviseur_frequence|Add0~22       ; combout          ;
+; |Diviseur_frequence|Add0~22       ; |Diviseur_frequence|Add0~23       ; cout             ;
+; |Diviseur_frequence|Add0~24       ; |Diviseur_frequence|Add0~24       ; combout          ;
+; |Diviseur_frequence|Add0~24       ; |Diviseur_frequence|Add0~25       ; cout             ;
+; |Diviseur_frequence|Add0~26       ; |Diviseur_frequence|Add0~26       ; combout          ;
+; |Diviseur_frequence|Add0~26       ; |Diviseur_frequence|Add0~27       ; cout             ;
+; |Diviseur_frequence|Add0~28       ; |Diviseur_frequence|Add0~28       ; combout          ;
+; |Diviseur_frequence|Add0~28       ; |Diviseur_frequence|Add0~29       ; cout             ;
+; |Diviseur_frequence|Add0~30       ; |Diviseur_frequence|Add0~30       ; combout          ;
+; |Diviseur_frequence|Add0~30       ; |Diviseur_frequence|Add0~31       ; cout             ;
+; |Diviseur_frequence|Add0~32       ; |Diviseur_frequence|Add0~32       ; combout          ;
+; |Diviseur_frequence|Add0~32       ; |Diviseur_frequence|Add0~33       ; cout             ;
+; |Diviseur_frequence|Add0~34       ; |Diviseur_frequence|Add0~34       ; combout          ;
+; |Diviseur_frequence|Add0~34       ; |Diviseur_frequence|Add0~35       ; cout             ;
+; |Diviseur_frequence|Add0~36       ; |Diviseur_frequence|Add0~36       ; combout          ;
+; |Diviseur_frequence|Add0~36       ; |Diviseur_frequence|Add0~37       ; cout             ;
+; |Diviseur_frequence|Add0~38       ; |Diviseur_frequence|Add0~38       ; combout          ;
+; |Diviseur_frequence|Add0~38       ; |Diviseur_frequence|Add0~39       ; cout             ;
+; |Diviseur_frequence|Add0~40       ; |Diviseur_frequence|Add0~40       ; combout          ;
+; |Diviseur_frequence|Add0~40       ; |Diviseur_frequence|Add0~41       ; cout             ;
+; |Diviseur_frequence|Add0~42       ; |Diviseur_frequence|Add0~42       ; combout          ;
+; |Diviseur_frequence|Add0~42       ; |Diviseur_frequence|Add0~43       ; cout             ;
+; |Diviseur_frequence|Add0~44       ; |Diviseur_frequence|Add0~44       ; combout          ;
+; |Diviseur_frequence|Add0~44       ; |Diviseur_frequence|Add0~45       ; cout             ;
+; |Diviseur_frequence|Add0~46       ; |Diviseur_frequence|Add0~46       ; combout          ;
+; |Diviseur_frequence|Add0~46       ; |Diviseur_frequence|Add0~47       ; cout             ;
+; |Diviseur_frequence|Add0~48       ; |Diviseur_frequence|Add0~48       ; combout          ;
+; |Diviseur_frequence|Add0~48       ; |Diviseur_frequence|Add0~49       ; cout             ;
+; |Diviseur_frequence|Add0~50       ; |Diviseur_frequence|Add0~50       ; combout          ;
+; |Diviseur_frequence|Add0~50       ; |Diviseur_frequence|Add0~51       ; cout             ;
+; |Diviseur_frequence|Add0~52       ; |Diviseur_frequence|Add0~52       ; combout          ;
+; |Diviseur_frequence|Add0~52       ; |Diviseur_frequence|Add0~53       ; cout             ;
+; |Diviseur_frequence|Add0~54       ; |Diviseur_frequence|Add0~54       ; combout          ;
+; |Diviseur_frequence|Add0~54       ; |Diviseur_frequence|Add0~55       ; cout             ;
+; |Diviseur_frequence|Add0~56       ; |Diviseur_frequence|Add0~56       ; combout          ;
+; |Diviseur_frequence|Add0~56       ; |Diviseur_frequence|Add0~57       ; cout             ;
+; |Diviseur_frequence|Add0~58       ; |Diviseur_frequence|Add0~58       ; combout          ;
+; |Diviseur_frequence|Add0~58       ; |Diviseur_frequence|Add0~59       ; cout             ;
+; |Diviseur_frequence|Add0~60       ; |Diviseur_frequence|Add0~60       ; combout          ;
+; |Diviseur_frequence|Add0~60       ; |Diviseur_frequence|Add0~61       ; cout             ;
+; |Diviseur_frequence|Add0~62       ; |Diviseur_frequence|Add0~62       ; combout          ;
+; |Diviseur_frequence|clkout~reg0   ; |Diviseur_frequence|clkout~reg0   ; regout           ;
+; |Diviseur_frequence|cpt2[0]       ; |Diviseur_frequence|cpt2[0]       ; regout           ;
+; |Diviseur_frequence|clkout~3      ; |Diviseur_frequence|clkout~3      ; combout          ;
+; |Diviseur_frequence|cpt1[31]      ; |Diviseur_frequence|cpt1[31]      ; regout           ;
+; |Diviseur_frequence|cpt1[30]      ; |Diviseur_frequence|cpt1[30]      ; regout           ;
+; |Diviseur_frequence|cpt1[29]      ; |Diviseur_frequence|cpt1[29]      ; regout           ;
+; |Diviseur_frequence|cpt1[28]      ; |Diviseur_frequence|cpt1[28]      ; regout           ;
+; |Diviseur_frequence|Equal0~0      ; |Diviseur_frequence|Equal0~0      ; combout          ;
+; |Diviseur_frequence|cpt1[27]      ; |Diviseur_frequence|cpt1[27]      ; regout           ;
+; |Diviseur_frequence|cpt1[26]      ; |Diviseur_frequence|cpt1[26]      ; regout           ;
+; |Diviseur_frequence|cpt1[25]      ; |Diviseur_frequence|cpt1[25]      ; regout           ;
+; |Diviseur_frequence|cpt1[24]      ; |Diviseur_frequence|cpt1[24]      ; regout           ;
+; |Diviseur_frequence|Equal0~1      ; |Diviseur_frequence|Equal0~1      ; combout          ;
+; |Diviseur_frequence|cpt1[23]      ; |Diviseur_frequence|cpt1[23]      ; regout           ;
+; |Diviseur_frequence|cpt1[22]      ; |Diviseur_frequence|cpt1[22]      ; regout           ;
+; |Diviseur_frequence|cpt1[21]      ; |Diviseur_frequence|cpt1[21]      ; regout           ;
+; |Diviseur_frequence|cpt1[20]      ; |Diviseur_frequence|cpt1[20]      ; regout           ;
+; |Diviseur_frequence|Equal0~2      ; |Diviseur_frequence|Equal0~2      ; combout          ;
+; |Diviseur_frequence|cpt1[19]      ; |Diviseur_frequence|cpt1[19]      ; regout           ;
+; |Diviseur_frequence|cpt1[18]      ; |Diviseur_frequence|cpt1[18]      ; regout           ;
+; |Diviseur_frequence|cpt1[17]      ; |Diviseur_frequence|cpt1[17]      ; regout           ;
+; |Diviseur_frequence|cpt1[16]      ; |Diviseur_frequence|cpt1[16]      ; regout           ;
+; |Diviseur_frequence|Equal0~3      ; |Diviseur_frequence|Equal0~3      ; combout          ;
+; |Diviseur_frequence|Equal0~4      ; |Diviseur_frequence|Equal0~4      ; combout          ;
+; |Diviseur_frequence|cpt1[15]      ; |Diviseur_frequence|cpt1[15]      ; regout           ;
+; |Diviseur_frequence|cpt1[14]      ; |Diviseur_frequence|cpt1[14]      ; regout           ;
+; |Diviseur_frequence|Equal0~5      ; |Diviseur_frequence|Equal0~5      ; combout          ;
+; |Diviseur_frequence|cpt1[11]      ; |Diviseur_frequence|cpt1[11]      ; regout           ;
+; |Diviseur_frequence|cpt1[10]      ; |Diviseur_frequence|cpt1[10]      ; regout           ;
+; |Diviseur_frequence|cpt1[9]       ; |Diviseur_frequence|cpt1[9]       ; regout           ;
+; |Diviseur_frequence|cpt1[8]       ; |Diviseur_frequence|cpt1[8]       ; regout           ;
+; |Diviseur_frequence|Equal0~6      ; |Diviseur_frequence|Equal0~6      ; combout          ;
+; |Diviseur_frequence|cpt1[13]      ; |Diviseur_frequence|cpt1[13]      ; regout           ;
+; |Diviseur_frequence|cpt1[12]      ; |Diviseur_frequence|cpt1[12]      ; regout           ;
+; |Diviseur_frequence|Equal0~7      ; |Diviseur_frequence|Equal0~7      ; combout          ;
+; |Diviseur_frequence|cpt1[4]       ; |Diviseur_frequence|cpt1[4]       ; regout           ;
+; |Diviseur_frequence|cpt1[7]       ; |Diviseur_frequence|cpt1[7]       ; regout           ;
+; |Diviseur_frequence|cpt1[6]       ; |Diviseur_frequence|cpt1[6]       ; regout           ;
+; |Diviseur_frequence|cpt1[5]       ; |Diviseur_frequence|cpt1[5]       ; regout           ;
+; |Diviseur_frequence|Equal0~8      ; |Diviseur_frequence|Equal0~8      ; combout          ;
+; |Diviseur_frequence|Equal0~10     ; |Diviseur_frequence|Equal0~10     ; combout          ;
+; |Diviseur_frequence|Add0~64       ; |Diviseur_frequence|Add0~64       ; combout          ;
+; |Diviseur_frequence|Add0~65       ; |Diviseur_frequence|Add0~65       ; combout          ;
+; |Diviseur_frequence|Add0~66       ; |Diviseur_frequence|Add0~66       ; combout          ;
+; |Diviseur_frequence|Add0~67       ; |Diviseur_frequence|Add0~67       ; combout          ;
+; |Diviseur_frequence|Add0~68       ; |Diviseur_frequence|Add0~68       ; combout          ;
+; |Diviseur_frequence|Add0~69       ; |Diviseur_frequence|Add0~69       ; combout          ;
+; |Diviseur_frequence|Add0~70       ; |Diviseur_frequence|Add0~70       ; combout          ;
+; |Diviseur_frequence|Add0~71       ; |Diviseur_frequence|Add0~71       ; combout          ;
+; |Diviseur_frequence|Add0~72       ; |Diviseur_frequence|Add0~72       ; combout          ;
+; |Diviseur_frequence|Add0~73       ; |Diviseur_frequence|Add0~73       ; combout          ;
+; |Diviseur_frequence|Add0~74       ; |Diviseur_frequence|Add0~74       ; combout          ;
+; |Diviseur_frequence|Add0~75       ; |Diviseur_frequence|Add0~75       ; combout          ;
+; |Diviseur_frequence|Add0~76       ; |Diviseur_frequence|Add0~76       ; combout          ;
+; |Diviseur_frequence|Add0~77       ; |Diviseur_frequence|Add0~77       ; combout          ;
+; |Diviseur_frequence|Add0~78       ; |Diviseur_frequence|Add0~78       ; combout          ;
+; |Diviseur_frequence|Add0~79       ; |Diviseur_frequence|Add0~79       ; combout          ;
+; |Diviseur_frequence|Add0~80       ; |Diviseur_frequence|Add0~80       ; combout          ;
+; |Diviseur_frequence|Add0~81       ; |Diviseur_frequence|Add0~81       ; combout          ;
+; |Diviseur_frequence|Add0~82       ; |Diviseur_frequence|Add0~82       ; combout          ;
+; |Diviseur_frequence|Add0~83       ; |Diviseur_frequence|Add0~83       ; combout          ;
+; |Diviseur_frequence|Add0~84       ; |Diviseur_frequence|Add0~84       ; combout          ;
+; |Diviseur_frequence|Add0~85       ; |Diviseur_frequence|Add0~85       ; combout          ;
+; |Diviseur_frequence|Add0~86       ; |Diviseur_frequence|Add0~86       ; combout          ;
+; |Diviseur_frequence|Add0~87       ; |Diviseur_frequence|Add0~87       ; combout          ;
+; |Diviseur_frequence|Add0~88       ; |Diviseur_frequence|Add0~88       ; combout          ;
+; |Diviseur_frequence|Add0~89       ; |Diviseur_frequence|Add0~89       ; combout          ;
+; |Diviseur_frequence|Add0~90       ; |Diviseur_frequence|Add0~90       ; combout          ;
+; |Diviseur_frequence|Add0~91       ; |Diviseur_frequence|Add0~91       ; combout          ;
+; |Diviseur_frequence|clkout        ; |Diviseur_frequence|clkout~output ; padio            ;
+; |Diviseur_frequence|reset         ; |Diviseur_frequence|reset~corein  ; combout          ;
+; |Diviseur_frequence|reset~clkctrl ; |Diviseur_frequence|reset~clkctrl ; outclk           ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Diviseur_frequence|Add0~6        ; |Diviseur_frequence|Add0~7        ; cout             ;
+; |Diviseur_frequence|Add0~8        ; |Diviseur_frequence|Add0~8        ; combout          ;
+; |Diviseur_frequence|Add0~8        ; |Diviseur_frequence|Add0~9        ; cout             ;
+; |Diviseur_frequence|Add0~10       ; |Diviseur_frequence|Add0~10       ; combout          ;
+; |Diviseur_frequence|Add0~10       ; |Diviseur_frequence|Add0~11       ; cout             ;
+; |Diviseur_frequence|Add0~12       ; |Diviseur_frequence|Add0~12       ; combout          ;
+; |Diviseur_frequence|Add0~12       ; |Diviseur_frequence|Add0~13       ; cout             ;
+; |Diviseur_frequence|Add0~14       ; |Diviseur_frequence|Add0~14       ; combout          ;
+; |Diviseur_frequence|Add0~14       ; |Diviseur_frequence|Add0~15       ; cout             ;
+; |Diviseur_frequence|Add0~16       ; |Diviseur_frequence|Add0~16       ; combout          ;
+; |Diviseur_frequence|Add0~16       ; |Diviseur_frequence|Add0~17       ; cout             ;
+; |Diviseur_frequence|Add0~18       ; |Diviseur_frequence|Add0~18       ; combout          ;
+; |Diviseur_frequence|Add0~18       ; |Diviseur_frequence|Add0~19       ; cout             ;
+; |Diviseur_frequence|Add0~20       ; |Diviseur_frequence|Add0~20       ; combout          ;
+; |Diviseur_frequence|Add0~20       ; |Diviseur_frequence|Add0~21       ; cout             ;
+; |Diviseur_frequence|Add0~22       ; |Diviseur_frequence|Add0~22       ; combout          ;
+; |Diviseur_frequence|Add0~22       ; |Diviseur_frequence|Add0~23       ; cout             ;
+; |Diviseur_frequence|Add0~24       ; |Diviseur_frequence|Add0~24       ; combout          ;
+; |Diviseur_frequence|Add0~24       ; |Diviseur_frequence|Add0~25       ; cout             ;
+; |Diviseur_frequence|Add0~26       ; |Diviseur_frequence|Add0~26       ; combout          ;
+; |Diviseur_frequence|Add0~26       ; |Diviseur_frequence|Add0~27       ; cout             ;
+; |Diviseur_frequence|Add0~28       ; |Diviseur_frequence|Add0~28       ; combout          ;
+; |Diviseur_frequence|Add0~28       ; |Diviseur_frequence|Add0~29       ; cout             ;
+; |Diviseur_frequence|Add0~30       ; |Diviseur_frequence|Add0~30       ; combout          ;
+; |Diviseur_frequence|Add0~30       ; |Diviseur_frequence|Add0~31       ; cout             ;
+; |Diviseur_frequence|Add0~32       ; |Diviseur_frequence|Add0~32       ; combout          ;
+; |Diviseur_frequence|Add0~32       ; |Diviseur_frequence|Add0~33       ; cout             ;
+; |Diviseur_frequence|Add0~34       ; |Diviseur_frequence|Add0~34       ; combout          ;
+; |Diviseur_frequence|Add0~34       ; |Diviseur_frequence|Add0~35       ; cout             ;
+; |Diviseur_frequence|Add0~36       ; |Diviseur_frequence|Add0~36       ; combout          ;
+; |Diviseur_frequence|Add0~36       ; |Diviseur_frequence|Add0~37       ; cout             ;
+; |Diviseur_frequence|Add0~38       ; |Diviseur_frequence|Add0~38       ; combout          ;
+; |Diviseur_frequence|Add0~38       ; |Diviseur_frequence|Add0~39       ; cout             ;
+; |Diviseur_frequence|Add0~40       ; |Diviseur_frequence|Add0~40       ; combout          ;
+; |Diviseur_frequence|Add0~40       ; |Diviseur_frequence|Add0~41       ; cout             ;
+; |Diviseur_frequence|Add0~42       ; |Diviseur_frequence|Add0~42       ; combout          ;
+; |Diviseur_frequence|Add0~42       ; |Diviseur_frequence|Add0~43       ; cout             ;
+; |Diviseur_frequence|Add0~44       ; |Diviseur_frequence|Add0~44       ; combout          ;
+; |Diviseur_frequence|Add0~44       ; |Diviseur_frequence|Add0~45       ; cout             ;
+; |Diviseur_frequence|Add0~46       ; |Diviseur_frequence|Add0~46       ; combout          ;
+; |Diviseur_frequence|Add0~46       ; |Diviseur_frequence|Add0~47       ; cout             ;
+; |Diviseur_frequence|Add0~48       ; |Diviseur_frequence|Add0~48       ; combout          ;
+; |Diviseur_frequence|Add0~48       ; |Diviseur_frequence|Add0~49       ; cout             ;
+; |Diviseur_frequence|Add0~50       ; |Diviseur_frequence|Add0~50       ; combout          ;
+; |Diviseur_frequence|Add0~50       ; |Diviseur_frequence|Add0~51       ; cout             ;
+; |Diviseur_frequence|Add0~52       ; |Diviseur_frequence|Add0~52       ; combout          ;
+; |Diviseur_frequence|Add0~52       ; |Diviseur_frequence|Add0~53       ; cout             ;
+; |Diviseur_frequence|Add0~54       ; |Diviseur_frequence|Add0~54       ; combout          ;
+; |Diviseur_frequence|Add0~54       ; |Diviseur_frequence|Add0~55       ; cout             ;
+; |Diviseur_frequence|Add0~56       ; |Diviseur_frequence|Add0~56       ; combout          ;
+; |Diviseur_frequence|Add0~56       ; |Diviseur_frequence|Add0~57       ; cout             ;
+; |Diviseur_frequence|Add0~58       ; |Diviseur_frequence|Add0~58       ; combout          ;
+; |Diviseur_frequence|Add0~58       ; |Diviseur_frequence|Add0~59       ; cout             ;
+; |Diviseur_frequence|Add0~60       ; |Diviseur_frequence|Add0~60       ; combout          ;
+; |Diviseur_frequence|Add0~60       ; |Diviseur_frequence|Add0~61       ; cout             ;
+; |Diviseur_frequence|Add0~62       ; |Diviseur_frequence|Add0~62       ; combout          ;
+; |Diviseur_frequence|clkout~reg0   ; |Diviseur_frequence|clkout~reg0   ; regout           ;
+; |Diviseur_frequence|cpt2[0]       ; |Diviseur_frequence|cpt2[0]       ; regout           ;
+; |Diviseur_frequence|clkout~3      ; |Diviseur_frequence|clkout~3      ; combout          ;
+; |Diviseur_frequence|cpt1[31]      ; |Diviseur_frequence|cpt1[31]      ; regout           ;
+; |Diviseur_frequence|cpt1[30]      ; |Diviseur_frequence|cpt1[30]      ; regout           ;
+; |Diviseur_frequence|cpt1[29]      ; |Diviseur_frequence|cpt1[29]      ; regout           ;
+; |Diviseur_frequence|cpt1[28]      ; |Diviseur_frequence|cpt1[28]      ; regout           ;
+; |Diviseur_frequence|Equal0~0      ; |Diviseur_frequence|Equal0~0      ; combout          ;
+; |Diviseur_frequence|cpt1[27]      ; |Diviseur_frequence|cpt1[27]      ; regout           ;
+; |Diviseur_frequence|cpt1[26]      ; |Diviseur_frequence|cpt1[26]      ; regout           ;
+; |Diviseur_frequence|cpt1[25]      ; |Diviseur_frequence|cpt1[25]      ; regout           ;
+; |Diviseur_frequence|cpt1[24]      ; |Diviseur_frequence|cpt1[24]      ; regout           ;
+; |Diviseur_frequence|Equal0~1      ; |Diviseur_frequence|Equal0~1      ; combout          ;
+; |Diviseur_frequence|cpt1[23]      ; |Diviseur_frequence|cpt1[23]      ; regout           ;
+; |Diviseur_frequence|cpt1[22]      ; |Diviseur_frequence|cpt1[22]      ; regout           ;
+; |Diviseur_frequence|cpt1[21]      ; |Diviseur_frequence|cpt1[21]      ; regout           ;
+; |Diviseur_frequence|cpt1[20]      ; |Diviseur_frequence|cpt1[20]      ; regout           ;
+; |Diviseur_frequence|Equal0~2      ; |Diviseur_frequence|Equal0~2      ; combout          ;
+; |Diviseur_frequence|cpt1[19]      ; |Diviseur_frequence|cpt1[19]      ; regout           ;
+; |Diviseur_frequence|cpt1[18]      ; |Diviseur_frequence|cpt1[18]      ; regout           ;
+; |Diviseur_frequence|cpt1[17]      ; |Diviseur_frequence|cpt1[17]      ; regout           ;
+; |Diviseur_frequence|cpt1[16]      ; |Diviseur_frequence|cpt1[16]      ; regout           ;
+; |Diviseur_frequence|Equal0~3      ; |Diviseur_frequence|Equal0~3      ; combout          ;
+; |Diviseur_frequence|Equal0~4      ; |Diviseur_frequence|Equal0~4      ; combout          ;
+; |Diviseur_frequence|cpt1[15]      ; |Diviseur_frequence|cpt1[15]      ; regout           ;
+; |Diviseur_frequence|cpt1[14]      ; |Diviseur_frequence|cpt1[14]      ; regout           ;
+; |Diviseur_frequence|Equal0~5      ; |Diviseur_frequence|Equal0~5      ; combout          ;
+; |Diviseur_frequence|cpt1[11]      ; |Diviseur_frequence|cpt1[11]      ; regout           ;
+; |Diviseur_frequence|cpt1[10]      ; |Diviseur_frequence|cpt1[10]      ; regout           ;
+; |Diviseur_frequence|cpt1[9]       ; |Diviseur_frequence|cpt1[9]       ; regout           ;
+; |Diviseur_frequence|cpt1[8]       ; |Diviseur_frequence|cpt1[8]       ; regout           ;
+; |Diviseur_frequence|Equal0~6      ; |Diviseur_frequence|Equal0~6      ; combout          ;
+; |Diviseur_frequence|cpt1[13]      ; |Diviseur_frequence|cpt1[13]      ; regout           ;
+; |Diviseur_frequence|cpt1[12]      ; |Diviseur_frequence|cpt1[12]      ; regout           ;
+; |Diviseur_frequence|Equal0~7      ; |Diviseur_frequence|Equal0~7      ; combout          ;
+; |Diviseur_frequence|cpt1[4]       ; |Diviseur_frequence|cpt1[4]       ; regout           ;
+; |Diviseur_frequence|cpt1[7]       ; |Diviseur_frequence|cpt1[7]       ; regout           ;
+; |Diviseur_frequence|cpt1[6]       ; |Diviseur_frequence|cpt1[6]       ; regout           ;
+; |Diviseur_frequence|cpt1[5]       ; |Diviseur_frequence|cpt1[5]       ; regout           ;
+; |Diviseur_frequence|Equal0~8      ; |Diviseur_frequence|Equal0~8      ; combout          ;
+; |Diviseur_frequence|cpt1[3]       ; |Diviseur_frequence|cpt1[3]       ; regout           ;
+; |Diviseur_frequence|Equal0~10     ; |Diviseur_frequence|Equal0~10     ; combout          ;
+; |Diviseur_frequence|Add0~64       ; |Diviseur_frequence|Add0~64       ; combout          ;
+; |Diviseur_frequence|Add0~65       ; |Diviseur_frequence|Add0~65       ; combout          ;
+; |Diviseur_frequence|Add0~66       ; |Diviseur_frequence|Add0~66       ; combout          ;
+; |Diviseur_frequence|Add0~67       ; |Diviseur_frequence|Add0~67       ; combout          ;
+; |Diviseur_frequence|Add0~68       ; |Diviseur_frequence|Add0~68       ; combout          ;
+; |Diviseur_frequence|Add0~69       ; |Diviseur_frequence|Add0~69       ; combout          ;
+; |Diviseur_frequence|Add0~70       ; |Diviseur_frequence|Add0~70       ; combout          ;
+; |Diviseur_frequence|Add0~71       ; |Diviseur_frequence|Add0~71       ; combout          ;
+; |Diviseur_frequence|Add0~72       ; |Diviseur_frequence|Add0~72       ; combout          ;
+; |Diviseur_frequence|Add0~73       ; |Diviseur_frequence|Add0~73       ; combout          ;
+; |Diviseur_frequence|Add0~74       ; |Diviseur_frequence|Add0~74       ; combout          ;
+; |Diviseur_frequence|Add0~75       ; |Diviseur_frequence|Add0~75       ; combout          ;
+; |Diviseur_frequence|Add0~76       ; |Diviseur_frequence|Add0~76       ; combout          ;
+; |Diviseur_frequence|Add0~77       ; |Diviseur_frequence|Add0~77       ; combout          ;
+; |Diviseur_frequence|Add0~78       ; |Diviseur_frequence|Add0~78       ; combout          ;
+; |Diviseur_frequence|Add0~79       ; |Diviseur_frequence|Add0~79       ; combout          ;
+; |Diviseur_frequence|Add0~80       ; |Diviseur_frequence|Add0~80       ; combout          ;
+; |Diviseur_frequence|Add0~81       ; |Diviseur_frequence|Add0~81       ; combout          ;
+; |Diviseur_frequence|Add0~82       ; |Diviseur_frequence|Add0~82       ; combout          ;
+; |Diviseur_frequence|Add0~83       ; |Diviseur_frequence|Add0~83       ; combout          ;
+; |Diviseur_frequence|Add0~84       ; |Diviseur_frequence|Add0~84       ; combout          ;
+; |Diviseur_frequence|Add0~85       ; |Diviseur_frequence|Add0~85       ; combout          ;
+; |Diviseur_frequence|Add0~86       ; |Diviseur_frequence|Add0~86       ; combout          ;
+; |Diviseur_frequence|Add0~87       ; |Diviseur_frequence|Add0~87       ; combout          ;
+; |Diviseur_frequence|Add0~88       ; |Diviseur_frequence|Add0~88       ; combout          ;
+; |Diviseur_frequence|Add0~89       ; |Diviseur_frequence|Add0~89       ; combout          ;
+; |Diviseur_frequence|Add0~90       ; |Diviseur_frequence|Add0~90       ; combout          ;
+; |Diviseur_frequence|Add0~91       ; |Diviseur_frequence|Add0~91       ; combout          ;
+; |Diviseur_frequence|clkout        ; |Diviseur_frequence|clkout~output ; padio            ;
+; |Diviseur_frequence|reset         ; |Diviseur_frequence|reset~corein  ; combout          ;
+; |Diviseur_frequence|reset~clkctrl ; |Diviseur_frequence|reset~clkctrl ; outclk           ;
++-----------------------------------+-----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Sep 08 09:27:14 2020
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Diviseur_frequence -c Diviseur_frequence
+Info: Using vector source file "C:/altera/90sp2/quartus/TP_Base/Diviseur_frequence/Diviseur_frequence.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of Diviseur_frequence.vwf called Diviseur_frequence.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      11.64 %
+Info: Number of transitions in simulation is 170
+Info: Vector file Diviseur_frequence.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Tue Sep 08 09:27:14 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

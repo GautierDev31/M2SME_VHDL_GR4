@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity Diviseur_frequence is   port( 
+	clkin : in std_logic;
+	reset : in std_logic;
+	clkout : inout std_logic);
+end Diviseur_frequence ;
+
+
+architecture div of Diviseur_frequence is
+	signal cpt1 : integer;
+	signal cpt2 : integer;
+begin
+process (clkin, clkout, reset)
+begin
+	if reset = '1'
+	then 
+		-- Initialisation apres init
+		cpt1 <= 0;
+		cpt2 <= 0;
+		clkout <= '0';
+	elsif rising_edge(clkin) -- Si on resoit un front montant clkin
+	then 
+		cpt1 <= cpt1 + 1;
+		if cpt1 = 25 then cpt2 <= 1; else cpt2 <= 0; end if;
+		if cpt2 = 1 then clkout <= not(clkout); cpt1 <= 0; end if;
+	end if;
+end process;
+end div;
+	
+
