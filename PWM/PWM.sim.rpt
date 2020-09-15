@@ -1,0 +1,997 @@
+Simulator report for PWM
+Tue Sep 15 11:02:20 2020
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 481 nodes    ;
+; Simulation Coverage         ;      25.99 % ;
+; Total Number of Transitions ; 5328         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      25.99 % ;
+; Total nodes checked                                 ; 481          ;
+; Total output ports checked                          ; 481          ;
+; Total output ports with complete 1/0-value coverage ; 125          ;
+; Total output ports with no 1/0-value coverage       ; 356          ;
+; Total output ports with no 1-value coverage         ; 356          ;
+; Total output ports with no 0-value coverage         ; 356          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |Comparateur|process_0~0   ; |Comparateur|process_0~0   ; out0             ;
+; |Comparateur|PWM~0         ; |Comparateur|PWM~0         ; out              ;
+; |Comparateur|state~31      ; |Comparateur|state~31      ; out              ;
+; |Comparateur|process_0~1   ; |Comparateur|process_0~1   ; out0             ;
+; |Comparateur|PWM~1         ; |Comparateur|PWM~1         ; out              ;
+; |Comparateur|state[0]      ; |Comparateur|state[0]      ; regout           ;
+; |Comparateur|process_0~2   ; |Comparateur|process_0~2   ; out0             ;
+; |Comparateur|state~63      ; |Comparateur|state~63      ; out              ;
+; |Comparateur|cpt~29        ; |Comparateur|cpt~29        ; out              ;
+; |Comparateur|cpt~30        ; |Comparateur|cpt~30        ; out              ;
+; |Comparateur|cpt~31        ; |Comparateur|cpt~31        ; out              ;
+; |Comparateur|PWM~reg0      ; |Comparateur|PWM~reg0      ; regout           ;
+; |Comparateur|cpt[0]        ; |Comparateur|cpt[0]        ; regout           ;
+; |Comparateur|cpt[1]        ; |Comparateur|cpt[1]        ; regout           ;
+; |Comparateur|cpt[2]        ; |Comparateur|cpt[2]        ; regout           ;
+; |Comparateur|clk_1kHz      ; |Comparateur|clk_1kHz      ; out              ;
+; |Comparateur|PWM           ; |Comparateur|PWM           ; pin_out          ;
+; |Comparateur|LessThan0~0   ; |Comparateur|LessThan0~0   ; out0             ;
+; |Comparateur|LessThan0~1   ; |Comparateur|LessThan0~1   ; out0             ;
+; |Comparateur|LessThan0~2   ; |Comparateur|LessThan0~2   ; out0             ;
+; |Comparateur|LessThan0~3   ; |Comparateur|LessThan0~3   ; out0             ;
+; |Comparateur|LessThan0~4   ; |Comparateur|LessThan0~4   ; out0             ;
+; |Comparateur|LessThan0~6   ; |Comparateur|LessThan0~6   ; out0             ;
+; |Comparateur|LessThan0~7   ; |Comparateur|LessThan0~7   ; out0             ;
+; |Comparateur|LessThan0~8   ; |Comparateur|LessThan0~8   ; out0             ;
+; |Comparateur|LessThan0~9   ; |Comparateur|LessThan0~9   ; out0             ;
+; |Comparateur|LessThan0~10  ; |Comparateur|LessThan0~10  ; out0             ;
+; |Comparateur|LessThan0~11  ; |Comparateur|LessThan0~11  ; out0             ;
+; |Comparateur|LessThan0~12  ; |Comparateur|LessThan0~12  ; out0             ;
+; |Comparateur|LessThan0~13  ; |Comparateur|LessThan0~13  ; out0             ;
+; |Comparateur|LessThan0~14  ; |Comparateur|LessThan0~14  ; out0             ;
+; |Comparateur|LessThan0~15  ; |Comparateur|LessThan0~15  ; out0             ;
+; |Comparateur|LessThan0~16  ; |Comparateur|LessThan0~16  ; out0             ;
+; |Comparateur|LessThan0~17  ; |Comparateur|LessThan0~17  ; out0             ;
+; |Comparateur|LessThan0~18  ; |Comparateur|LessThan0~18  ; out0             ;
+; |Comparateur|LessThan0~19  ; |Comparateur|LessThan0~19  ; out0             ;
+; |Comparateur|LessThan0~20  ; |Comparateur|LessThan0~20  ; out0             ;
+; |Comparateur|LessThan0~21  ; |Comparateur|LessThan0~21  ; out0             ;
+; |Comparateur|LessThan0~22  ; |Comparateur|LessThan0~22  ; out0             ;
+; |Comparateur|LessThan0~23  ; |Comparateur|LessThan0~23  ; out0             ;
+; |Comparateur|LessThan0~24  ; |Comparateur|LessThan0~24  ; out0             ;
+; |Comparateur|LessThan0~25  ; |Comparateur|LessThan0~25  ; out0             ;
+; |Comparateur|LessThan0~26  ; |Comparateur|LessThan0~26  ; out0             ;
+; |Comparateur|LessThan0~27  ; |Comparateur|LessThan0~27  ; out0             ;
+; |Comparateur|LessThan0~28  ; |Comparateur|LessThan0~28  ; out0             ;
+; |Comparateur|LessThan0~29  ; |Comparateur|LessThan0~29  ; out0             ;
+; |Comparateur|LessThan0~30  ; |Comparateur|LessThan0~30  ; out0             ;
+; |Comparateur|LessThan0~31  ; |Comparateur|LessThan0~31  ; out0             ;
+; |Comparateur|LessThan0~32  ; |Comparateur|LessThan0~32  ; out0             ;
+; |Comparateur|LessThan0~33  ; |Comparateur|LessThan0~33  ; out0             ;
+; |Comparateur|LessThan0~34  ; |Comparateur|LessThan0~34  ; out0             ;
+; |Comparateur|LessThan0~35  ; |Comparateur|LessThan0~35  ; out0             ;
+; |Comparateur|LessThan0~36  ; |Comparateur|LessThan0~36  ; out0             ;
+; |Comparateur|LessThan0~37  ; |Comparateur|LessThan0~37  ; out0             ;
+; |Comparateur|LessThan0~38  ; |Comparateur|LessThan0~38  ; out0             ;
+; |Comparateur|LessThan1~1   ; |Comparateur|LessThan1~1   ; out0             ;
+; |Comparateur|LessThan1~2   ; |Comparateur|LessThan1~2   ; out0             ;
+; |Comparateur|LessThan1~3   ; |Comparateur|LessThan1~3   ; out0             ;
+; |Comparateur|LessThan1~5   ; |Comparateur|LessThan1~5   ; out0             ;
+; |Comparateur|LessThan1~7   ; |Comparateur|LessThan1~7   ; out0             ;
+; |Comparateur|LessThan1~9   ; |Comparateur|LessThan1~9   ; out0             ;
+; |Comparateur|LessThan1~11  ; |Comparateur|LessThan1~11  ; out0             ;
+; |Comparateur|LessThan1~13  ; |Comparateur|LessThan1~13  ; out0             ;
+; |Comparateur|LessThan1~15  ; |Comparateur|LessThan1~15  ; out0             ;
+; |Comparateur|LessThan1~17  ; |Comparateur|LessThan1~17  ; out0             ;
+; |Comparateur|LessThan1~19  ; |Comparateur|LessThan1~19  ; out0             ;
+; |Comparateur|LessThan1~21  ; |Comparateur|LessThan1~21  ; out0             ;
+; |Comparateur|LessThan1~23  ; |Comparateur|LessThan1~23  ; out0             ;
+; |Comparateur|LessThan1~25  ; |Comparateur|LessThan1~25  ; out0             ;
+; |Comparateur|LessThan1~27  ; |Comparateur|LessThan1~27  ; out0             ;
+; |Comparateur|LessThan1~29  ; |Comparateur|LessThan1~29  ; out0             ;
+; |Comparateur|LessThan1~31  ; |Comparateur|LessThan1~31  ; out0             ;
+; |Comparateur|LessThan1~33  ; |Comparateur|LessThan1~33  ; out0             ;
+; |Comparateur|LessThan1~35  ; |Comparateur|LessThan1~35  ; out0             ;
+; |Comparateur|LessThan1~37  ; |Comparateur|LessThan1~37  ; out0             ;
+; |Comparateur|LessThan1~39  ; |Comparateur|LessThan1~39  ; out0             ;
+; |Comparateur|LessThan1~41  ; |Comparateur|LessThan1~41  ; out0             ;
+; |Comparateur|LessThan1~43  ; |Comparateur|LessThan1~43  ; out0             ;
+; |Comparateur|LessThan1~45  ; |Comparateur|LessThan1~45  ; out0             ;
+; |Comparateur|LessThan1~47  ; |Comparateur|LessThan1~47  ; out0             ;
+; |Comparateur|LessThan1~49  ; |Comparateur|LessThan1~49  ; out0             ;
+; |Comparateur|LessThan1~51  ; |Comparateur|LessThan1~51  ; out0             ;
+; |Comparateur|LessThan1~53  ; |Comparateur|LessThan1~53  ; out0             ;
+; |Comparateur|LessThan1~55  ; |Comparateur|LessThan1~55  ; out0             ;
+; |Comparateur|LessThan1~57  ; |Comparateur|LessThan1~57  ; out0             ;
+; |Comparateur|LessThan1~59  ; |Comparateur|LessThan1~59  ; out0             ;
+; |Comparateur|LessThan1~61  ; |Comparateur|LessThan1~61  ; out0             ;
+; |Comparateur|LessThan1~63  ; |Comparateur|LessThan1~63  ; out0             ;
+; |Comparateur|LessThan1~65  ; |Comparateur|LessThan1~65  ; out0             ;
+; |Comparateur|LessThan1~67  ; |Comparateur|LessThan1~67  ; out0             ;
+; |Comparateur|LessThan1~69  ; |Comparateur|LessThan1~69  ; out0             ;
+; |Comparateur|LessThan1~71  ; |Comparateur|LessThan1~71  ; out0             ;
+; |Comparateur|LessThan1~73  ; |Comparateur|LessThan1~73  ; out0             ;
+; |Comparateur|LessThan1~75  ; |Comparateur|LessThan1~75  ; out0             ;
+; |Comparateur|LessThan1~77  ; |Comparateur|LessThan1~77  ; out0             ;
+; |Comparateur|LessThan1~79  ; |Comparateur|LessThan1~79  ; out0             ;
+; |Comparateur|LessThan1~81  ; |Comparateur|LessThan1~81  ; out0             ;
+; |Comparateur|LessThan1~83  ; |Comparateur|LessThan1~83  ; out0             ;
+; |Comparateur|LessThan1~85  ; |Comparateur|LessThan1~85  ; out0             ;
+; |Comparateur|LessThan1~87  ; |Comparateur|LessThan1~87  ; out0             ;
+; |Comparateur|LessThan1~89  ; |Comparateur|LessThan1~89  ; out0             ;
+; |Comparateur|LessThan1~91  ; |Comparateur|LessThan1~91  ; out0             ;
+; |Comparateur|LessThan1~93  ; |Comparateur|LessThan1~93  ; out0             ;
+; |Comparateur|LessThan1~95  ; |Comparateur|LessThan1~95  ; out0             ;
+; |Comparateur|LessThan1~97  ; |Comparateur|LessThan1~97  ; out0             ;
+; |Comparateur|LessThan1~99  ; |Comparateur|LessThan1~99  ; out0             ;
+; |Comparateur|LessThan1~101 ; |Comparateur|LessThan1~101 ; out0             ;
+; |Comparateur|LessThan1~103 ; |Comparateur|LessThan1~103 ; out0             ;
+; |Comparateur|LessThan1~105 ; |Comparateur|LessThan1~105 ; out0             ;
+; |Comparateur|LessThan1~107 ; |Comparateur|LessThan1~107 ; out0             ;
+; |Comparateur|LessThan1~109 ; |Comparateur|LessThan1~109 ; out0             ;
+; |Comparateur|LessThan1~111 ; |Comparateur|LessThan1~111 ; out0             ;
+; |Comparateur|LessThan1~113 ; |Comparateur|LessThan1~113 ; out0             ;
+; |Comparateur|LessThan1~115 ; |Comparateur|LessThan1~115 ; out0             ;
+; |Comparateur|LessThan1~117 ; |Comparateur|LessThan1~117 ; out0             ;
+; |Comparateur|LessThan1~119 ; |Comparateur|LessThan1~119 ; out0             ;
+; |Comparateur|Add0~0        ; |Comparateur|Add0~0        ; out0             ;
+; |Comparateur|Add0~1        ; |Comparateur|Add0~1        ; out0             ;
+; |Comparateur|Add0~2        ; |Comparateur|Add0~2        ; out0             ;
+; |Comparateur|Equal0~0      ; |Comparateur|Equal0~0      ; out0             ;
+; |Comparateur|Equal1~0      ; |Comparateur|Equal1~0      ; out0             ;
+; |Comparateur|Equal1~1      ; |Comparateur|Equal1~1      ; out0             ;
+; |Comparateur|Equal1~2      ; |Comparateur|Equal1~2      ; out0             ;
+; |Comparateur|Equal1~3      ; |Comparateur|Equal1~3      ; out0             ;
+; |Comparateur|Equal2~0      ; |Comparateur|Equal2~0      ; out0             ;
++----------------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                   ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |Comparateur|state[6]      ; |Comparateur|state[6]      ; regout           ;
+; |Comparateur|duty[31]~0    ; |Comparateur|duty[31]~0    ; out0             ;
+; |Comparateur|duty[31]~1    ; |Comparateur|duty[31]~1    ; out0             ;
+; |Comparateur|duty[2]~2     ; |Comparateur|duty[2]~2     ; out              ;
+; |Comparateur|duty[1]~3     ; |Comparateur|duty[1]~3     ; out              ;
+; |Comparateur|state~0       ; |Comparateur|state~0       ; out              ;
+; |Comparateur|state~1       ; |Comparateur|state~1       ; out              ;
+; |Comparateur|state~2       ; |Comparateur|state~2       ; out              ;
+; |Comparateur|state~3       ; |Comparateur|state~3       ; out              ;
+; |Comparateur|state~4       ; |Comparateur|state~4       ; out              ;
+; |Comparateur|state~5       ; |Comparateur|state~5       ; out              ;
+; |Comparateur|state~6       ; |Comparateur|state~6       ; out              ;
+; |Comparateur|state~7       ; |Comparateur|state~7       ; out              ;
+; |Comparateur|state~8       ; |Comparateur|state~8       ; out              ;
+; |Comparateur|state~9       ; |Comparateur|state~9       ; out              ;
+; |Comparateur|state~10      ; |Comparateur|state~10      ; out              ;
+; |Comparateur|state~11      ; |Comparateur|state~11      ; out              ;
+; |Comparateur|state~12      ; |Comparateur|state~12      ; out              ;
+; |Comparateur|state~13      ; |Comparateur|state~13      ; out              ;
+; |Comparateur|state~14      ; |Comparateur|state~14      ; out              ;
+; |Comparateur|state~15      ; |Comparateur|state~15      ; out              ;
+; |Comparateur|state~16      ; |Comparateur|state~16      ; out              ;
+; |Comparateur|state~17      ; |Comparateur|state~17      ; out              ;
+; |Comparateur|state~18      ; |Comparateur|state~18      ; out              ;
+; |Comparateur|state~19      ; |Comparateur|state~19      ; out              ;
+; |Comparateur|state~20      ; |Comparateur|state~20      ; out              ;
+; |Comparateur|state~21      ; |Comparateur|state~21      ; out              ;
+; |Comparateur|state~22      ; |Comparateur|state~22      ; out              ;
+; |Comparateur|state~23      ; |Comparateur|state~23      ; out              ;
+; |Comparateur|state~24      ; |Comparateur|state~24      ; out              ;
+; |Comparateur|state~25      ; |Comparateur|state~25      ; out              ;
+; |Comparateur|state~26      ; |Comparateur|state~26      ; out              ;
+; |Comparateur|state~27      ; |Comparateur|state~27      ; out              ;
+; |Comparateur|state~28      ; |Comparateur|state~28      ; out              ;
+; |Comparateur|state~29      ; |Comparateur|state~29      ; out              ;
+; |Comparateur|state~30      ; |Comparateur|state~30      ; out              ;
+; |Comparateur|state[5]      ; |Comparateur|state[5]      ; regout           ;
+; |Comparateur|state[4]      ; |Comparateur|state[4]      ; regout           ;
+; |Comparateur|state[3]      ; |Comparateur|state[3]      ; regout           ;
+; |Comparateur|state[2]      ; |Comparateur|state[2]      ; regout           ;
+; |Comparateur|state[1]      ; |Comparateur|state[1]      ; regout           ;
+; |Comparateur|state~32      ; |Comparateur|state~32      ; out              ;
+; |Comparateur|state~33      ; |Comparateur|state~33      ; out              ;
+; |Comparateur|state~34      ; |Comparateur|state~34      ; out              ;
+; |Comparateur|state~35      ; |Comparateur|state~35      ; out              ;
+; |Comparateur|state~36      ; |Comparateur|state~36      ; out              ;
+; |Comparateur|state~37      ; |Comparateur|state~37      ; out              ;
+; |Comparateur|state~38      ; |Comparateur|state~38      ; out              ;
+; |Comparateur|state~39      ; |Comparateur|state~39      ; out              ;
+; |Comparateur|state~40      ; |Comparateur|state~40      ; out              ;
+; |Comparateur|state~41      ; |Comparateur|state~41      ; out              ;
+; |Comparateur|state~42      ; |Comparateur|state~42      ; out              ;
+; |Comparateur|state~43      ; |Comparateur|state~43      ; out              ;
+; |Comparateur|state~44      ; |Comparateur|state~44      ; out              ;
+; |Comparateur|state~45      ; |Comparateur|state~45      ; out              ;
+; |Comparateur|state~46      ; |Comparateur|state~46      ; out              ;
+; |Comparateur|state~47      ; |Comparateur|state~47      ; out              ;
+; |Comparateur|state~48      ; |Comparateur|state~48      ; out              ;
+; |Comparateur|state~49      ; |Comparateur|state~49      ; out              ;
+; |Comparateur|state~50      ; |Comparateur|state~50      ; out              ;
+; |Comparateur|state~51      ; |Comparateur|state~51      ; out              ;
+; |Comparateur|state~52      ; |Comparateur|state~52      ; out              ;
+; |Comparateur|state~53      ; |Comparateur|state~53      ; out              ;
+; |Comparateur|state~54      ; |Comparateur|state~54      ; out              ;
+; |Comparateur|state~55      ; |Comparateur|state~55      ; out              ;
+; |Comparateur|state~56      ; |Comparateur|state~56      ; out              ;
+; |Comparateur|state~57      ; |Comparateur|state~57      ; out              ;
+; |Comparateur|state~58      ; |Comparateur|state~58      ; out              ;
+; |Comparateur|state~59      ; |Comparateur|state~59      ; out              ;
+; |Comparateur|state~60      ; |Comparateur|state~60      ; out              ;
+; |Comparateur|state~61      ; |Comparateur|state~61      ; out              ;
+; |Comparateur|state~62      ; |Comparateur|state~62      ; out              ;
+; |Comparateur|cpt~0         ; |Comparateur|cpt~0         ; out              ;
+; |Comparateur|cpt~1         ; |Comparateur|cpt~1         ; out              ;
+; |Comparateur|cpt~2         ; |Comparateur|cpt~2         ; out              ;
+; |Comparateur|cpt~3         ; |Comparateur|cpt~3         ; out              ;
+; |Comparateur|cpt~4         ; |Comparateur|cpt~4         ; out              ;
+; |Comparateur|cpt~5         ; |Comparateur|cpt~5         ; out              ;
+; |Comparateur|cpt~6         ; |Comparateur|cpt~6         ; out              ;
+; |Comparateur|cpt~7         ; |Comparateur|cpt~7         ; out              ;
+; |Comparateur|cpt~8         ; |Comparateur|cpt~8         ; out              ;
+; |Comparateur|cpt~9         ; |Comparateur|cpt~9         ; out              ;
+; |Comparateur|cpt~10        ; |Comparateur|cpt~10        ; out              ;
+; |Comparateur|cpt~11        ; |Comparateur|cpt~11        ; out              ;
+; |Comparateur|cpt~12        ; |Comparateur|cpt~12        ; out              ;
+; |Comparateur|cpt~13        ; |Comparateur|cpt~13        ; out              ;
+; |Comparateur|cpt~14        ; |Comparateur|cpt~14        ; out              ;
+; |Comparateur|cpt~15        ; |Comparateur|cpt~15        ; out              ;
+; |Comparateur|cpt~16        ; |Comparateur|cpt~16        ; out              ;
+; |Comparateur|cpt~17        ; |Comparateur|cpt~17        ; out              ;
+; |Comparateur|cpt~18        ; |Comparateur|cpt~18        ; out              ;
+; |Comparateur|cpt~19        ; |Comparateur|cpt~19        ; out              ;
+; |Comparateur|cpt~20        ; |Comparateur|cpt~20        ; out              ;
+; |Comparateur|cpt~21        ; |Comparateur|cpt~21        ; out              ;
+; |Comparateur|cpt~22        ; |Comparateur|cpt~22        ; out              ;
+; |Comparateur|cpt~23        ; |Comparateur|cpt~23        ; out              ;
+; |Comparateur|cpt~24        ; |Comparateur|cpt~24        ; out              ;
+; |Comparateur|cpt~25        ; |Comparateur|cpt~25        ; out              ;
+; |Comparateur|cpt~26        ; |Comparateur|cpt~26        ; out              ;
+; |Comparateur|cpt~27        ; |Comparateur|cpt~27        ; out              ;
+; |Comparateur|cpt~28        ; |Comparateur|cpt~28        ; out              ;
+; |Comparateur|duty[31]~4    ; |Comparateur|duty[31]~4    ; out0             ;
+; |Comparateur|state[7]      ; |Comparateur|state[7]      ; regout           ;
+; |Comparateur|state[8]      ; |Comparateur|state[8]      ; regout           ;
+; |Comparateur|state[9]      ; |Comparateur|state[9]      ; regout           ;
+; |Comparateur|state[10]     ; |Comparateur|state[10]     ; regout           ;
+; |Comparateur|state[11]     ; |Comparateur|state[11]     ; regout           ;
+; |Comparateur|state[12]     ; |Comparateur|state[12]     ; regout           ;
+; |Comparateur|state[13]     ; |Comparateur|state[13]     ; regout           ;
+; |Comparateur|state[14]     ; |Comparateur|state[14]     ; regout           ;
+; |Comparateur|state[15]     ; |Comparateur|state[15]     ; regout           ;
+; |Comparateur|state[16]     ; |Comparateur|state[16]     ; regout           ;
+; |Comparateur|state[17]     ; |Comparateur|state[17]     ; regout           ;
+; |Comparateur|state[18]     ; |Comparateur|state[18]     ; regout           ;
+; |Comparateur|state[19]     ; |Comparateur|state[19]     ; regout           ;
+; |Comparateur|state[20]     ; |Comparateur|state[20]     ; regout           ;
+; |Comparateur|state[21]     ; |Comparateur|state[21]     ; regout           ;
+; |Comparateur|state[22]     ; |Comparateur|state[22]     ; regout           ;
+; |Comparateur|state[23]     ; |Comparateur|state[23]     ; regout           ;
+; |Comparateur|state[24]     ; |Comparateur|state[24]     ; regout           ;
+; |Comparateur|state[25]     ; |Comparateur|state[25]     ; regout           ;
+; |Comparateur|state[26]     ; |Comparateur|state[26]     ; regout           ;
+; |Comparateur|state[27]     ; |Comparateur|state[27]     ; regout           ;
+; |Comparateur|state[28]     ; |Comparateur|state[28]     ; regout           ;
+; |Comparateur|state[29]     ; |Comparateur|state[29]     ; regout           ;
+; |Comparateur|state[30]     ; |Comparateur|state[30]     ; regout           ;
+; |Comparateur|state[31]     ; |Comparateur|state[31]     ; regout           ;
+; |Comparateur|duty[2]       ; |Comparateur|duty[2]       ; out              ;
+; |Comparateur|comb~0        ; |Comparateur|comb~0        ; out0             ;
+; |Comparateur|duty[1]       ; |Comparateur|duty[1]       ; out              ;
+; |Comparateur|comb~1        ; |Comparateur|comb~1        ; out0             ;
+; |Comparateur|duty[0]       ; |Comparateur|duty[0]       ; out              ;
+; |Comparateur|comb~2        ; |Comparateur|comb~2        ; out0             ;
+; |Comparateur|comb~3        ; |Comparateur|comb~3        ; out0             ;
+; |Comparateur|cpt[3]        ; |Comparateur|cpt[3]        ; regout           ;
+; |Comparateur|cpt[4]        ; |Comparateur|cpt[4]        ; regout           ;
+; |Comparateur|cpt[5]        ; |Comparateur|cpt[5]        ; regout           ;
+; |Comparateur|cpt[6]        ; |Comparateur|cpt[6]        ; regout           ;
+; |Comparateur|cpt[7]        ; |Comparateur|cpt[7]        ; regout           ;
+; |Comparateur|cpt[8]        ; |Comparateur|cpt[8]        ; regout           ;
+; |Comparateur|cpt[9]        ; |Comparateur|cpt[9]        ; regout           ;
+; |Comparateur|cpt[10]       ; |Comparateur|cpt[10]       ; regout           ;
+; |Comparateur|cpt[11]       ; |Comparateur|cpt[11]       ; regout           ;
+; |Comparateur|cpt[12]       ; |Comparateur|cpt[12]       ; regout           ;
+; |Comparateur|cpt[13]       ; |Comparateur|cpt[13]       ; regout           ;
+; |Comparateur|cpt[14]       ; |Comparateur|cpt[14]       ; regout           ;
+; |Comparateur|cpt[15]       ; |Comparateur|cpt[15]       ; regout           ;
+; |Comparateur|cpt[16]       ; |Comparateur|cpt[16]       ; regout           ;
+; |Comparateur|cpt[17]       ; |Comparateur|cpt[17]       ; regout           ;
+; |Comparateur|cpt[18]       ; |Comparateur|cpt[18]       ; regout           ;
+; |Comparateur|cpt[19]       ; |Comparateur|cpt[19]       ; regout           ;
+; |Comparateur|cpt[20]       ; |Comparateur|cpt[20]       ; regout           ;
+; |Comparateur|cpt[21]       ; |Comparateur|cpt[21]       ; regout           ;
+; |Comparateur|cpt[22]       ; |Comparateur|cpt[22]       ; regout           ;
+; |Comparateur|cpt[23]       ; |Comparateur|cpt[23]       ; regout           ;
+; |Comparateur|cpt[24]       ; |Comparateur|cpt[24]       ; regout           ;
+; |Comparateur|cpt[25]       ; |Comparateur|cpt[25]       ; regout           ;
+; |Comparateur|cpt[26]       ; |Comparateur|cpt[26]       ; regout           ;
+; |Comparateur|cpt[27]       ; |Comparateur|cpt[27]       ; regout           ;
+; |Comparateur|cpt[28]       ; |Comparateur|cpt[28]       ; regout           ;
+; |Comparateur|cpt[29]       ; |Comparateur|cpt[29]       ; regout           ;
+; |Comparateur|cpt[30]       ; |Comparateur|cpt[30]       ; regout           ;
+; |Comparateur|cpt[31]       ; |Comparateur|cpt[31]       ; regout           ;
+; |Comparateur|duty[0]~5     ; |Comparateur|duty[0]~5     ; out              ;
+; |Comparateur|duty[0]~6     ; |Comparateur|duty[0]~6     ; out              ;
+; |Comparateur|comb~4        ; |Comparateur|comb~4        ; out0             ;
+; |Comparateur|duty[1]~7     ; |Comparateur|duty[1]~7     ; out              ;
+; |Comparateur|comb~5        ; |Comparateur|comb~5        ; out0             ;
+; |Comparateur|duty[2]~8     ; |Comparateur|duty[2]~8     ; out              ;
+; |Comparateur|BTN1          ; |Comparateur|BTN1          ; out              ;
+; |Comparateur|BTN2          ; |Comparateur|BTN2          ; out              ;
+; |Comparateur|BTN3          ; |Comparateur|BTN3          ; out              ;
+; |Comparateur|BTN4          ; |Comparateur|BTN4          ; out              ;
+; |Comparateur|LessThan0~5   ; |Comparateur|LessThan0~5   ; out0             ;
+; |Comparateur|LessThan1~0   ; |Comparateur|LessThan1~0   ; out0             ;
+; |Comparateur|LessThan1~4   ; |Comparateur|LessThan1~4   ; out0             ;
+; |Comparateur|LessThan1~6   ; |Comparateur|LessThan1~6   ; out0             ;
+; |Comparateur|LessThan1~8   ; |Comparateur|LessThan1~8   ; out0             ;
+; |Comparateur|LessThan1~10  ; |Comparateur|LessThan1~10  ; out0             ;
+; |Comparateur|LessThan1~12  ; |Comparateur|LessThan1~12  ; out0             ;
+; |Comparateur|LessThan1~14  ; |Comparateur|LessThan1~14  ; out0             ;
+; |Comparateur|LessThan1~16  ; |Comparateur|LessThan1~16  ; out0             ;
+; |Comparateur|LessThan1~18  ; |Comparateur|LessThan1~18  ; out0             ;
+; |Comparateur|LessThan1~20  ; |Comparateur|LessThan1~20  ; out0             ;
+; |Comparateur|LessThan1~22  ; |Comparateur|LessThan1~22  ; out0             ;
+; |Comparateur|LessThan1~24  ; |Comparateur|LessThan1~24  ; out0             ;
+; |Comparateur|LessThan1~26  ; |Comparateur|LessThan1~26  ; out0             ;
+; |Comparateur|LessThan1~28  ; |Comparateur|LessThan1~28  ; out0             ;
+; |Comparateur|LessThan1~30  ; |Comparateur|LessThan1~30  ; out0             ;
+; |Comparateur|LessThan1~32  ; |Comparateur|LessThan1~32  ; out0             ;
+; |Comparateur|LessThan1~34  ; |Comparateur|LessThan1~34  ; out0             ;
+; |Comparateur|LessThan1~36  ; |Comparateur|LessThan1~36  ; out0             ;
+; |Comparateur|LessThan1~38  ; |Comparateur|LessThan1~38  ; out0             ;
+; |Comparateur|LessThan1~40  ; |Comparateur|LessThan1~40  ; out0             ;
+; |Comparateur|LessThan1~42  ; |Comparateur|LessThan1~42  ; out0             ;
+; |Comparateur|LessThan1~44  ; |Comparateur|LessThan1~44  ; out0             ;
+; |Comparateur|LessThan1~46  ; |Comparateur|LessThan1~46  ; out0             ;
+; |Comparateur|LessThan1~48  ; |Comparateur|LessThan1~48  ; out0             ;
+; |Comparateur|LessThan1~50  ; |Comparateur|LessThan1~50  ; out0             ;
+; |Comparateur|LessThan1~52  ; |Comparateur|LessThan1~52  ; out0             ;
+; |Comparateur|LessThan1~54  ; |Comparateur|LessThan1~54  ; out0             ;
+; |Comparateur|LessThan1~56  ; |Comparateur|LessThan1~56  ; out0             ;
+; |Comparateur|LessThan1~58  ; |Comparateur|LessThan1~58  ; out0             ;
+; |Comparateur|LessThan1~60  ; |Comparateur|LessThan1~60  ; out0             ;
+; |Comparateur|LessThan1~62  ; |Comparateur|LessThan1~62  ; out0             ;
+; |Comparateur|LessThan1~64  ; |Comparateur|LessThan1~64  ; out0             ;
+; |Comparateur|LessThan1~66  ; |Comparateur|LessThan1~66  ; out0             ;
+; |Comparateur|LessThan1~68  ; |Comparateur|LessThan1~68  ; out0             ;
+; |Comparateur|LessThan1~70  ; |Comparateur|LessThan1~70  ; out0             ;
+; |Comparateur|LessThan1~72  ; |Comparateur|LessThan1~72  ; out0             ;
+; |Comparateur|LessThan1~74  ; |Comparateur|LessThan1~74  ; out0             ;
+; |Comparateur|LessThan1~76  ; |Comparateur|LessThan1~76  ; out0             ;
+; |Comparateur|LessThan1~78  ; |Comparateur|LessThan1~78  ; out0             ;
+; |Comparateur|LessThan1~80  ; |Comparateur|LessThan1~80  ; out0             ;
+; |Comparateur|LessThan1~82  ; |Comparateur|LessThan1~82  ; out0             ;
+; |Comparateur|LessThan1~84  ; |Comparateur|LessThan1~84  ; out0             ;
+; |Comparateur|LessThan1~86  ; |Comparateur|LessThan1~86  ; out0             ;
+; |Comparateur|LessThan1~88  ; |Comparateur|LessThan1~88  ; out0             ;
+; |Comparateur|LessThan1~90  ; |Comparateur|LessThan1~90  ; out0             ;
+; |Comparateur|LessThan1~92  ; |Comparateur|LessThan1~92  ; out0             ;
+; |Comparateur|LessThan1~94  ; |Comparateur|LessThan1~94  ; out0             ;
+; |Comparateur|LessThan1~96  ; |Comparateur|LessThan1~96  ; out0             ;
+; |Comparateur|LessThan1~98  ; |Comparateur|LessThan1~98  ; out0             ;
+; |Comparateur|LessThan1~100 ; |Comparateur|LessThan1~100 ; out0             ;
+; |Comparateur|LessThan1~102 ; |Comparateur|LessThan1~102 ; out0             ;
+; |Comparateur|LessThan1~104 ; |Comparateur|LessThan1~104 ; out0             ;
+; |Comparateur|LessThan1~106 ; |Comparateur|LessThan1~106 ; out0             ;
+; |Comparateur|LessThan1~108 ; |Comparateur|LessThan1~108 ; out0             ;
+; |Comparateur|LessThan1~110 ; |Comparateur|LessThan1~110 ; out0             ;
+; |Comparateur|LessThan1~112 ; |Comparateur|LessThan1~112 ; out0             ;
+; |Comparateur|LessThan1~114 ; |Comparateur|LessThan1~114 ; out0             ;
+; |Comparateur|LessThan1~116 ; |Comparateur|LessThan1~116 ; out0             ;
+; |Comparateur|LessThan1~118 ; |Comparateur|LessThan1~118 ; out0             ;
+; |Comparateur|Add0~3        ; |Comparateur|Add0~3        ; out0             ;
+; |Comparateur|Add0~4        ; |Comparateur|Add0~4        ; out0             ;
+; |Comparateur|Add0~5        ; |Comparateur|Add0~5        ; out0             ;
+; |Comparateur|Add0~6        ; |Comparateur|Add0~6        ; out0             ;
+; |Comparateur|Add0~7        ; |Comparateur|Add0~7        ; out0             ;
+; |Comparateur|Add0~8        ; |Comparateur|Add0~8        ; out0             ;
+; |Comparateur|Add0~9        ; |Comparateur|Add0~9        ; out0             ;
+; |Comparateur|Add0~10       ; |Comparateur|Add0~10       ; out0             ;
+; |Comparateur|Add0~11       ; |Comparateur|Add0~11       ; out0             ;
+; |Comparateur|Add0~12       ; |Comparateur|Add0~12       ; out0             ;
+; |Comparateur|Add0~13       ; |Comparateur|Add0~13       ; out0             ;
+; |Comparateur|Add0~14       ; |Comparateur|Add0~14       ; out0             ;
+; |Comparateur|Add0~15       ; |Comparateur|Add0~15       ; out0             ;
+; |Comparateur|Add0~16       ; |Comparateur|Add0~16       ; out0             ;
+; |Comparateur|Add0~17       ; |Comparateur|Add0~17       ; out0             ;
+; |Comparateur|Add0~18       ; |Comparateur|Add0~18       ; out0             ;
+; |Comparateur|Add0~19       ; |Comparateur|Add0~19       ; out0             ;
+; |Comparateur|Add0~20       ; |Comparateur|Add0~20       ; out0             ;
+; |Comparateur|Add0~21       ; |Comparateur|Add0~21       ; out0             ;
+; |Comparateur|Add0~22       ; |Comparateur|Add0~22       ; out0             ;
+; |Comparateur|Add0~23       ; |Comparateur|Add0~23       ; out0             ;
+; |Comparateur|Add0~24       ; |Comparateur|Add0~24       ; out0             ;
+; |Comparateur|Add0~25       ; |Comparateur|Add0~25       ; out0             ;
+; |Comparateur|Add0~26       ; |Comparateur|Add0~26       ; out0             ;
+; |Comparateur|Add0~27       ; |Comparateur|Add0~27       ; out0             ;
+; |Comparateur|Add0~28       ; |Comparateur|Add0~28       ; out0             ;
+; |Comparateur|Add0~29       ; |Comparateur|Add0~29       ; out0             ;
+; |Comparateur|Add0~30       ; |Comparateur|Add0~30       ; out0             ;
+; |Comparateur|Add0~31       ; |Comparateur|Add0~31       ; out0             ;
+; |Comparateur|Add0~32       ; |Comparateur|Add0~32       ; out0             ;
+; |Comparateur|Add0~33       ; |Comparateur|Add0~33       ; out0             ;
+; |Comparateur|Add0~34       ; |Comparateur|Add0~34       ; out0             ;
+; |Comparateur|Add0~35       ; |Comparateur|Add0~35       ; out0             ;
+; |Comparateur|Add0~36       ; |Comparateur|Add0~36       ; out0             ;
+; |Comparateur|Add0~37       ; |Comparateur|Add0~37       ; out0             ;
+; |Comparateur|Add0~38       ; |Comparateur|Add0~38       ; out0             ;
+; |Comparateur|Add0~39       ; |Comparateur|Add0~39       ; out0             ;
+; |Comparateur|Add0~40       ; |Comparateur|Add0~40       ; out0             ;
+; |Comparateur|Add0~41       ; |Comparateur|Add0~41       ; out0             ;
+; |Comparateur|Add0~42       ; |Comparateur|Add0~42       ; out0             ;
+; |Comparateur|Add0~43       ; |Comparateur|Add0~43       ; out0             ;
+; |Comparateur|Add0~44       ; |Comparateur|Add0~44       ; out0             ;
+; |Comparateur|Add0~45       ; |Comparateur|Add0~45       ; out0             ;
+; |Comparateur|Add0~46       ; |Comparateur|Add0~46       ; out0             ;
+; |Comparateur|Add0~47       ; |Comparateur|Add0~47       ; out0             ;
+; |Comparateur|Add0~48       ; |Comparateur|Add0~48       ; out0             ;
+; |Comparateur|Add0~49       ; |Comparateur|Add0~49       ; out0             ;
+; |Comparateur|Add0~50       ; |Comparateur|Add0~50       ; out0             ;
+; |Comparateur|Add0~51       ; |Comparateur|Add0~51       ; out0             ;
+; |Comparateur|Add0~52       ; |Comparateur|Add0~52       ; out0             ;
+; |Comparateur|Add0~53       ; |Comparateur|Add0~53       ; out0             ;
+; |Comparateur|Add0~54       ; |Comparateur|Add0~54       ; out0             ;
+; |Comparateur|Add0~55       ; |Comparateur|Add0~55       ; out0             ;
+; |Comparateur|Add0~56       ; |Comparateur|Add0~56       ; out0             ;
+; |Comparateur|Add0~57       ; |Comparateur|Add0~57       ; out0             ;
+; |Comparateur|Add0~58       ; |Comparateur|Add0~58       ; out0             ;
+; |Comparateur|Add0~59       ; |Comparateur|Add0~59       ; out0             ;
+; |Comparateur|Add0~60       ; |Comparateur|Add0~60       ; out0             ;
+; |Comparateur|Add1~0        ; |Comparateur|Add1~0        ; out0             ;
+; |Comparateur|Add1~1        ; |Comparateur|Add1~1        ; out0             ;
+; |Comparateur|Add1~2        ; |Comparateur|Add1~2        ; out0             ;
+; |Comparateur|Add2~0        ; |Comparateur|Add2~0        ; out0             ;
+; |Comparateur|Add2~1        ; |Comparateur|Add2~1        ; out0             ;
+; |Comparateur|Add2~2        ; |Comparateur|Add2~2        ; out0             ;
+; |Comparateur|Add2~3        ; |Comparateur|Add2~3        ; out0             ;
+; |Comparateur|Add2~4        ; |Comparateur|Add2~4        ; out0             ;
+; |Comparateur|Add2~5        ; |Comparateur|Add2~5        ; out0             ;
+; |Comparateur|Add2~6        ; |Comparateur|Add2~6        ; out0             ;
+; |Comparateur|Add2~7        ; |Comparateur|Add2~7        ; out0             ;
+; |Comparateur|Add2~8        ; |Comparateur|Add2~8        ; out0             ;
+; |Comparateur|Add2~9        ; |Comparateur|Add2~9        ; out0             ;
+; |Comparateur|Add2~10       ; |Comparateur|Add2~10       ; out0             ;
+; |Comparateur|Add2~11       ; |Comparateur|Add2~11       ; out0             ;
+; |Comparateur|Add2~12       ; |Comparateur|Add2~12       ; out0             ;
+; |Comparateur|Add2~13       ; |Comparateur|Add2~13       ; out0             ;
+; |Comparateur|Add2~14       ; |Comparateur|Add2~14       ; out0             ;
+; |Comparateur|Add2~15       ; |Comparateur|Add2~15       ; out0             ;
+; |Comparateur|Add2~16       ; |Comparateur|Add2~16       ; out0             ;
+; |Comparateur|Add2~17       ; |Comparateur|Add2~17       ; out0             ;
+; |Comparateur|Add2~18       ; |Comparateur|Add2~18       ; out0             ;
+; |Comparateur|Add2~19       ; |Comparateur|Add2~19       ; out0             ;
+; |Comparateur|Add2~20       ; |Comparateur|Add2~20       ; out0             ;
+; |Comparateur|Add2~21       ; |Comparateur|Add2~21       ; out0             ;
+; |Comparateur|Add2~22       ; |Comparateur|Add2~22       ; out0             ;
+; |Comparateur|Add2~23       ; |Comparateur|Add2~23       ; out0             ;
+; |Comparateur|Add2~24       ; |Comparateur|Add2~24       ; out0             ;
+; |Comparateur|Add2~25       ; |Comparateur|Add2~25       ; out0             ;
+; |Comparateur|Add2~26       ; |Comparateur|Add2~26       ; out0             ;
+; |Comparateur|Add2~27       ; |Comparateur|Add2~27       ; out0             ;
+; |Comparateur|Add2~28       ; |Comparateur|Add2~28       ; out0             ;
+; |Comparateur|Add2~29       ; |Comparateur|Add2~29       ; out0             ;
+; |Comparateur|Add2~30       ; |Comparateur|Add2~30       ; out0             ;
+; |Comparateur|Add2~31       ; |Comparateur|Add2~31       ; out0             ;
+; |Comparateur|Add2~32       ; |Comparateur|Add2~32       ; out0             ;
+; |Comparateur|Add2~33       ; |Comparateur|Add2~33       ; out0             ;
+; |Comparateur|Add2~34       ; |Comparateur|Add2~34       ; out0             ;
+; |Comparateur|Add2~35       ; |Comparateur|Add2~35       ; out0             ;
+; |Comparateur|Add2~36       ; |Comparateur|Add2~36       ; out0             ;
+; |Comparateur|Add2~37       ; |Comparateur|Add2~37       ; out0             ;
+; |Comparateur|Add2~38       ; |Comparateur|Add2~38       ; out0             ;
+; |Comparateur|Add2~39       ; |Comparateur|Add2~39       ; out0             ;
+; |Comparateur|Add2~40       ; |Comparateur|Add2~40       ; out0             ;
+; |Comparateur|Add2~41       ; |Comparateur|Add2~41       ; out0             ;
+; |Comparateur|Add2~42       ; |Comparateur|Add2~42       ; out0             ;
+; |Comparateur|Add2~43       ; |Comparateur|Add2~43       ; out0             ;
+; |Comparateur|Add2~44       ; |Comparateur|Add2~44       ; out0             ;
+; |Comparateur|Add2~45       ; |Comparateur|Add2~45       ; out0             ;
+; |Comparateur|Add2~46       ; |Comparateur|Add2~46       ; out0             ;
+; |Comparateur|Add2~47       ; |Comparateur|Add2~47       ; out0             ;
+; |Comparateur|Add2~48       ; |Comparateur|Add2~48       ; out0             ;
+; |Comparateur|Add2~49       ; |Comparateur|Add2~49       ; out0             ;
+; |Comparateur|Add2~50       ; |Comparateur|Add2~50       ; out0             ;
+; |Comparateur|Add2~51       ; |Comparateur|Add2~51       ; out0             ;
+; |Comparateur|Add2~52       ; |Comparateur|Add2~52       ; out0             ;
+; |Comparateur|Add2~53       ; |Comparateur|Add2~53       ; out0             ;
+; |Comparateur|Add2~54       ; |Comparateur|Add2~54       ; out0             ;
+; |Comparateur|Add2~55       ; |Comparateur|Add2~55       ; out0             ;
+; |Comparateur|Add2~56       ; |Comparateur|Add2~56       ; out0             ;
+; |Comparateur|Add2~57       ; |Comparateur|Add2~57       ; out0             ;
+; |Comparateur|Add2~58       ; |Comparateur|Add2~58       ; out0             ;
+; |Comparateur|Add2~59       ; |Comparateur|Add2~59       ; out0             ;
+; |Comparateur|Add2~60       ; |Comparateur|Add2~60       ; out0             ;
+; |Comparateur|Add2~61       ; |Comparateur|Add2~61       ; out0             ;
++----------------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                   ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |Comparateur|state[6]      ; |Comparateur|state[6]      ; regout           ;
+; |Comparateur|duty[31]~0    ; |Comparateur|duty[31]~0    ; out0             ;
+; |Comparateur|duty[31]~1    ; |Comparateur|duty[31]~1    ; out0             ;
+; |Comparateur|duty[2]~2     ; |Comparateur|duty[2]~2     ; out              ;
+; |Comparateur|duty[1]~3     ; |Comparateur|duty[1]~3     ; out              ;
+; |Comparateur|state~0       ; |Comparateur|state~0       ; out              ;
+; |Comparateur|state~1       ; |Comparateur|state~1       ; out              ;
+; |Comparateur|state~2       ; |Comparateur|state~2       ; out              ;
+; |Comparateur|state~3       ; |Comparateur|state~3       ; out              ;
+; |Comparateur|state~4       ; |Comparateur|state~4       ; out              ;
+; |Comparateur|state~5       ; |Comparateur|state~5       ; out              ;
+; |Comparateur|state~6       ; |Comparateur|state~6       ; out              ;
+; |Comparateur|state~7       ; |Comparateur|state~7       ; out              ;
+; |Comparateur|state~8       ; |Comparateur|state~8       ; out              ;
+; |Comparateur|state~9       ; |Comparateur|state~9       ; out              ;
+; |Comparateur|state~10      ; |Comparateur|state~10      ; out              ;
+; |Comparateur|state~11      ; |Comparateur|state~11      ; out              ;
+; |Comparateur|state~12      ; |Comparateur|state~12      ; out              ;
+; |Comparateur|state~13      ; |Comparateur|state~13      ; out              ;
+; |Comparateur|state~14      ; |Comparateur|state~14      ; out              ;
+; |Comparateur|state~15      ; |Comparateur|state~15      ; out              ;
+; |Comparateur|state~16      ; |Comparateur|state~16      ; out              ;
+; |Comparateur|state~17      ; |Comparateur|state~17      ; out              ;
+; |Comparateur|state~18      ; |Comparateur|state~18      ; out              ;
+; |Comparateur|state~19      ; |Comparateur|state~19      ; out              ;
+; |Comparateur|state~20      ; |Comparateur|state~20      ; out              ;
+; |Comparateur|state~21      ; |Comparateur|state~21      ; out              ;
+; |Comparateur|state~22      ; |Comparateur|state~22      ; out              ;
+; |Comparateur|state~23      ; |Comparateur|state~23      ; out              ;
+; |Comparateur|state~24      ; |Comparateur|state~24      ; out              ;
+; |Comparateur|state~25      ; |Comparateur|state~25      ; out              ;
+; |Comparateur|state~26      ; |Comparateur|state~26      ; out              ;
+; |Comparateur|state~27      ; |Comparateur|state~27      ; out              ;
+; |Comparateur|state~28      ; |Comparateur|state~28      ; out              ;
+; |Comparateur|state~29      ; |Comparateur|state~29      ; out              ;
+; |Comparateur|state~30      ; |Comparateur|state~30      ; out              ;
+; |Comparateur|state[5]      ; |Comparateur|state[5]      ; regout           ;
+; |Comparateur|state[4]      ; |Comparateur|state[4]      ; regout           ;
+; |Comparateur|state[3]      ; |Comparateur|state[3]      ; regout           ;
+; |Comparateur|state[2]      ; |Comparateur|state[2]      ; regout           ;
+; |Comparateur|state[1]      ; |Comparateur|state[1]      ; regout           ;
+; |Comparateur|state~32      ; |Comparateur|state~32      ; out              ;
+; |Comparateur|state~33      ; |Comparateur|state~33      ; out              ;
+; |Comparateur|state~34      ; |Comparateur|state~34      ; out              ;
+; |Comparateur|state~35      ; |Comparateur|state~35      ; out              ;
+; |Comparateur|state~36      ; |Comparateur|state~36      ; out              ;
+; |Comparateur|state~37      ; |Comparateur|state~37      ; out              ;
+; |Comparateur|state~38      ; |Comparateur|state~38      ; out              ;
+; |Comparateur|state~39      ; |Comparateur|state~39      ; out              ;
+; |Comparateur|state~40      ; |Comparateur|state~40      ; out              ;
+; |Comparateur|state~41      ; |Comparateur|state~41      ; out              ;
+; |Comparateur|state~42      ; |Comparateur|state~42      ; out              ;
+; |Comparateur|state~43      ; |Comparateur|state~43      ; out              ;
+; |Comparateur|state~44      ; |Comparateur|state~44      ; out              ;
+; |Comparateur|state~45      ; |Comparateur|state~45      ; out              ;
+; |Comparateur|state~46      ; |Comparateur|state~46      ; out              ;
+; |Comparateur|state~47      ; |Comparateur|state~47      ; out              ;
+; |Comparateur|state~48      ; |Comparateur|state~48      ; out              ;
+; |Comparateur|state~49      ; |Comparateur|state~49      ; out              ;
+; |Comparateur|state~50      ; |Comparateur|state~50      ; out              ;
+; |Comparateur|state~51      ; |Comparateur|state~51      ; out              ;
+; |Comparateur|state~52      ; |Comparateur|state~52      ; out              ;
+; |Comparateur|state~53      ; |Comparateur|state~53      ; out              ;
+; |Comparateur|state~54      ; |Comparateur|state~54      ; out              ;
+; |Comparateur|state~55      ; |Comparateur|state~55      ; out              ;
+; |Comparateur|state~56      ; |Comparateur|state~56      ; out              ;
+; |Comparateur|state~57      ; |Comparateur|state~57      ; out              ;
+; |Comparateur|state~58      ; |Comparateur|state~58      ; out              ;
+; |Comparateur|state~59      ; |Comparateur|state~59      ; out              ;
+; |Comparateur|state~60      ; |Comparateur|state~60      ; out              ;
+; |Comparateur|state~61      ; |Comparateur|state~61      ; out              ;
+; |Comparateur|state~62      ; |Comparateur|state~62      ; out              ;
+; |Comparateur|cpt~0         ; |Comparateur|cpt~0         ; out              ;
+; |Comparateur|cpt~1         ; |Comparateur|cpt~1         ; out              ;
+; |Comparateur|cpt~2         ; |Comparateur|cpt~2         ; out              ;
+; |Comparateur|cpt~3         ; |Comparateur|cpt~3         ; out              ;
+; |Comparateur|cpt~4         ; |Comparateur|cpt~4         ; out              ;
+; |Comparateur|cpt~5         ; |Comparateur|cpt~5         ; out              ;
+; |Comparateur|cpt~6         ; |Comparateur|cpt~6         ; out              ;
+; |Comparateur|cpt~7         ; |Comparateur|cpt~7         ; out              ;
+; |Comparateur|cpt~8         ; |Comparateur|cpt~8         ; out              ;
+; |Comparateur|cpt~9         ; |Comparateur|cpt~9         ; out              ;
+; |Comparateur|cpt~10        ; |Comparateur|cpt~10        ; out              ;
+; |Comparateur|cpt~11        ; |Comparateur|cpt~11        ; out              ;
+; |Comparateur|cpt~12        ; |Comparateur|cpt~12        ; out              ;
+; |Comparateur|cpt~13        ; |Comparateur|cpt~13        ; out              ;
+; |Comparateur|cpt~14        ; |Comparateur|cpt~14        ; out              ;
+; |Comparateur|cpt~15        ; |Comparateur|cpt~15        ; out              ;
+; |Comparateur|cpt~16        ; |Comparateur|cpt~16        ; out              ;
+; |Comparateur|cpt~17        ; |Comparateur|cpt~17        ; out              ;
+; |Comparateur|cpt~18        ; |Comparateur|cpt~18        ; out              ;
+; |Comparateur|cpt~19        ; |Comparateur|cpt~19        ; out              ;
+; |Comparateur|cpt~20        ; |Comparateur|cpt~20        ; out              ;
+; |Comparateur|cpt~21        ; |Comparateur|cpt~21        ; out              ;
+; |Comparateur|cpt~22        ; |Comparateur|cpt~22        ; out              ;
+; |Comparateur|cpt~23        ; |Comparateur|cpt~23        ; out              ;
+; |Comparateur|cpt~24        ; |Comparateur|cpt~24        ; out              ;
+; |Comparateur|cpt~25        ; |Comparateur|cpt~25        ; out              ;
+; |Comparateur|cpt~26        ; |Comparateur|cpt~26        ; out              ;
+; |Comparateur|cpt~27        ; |Comparateur|cpt~27        ; out              ;
+; |Comparateur|cpt~28        ; |Comparateur|cpt~28        ; out              ;
+; |Comparateur|duty[31]~4    ; |Comparateur|duty[31]~4    ; out0             ;
+; |Comparateur|state[7]      ; |Comparateur|state[7]      ; regout           ;
+; |Comparateur|state[8]      ; |Comparateur|state[8]      ; regout           ;
+; |Comparateur|state[9]      ; |Comparateur|state[9]      ; regout           ;
+; |Comparateur|state[10]     ; |Comparateur|state[10]     ; regout           ;
+; |Comparateur|state[11]     ; |Comparateur|state[11]     ; regout           ;
+; |Comparateur|state[12]     ; |Comparateur|state[12]     ; regout           ;
+; |Comparateur|state[13]     ; |Comparateur|state[13]     ; regout           ;
+; |Comparateur|state[14]     ; |Comparateur|state[14]     ; regout           ;
+; |Comparateur|state[15]     ; |Comparateur|state[15]     ; regout           ;
+; |Comparateur|state[16]     ; |Comparateur|state[16]     ; regout           ;
+; |Comparateur|state[17]     ; |Comparateur|state[17]     ; regout           ;
+; |Comparateur|state[18]     ; |Comparateur|state[18]     ; regout           ;
+; |Comparateur|state[19]     ; |Comparateur|state[19]     ; regout           ;
+; |Comparateur|state[20]     ; |Comparateur|state[20]     ; regout           ;
+; |Comparateur|state[21]     ; |Comparateur|state[21]     ; regout           ;
+; |Comparateur|state[22]     ; |Comparateur|state[22]     ; regout           ;
+; |Comparateur|state[23]     ; |Comparateur|state[23]     ; regout           ;
+; |Comparateur|state[24]     ; |Comparateur|state[24]     ; regout           ;
+; |Comparateur|state[25]     ; |Comparateur|state[25]     ; regout           ;
+; |Comparateur|state[26]     ; |Comparateur|state[26]     ; regout           ;
+; |Comparateur|state[27]     ; |Comparateur|state[27]     ; regout           ;
+; |Comparateur|state[28]     ; |Comparateur|state[28]     ; regout           ;
+; |Comparateur|state[29]     ; |Comparateur|state[29]     ; regout           ;
+; |Comparateur|state[30]     ; |Comparateur|state[30]     ; regout           ;
+; |Comparateur|state[31]     ; |Comparateur|state[31]     ; regout           ;
+; |Comparateur|duty[2]       ; |Comparateur|duty[2]       ; out              ;
+; |Comparateur|comb~0        ; |Comparateur|comb~0        ; out0             ;
+; |Comparateur|duty[1]       ; |Comparateur|duty[1]       ; out              ;
+; |Comparateur|comb~1        ; |Comparateur|comb~1        ; out0             ;
+; |Comparateur|duty[0]       ; |Comparateur|duty[0]       ; out              ;
+; |Comparateur|comb~2        ; |Comparateur|comb~2        ; out0             ;
+; |Comparateur|comb~3        ; |Comparateur|comb~3        ; out0             ;
+; |Comparateur|cpt[3]        ; |Comparateur|cpt[3]        ; regout           ;
+; |Comparateur|cpt[4]        ; |Comparateur|cpt[4]        ; regout           ;
+; |Comparateur|cpt[5]        ; |Comparateur|cpt[5]        ; regout           ;
+; |Comparateur|cpt[6]        ; |Comparateur|cpt[6]        ; regout           ;
+; |Comparateur|cpt[7]        ; |Comparateur|cpt[7]        ; regout           ;
+; |Comparateur|cpt[8]        ; |Comparateur|cpt[8]        ; regout           ;
+; |Comparateur|cpt[9]        ; |Comparateur|cpt[9]        ; regout           ;
+; |Comparateur|cpt[10]       ; |Comparateur|cpt[10]       ; regout           ;
+; |Comparateur|cpt[11]       ; |Comparateur|cpt[11]       ; regout           ;
+; |Comparateur|cpt[12]       ; |Comparateur|cpt[12]       ; regout           ;
+; |Comparateur|cpt[13]       ; |Comparateur|cpt[13]       ; regout           ;
+; |Comparateur|cpt[14]       ; |Comparateur|cpt[14]       ; regout           ;
+; |Comparateur|cpt[15]       ; |Comparateur|cpt[15]       ; regout           ;
+; |Comparateur|cpt[16]       ; |Comparateur|cpt[16]       ; regout           ;
+; |Comparateur|cpt[17]       ; |Comparateur|cpt[17]       ; regout           ;
+; |Comparateur|cpt[18]       ; |Comparateur|cpt[18]       ; regout           ;
+; |Comparateur|cpt[19]       ; |Comparateur|cpt[19]       ; regout           ;
+; |Comparateur|cpt[20]       ; |Comparateur|cpt[20]       ; regout           ;
+; |Comparateur|cpt[21]       ; |Comparateur|cpt[21]       ; regout           ;
+; |Comparateur|cpt[22]       ; |Comparateur|cpt[22]       ; regout           ;
+; |Comparateur|cpt[23]       ; |Comparateur|cpt[23]       ; regout           ;
+; |Comparateur|cpt[24]       ; |Comparateur|cpt[24]       ; regout           ;
+; |Comparateur|cpt[25]       ; |Comparateur|cpt[25]       ; regout           ;
+; |Comparateur|cpt[26]       ; |Comparateur|cpt[26]       ; regout           ;
+; |Comparateur|cpt[27]       ; |Comparateur|cpt[27]       ; regout           ;
+; |Comparateur|cpt[28]       ; |Comparateur|cpt[28]       ; regout           ;
+; |Comparateur|cpt[29]       ; |Comparateur|cpt[29]       ; regout           ;
+; |Comparateur|cpt[30]       ; |Comparateur|cpt[30]       ; regout           ;
+; |Comparateur|cpt[31]       ; |Comparateur|cpt[31]       ; regout           ;
+; |Comparateur|duty[0]~5     ; |Comparateur|duty[0]~5     ; out              ;
+; |Comparateur|duty[0]~6     ; |Comparateur|duty[0]~6     ; out              ;
+; |Comparateur|comb~4        ; |Comparateur|comb~4        ; out0             ;
+; |Comparateur|duty[1]~7     ; |Comparateur|duty[1]~7     ; out              ;
+; |Comparateur|comb~5        ; |Comparateur|comb~5        ; out0             ;
+; |Comparateur|duty[2]~8     ; |Comparateur|duty[2]~8     ; out              ;
+; |Comparateur|BTN1          ; |Comparateur|BTN1          ; out              ;
+; |Comparateur|BTN2          ; |Comparateur|BTN2          ; out              ;
+; |Comparateur|BTN3          ; |Comparateur|BTN3          ; out              ;
+; |Comparateur|BTN4          ; |Comparateur|BTN4          ; out              ;
+; |Comparateur|LessThan0~5   ; |Comparateur|LessThan0~5   ; out0             ;
+; |Comparateur|LessThan1~0   ; |Comparateur|LessThan1~0   ; out0             ;
+; |Comparateur|LessThan1~4   ; |Comparateur|LessThan1~4   ; out0             ;
+; |Comparateur|LessThan1~6   ; |Comparateur|LessThan1~6   ; out0             ;
+; |Comparateur|LessThan1~8   ; |Comparateur|LessThan1~8   ; out0             ;
+; |Comparateur|LessThan1~10  ; |Comparateur|LessThan1~10  ; out0             ;
+; |Comparateur|LessThan1~12  ; |Comparateur|LessThan1~12  ; out0             ;
+; |Comparateur|LessThan1~14  ; |Comparateur|LessThan1~14  ; out0             ;
+; |Comparateur|LessThan1~16  ; |Comparateur|LessThan1~16  ; out0             ;
+; |Comparateur|LessThan1~18  ; |Comparateur|LessThan1~18  ; out0             ;
+; |Comparateur|LessThan1~20  ; |Comparateur|LessThan1~20  ; out0             ;
+; |Comparateur|LessThan1~22  ; |Comparateur|LessThan1~22  ; out0             ;
+; |Comparateur|LessThan1~24  ; |Comparateur|LessThan1~24  ; out0             ;
+; |Comparateur|LessThan1~26  ; |Comparateur|LessThan1~26  ; out0             ;
+; |Comparateur|LessThan1~28  ; |Comparateur|LessThan1~28  ; out0             ;
+; |Comparateur|LessThan1~30  ; |Comparateur|LessThan1~30  ; out0             ;
+; |Comparateur|LessThan1~32  ; |Comparateur|LessThan1~32  ; out0             ;
+; |Comparateur|LessThan1~34  ; |Comparateur|LessThan1~34  ; out0             ;
+; |Comparateur|LessThan1~36  ; |Comparateur|LessThan1~36  ; out0             ;
+; |Comparateur|LessThan1~38  ; |Comparateur|LessThan1~38  ; out0             ;
+; |Comparateur|LessThan1~40  ; |Comparateur|LessThan1~40  ; out0             ;
+; |Comparateur|LessThan1~42  ; |Comparateur|LessThan1~42  ; out0             ;
+; |Comparateur|LessThan1~44  ; |Comparateur|LessThan1~44  ; out0             ;
+; |Comparateur|LessThan1~46  ; |Comparateur|LessThan1~46  ; out0             ;
+; |Comparateur|LessThan1~48  ; |Comparateur|LessThan1~48  ; out0             ;
+; |Comparateur|LessThan1~50  ; |Comparateur|LessThan1~50  ; out0             ;
+; |Comparateur|LessThan1~52  ; |Comparateur|LessThan1~52  ; out0             ;
+; |Comparateur|LessThan1~54  ; |Comparateur|LessThan1~54  ; out0             ;
+; |Comparateur|LessThan1~56  ; |Comparateur|LessThan1~56  ; out0             ;
+; |Comparateur|LessThan1~58  ; |Comparateur|LessThan1~58  ; out0             ;
+; |Comparateur|LessThan1~60  ; |Comparateur|LessThan1~60  ; out0             ;
+; |Comparateur|LessThan1~62  ; |Comparateur|LessThan1~62  ; out0             ;
+; |Comparateur|LessThan1~64  ; |Comparateur|LessThan1~64  ; out0             ;
+; |Comparateur|LessThan1~66  ; |Comparateur|LessThan1~66  ; out0             ;
+; |Comparateur|LessThan1~68  ; |Comparateur|LessThan1~68  ; out0             ;
+; |Comparateur|LessThan1~70  ; |Comparateur|LessThan1~70  ; out0             ;
+; |Comparateur|LessThan1~72  ; |Comparateur|LessThan1~72  ; out0             ;
+; |Comparateur|LessThan1~74  ; |Comparateur|LessThan1~74  ; out0             ;
+; |Comparateur|LessThan1~76  ; |Comparateur|LessThan1~76  ; out0             ;
+; |Comparateur|LessThan1~78  ; |Comparateur|LessThan1~78  ; out0             ;
+; |Comparateur|LessThan1~80  ; |Comparateur|LessThan1~80  ; out0             ;
+; |Comparateur|LessThan1~82  ; |Comparateur|LessThan1~82  ; out0             ;
+; |Comparateur|LessThan1~84  ; |Comparateur|LessThan1~84  ; out0             ;
+; |Comparateur|LessThan1~86  ; |Comparateur|LessThan1~86  ; out0             ;
+; |Comparateur|LessThan1~88  ; |Comparateur|LessThan1~88  ; out0             ;
+; |Comparateur|LessThan1~90  ; |Comparateur|LessThan1~90  ; out0             ;
+; |Comparateur|LessThan1~92  ; |Comparateur|LessThan1~92  ; out0             ;
+; |Comparateur|LessThan1~94  ; |Comparateur|LessThan1~94  ; out0             ;
+; |Comparateur|LessThan1~96  ; |Comparateur|LessThan1~96  ; out0             ;
+; |Comparateur|LessThan1~98  ; |Comparateur|LessThan1~98  ; out0             ;
+; |Comparateur|LessThan1~100 ; |Comparateur|LessThan1~100 ; out0             ;
+; |Comparateur|LessThan1~102 ; |Comparateur|LessThan1~102 ; out0             ;
+; |Comparateur|LessThan1~104 ; |Comparateur|LessThan1~104 ; out0             ;
+; |Comparateur|LessThan1~106 ; |Comparateur|LessThan1~106 ; out0             ;
+; |Comparateur|LessThan1~108 ; |Comparateur|LessThan1~108 ; out0             ;
+; |Comparateur|LessThan1~110 ; |Comparateur|LessThan1~110 ; out0             ;
+; |Comparateur|LessThan1~112 ; |Comparateur|LessThan1~112 ; out0             ;
+; |Comparateur|LessThan1~114 ; |Comparateur|LessThan1~114 ; out0             ;
+; |Comparateur|LessThan1~116 ; |Comparateur|LessThan1~116 ; out0             ;
+; |Comparateur|LessThan1~118 ; |Comparateur|LessThan1~118 ; out0             ;
+; |Comparateur|Add0~3        ; |Comparateur|Add0~3        ; out0             ;
+; |Comparateur|Add0~4        ; |Comparateur|Add0~4        ; out0             ;
+; |Comparateur|Add0~5        ; |Comparateur|Add0~5        ; out0             ;
+; |Comparateur|Add0~6        ; |Comparateur|Add0~6        ; out0             ;
+; |Comparateur|Add0~7        ; |Comparateur|Add0~7        ; out0             ;
+; |Comparateur|Add0~8        ; |Comparateur|Add0~8        ; out0             ;
+; |Comparateur|Add0~9        ; |Comparateur|Add0~9        ; out0             ;
+; |Comparateur|Add0~10       ; |Comparateur|Add0~10       ; out0             ;
+; |Comparateur|Add0~11       ; |Comparateur|Add0~11       ; out0             ;
+; |Comparateur|Add0~12       ; |Comparateur|Add0~12       ; out0             ;
+; |Comparateur|Add0~13       ; |Comparateur|Add0~13       ; out0             ;
+; |Comparateur|Add0~14       ; |Comparateur|Add0~14       ; out0             ;
+; |Comparateur|Add0~15       ; |Comparateur|Add0~15       ; out0             ;
+; |Comparateur|Add0~16       ; |Comparateur|Add0~16       ; out0             ;
+; |Comparateur|Add0~17       ; |Comparateur|Add0~17       ; out0             ;
+; |Comparateur|Add0~18       ; |Comparateur|Add0~18       ; out0             ;
+; |Comparateur|Add0~19       ; |Comparateur|Add0~19       ; out0             ;
+; |Comparateur|Add0~20       ; |Comparateur|Add0~20       ; out0             ;
+; |Comparateur|Add0~21       ; |Comparateur|Add0~21       ; out0             ;
+; |Comparateur|Add0~22       ; |Comparateur|Add0~22       ; out0             ;
+; |Comparateur|Add0~23       ; |Comparateur|Add0~23       ; out0             ;
+; |Comparateur|Add0~24       ; |Comparateur|Add0~24       ; out0             ;
+; |Comparateur|Add0~25       ; |Comparateur|Add0~25       ; out0             ;
+; |Comparateur|Add0~26       ; |Comparateur|Add0~26       ; out0             ;
+; |Comparateur|Add0~27       ; |Comparateur|Add0~27       ; out0             ;
+; |Comparateur|Add0~28       ; |Comparateur|Add0~28       ; out0             ;
+; |Comparateur|Add0~29       ; |Comparateur|Add0~29       ; out0             ;
+; |Comparateur|Add0~30       ; |Comparateur|Add0~30       ; out0             ;
+; |Comparateur|Add0~31       ; |Comparateur|Add0~31       ; out0             ;
+; |Comparateur|Add0~32       ; |Comparateur|Add0~32       ; out0             ;
+; |Comparateur|Add0~33       ; |Comparateur|Add0~33       ; out0             ;
+; |Comparateur|Add0~34       ; |Comparateur|Add0~34       ; out0             ;
+; |Comparateur|Add0~35       ; |Comparateur|Add0~35       ; out0             ;
+; |Comparateur|Add0~36       ; |Comparateur|Add0~36       ; out0             ;
+; |Comparateur|Add0~37       ; |Comparateur|Add0~37       ; out0             ;
+; |Comparateur|Add0~38       ; |Comparateur|Add0~38       ; out0             ;
+; |Comparateur|Add0~39       ; |Comparateur|Add0~39       ; out0             ;
+; |Comparateur|Add0~40       ; |Comparateur|Add0~40       ; out0             ;
+; |Comparateur|Add0~41       ; |Comparateur|Add0~41       ; out0             ;
+; |Comparateur|Add0~42       ; |Comparateur|Add0~42       ; out0             ;
+; |Comparateur|Add0~43       ; |Comparateur|Add0~43       ; out0             ;
+; |Comparateur|Add0~44       ; |Comparateur|Add0~44       ; out0             ;
+; |Comparateur|Add0~45       ; |Comparateur|Add0~45       ; out0             ;
+; |Comparateur|Add0~46       ; |Comparateur|Add0~46       ; out0             ;
+; |Comparateur|Add0~47       ; |Comparateur|Add0~47       ; out0             ;
+; |Comparateur|Add0~48       ; |Comparateur|Add0~48       ; out0             ;
+; |Comparateur|Add0~49       ; |Comparateur|Add0~49       ; out0             ;
+; |Comparateur|Add0~50       ; |Comparateur|Add0~50       ; out0             ;
+; |Comparateur|Add0~51       ; |Comparateur|Add0~51       ; out0             ;
+; |Comparateur|Add0~52       ; |Comparateur|Add0~52       ; out0             ;
+; |Comparateur|Add0~53       ; |Comparateur|Add0~53       ; out0             ;
+; |Comparateur|Add0~54       ; |Comparateur|Add0~54       ; out0             ;
+; |Comparateur|Add0~55       ; |Comparateur|Add0~55       ; out0             ;
+; |Comparateur|Add0~56       ; |Comparateur|Add0~56       ; out0             ;
+; |Comparateur|Add0~57       ; |Comparateur|Add0~57       ; out0             ;
+; |Comparateur|Add0~58       ; |Comparateur|Add0~58       ; out0             ;
+; |Comparateur|Add0~59       ; |Comparateur|Add0~59       ; out0             ;
+; |Comparateur|Add0~60       ; |Comparateur|Add0~60       ; out0             ;
+; |Comparateur|Add1~0        ; |Comparateur|Add1~0        ; out0             ;
+; |Comparateur|Add1~1        ; |Comparateur|Add1~1        ; out0             ;
+; |Comparateur|Add1~2        ; |Comparateur|Add1~2        ; out0             ;
+; |Comparateur|Add2~0        ; |Comparateur|Add2~0        ; out0             ;
+; |Comparateur|Add2~1        ; |Comparateur|Add2~1        ; out0             ;
+; |Comparateur|Add2~2        ; |Comparateur|Add2~2        ; out0             ;
+; |Comparateur|Add2~3        ; |Comparateur|Add2~3        ; out0             ;
+; |Comparateur|Add2~4        ; |Comparateur|Add2~4        ; out0             ;
+; |Comparateur|Add2~5        ; |Comparateur|Add2~5        ; out0             ;
+; |Comparateur|Add2~6        ; |Comparateur|Add2~6        ; out0             ;
+; |Comparateur|Add2~7        ; |Comparateur|Add2~7        ; out0             ;
+; |Comparateur|Add2~8        ; |Comparateur|Add2~8        ; out0             ;
+; |Comparateur|Add2~9        ; |Comparateur|Add2~9        ; out0             ;
+; |Comparateur|Add2~10       ; |Comparateur|Add2~10       ; out0             ;
+; |Comparateur|Add2~11       ; |Comparateur|Add2~11       ; out0             ;
+; |Comparateur|Add2~12       ; |Comparateur|Add2~12       ; out0             ;
+; |Comparateur|Add2~13       ; |Comparateur|Add2~13       ; out0             ;
+; |Comparateur|Add2~14       ; |Comparateur|Add2~14       ; out0             ;
+; |Comparateur|Add2~15       ; |Comparateur|Add2~15       ; out0             ;
+; |Comparateur|Add2~16       ; |Comparateur|Add2~16       ; out0             ;
+; |Comparateur|Add2~17       ; |Comparateur|Add2~17       ; out0             ;
+; |Comparateur|Add2~18       ; |Comparateur|Add2~18       ; out0             ;
+; |Comparateur|Add2~19       ; |Comparateur|Add2~19       ; out0             ;
+; |Comparateur|Add2~20       ; |Comparateur|Add2~20       ; out0             ;
+; |Comparateur|Add2~21       ; |Comparateur|Add2~21       ; out0             ;
+; |Comparateur|Add2~22       ; |Comparateur|Add2~22       ; out0             ;
+; |Comparateur|Add2~23       ; |Comparateur|Add2~23       ; out0             ;
+; |Comparateur|Add2~24       ; |Comparateur|Add2~24       ; out0             ;
+; |Comparateur|Add2~25       ; |Comparateur|Add2~25       ; out0             ;
+; |Comparateur|Add2~26       ; |Comparateur|Add2~26       ; out0             ;
+; |Comparateur|Add2~27       ; |Comparateur|Add2~27       ; out0             ;
+; |Comparateur|Add2~28       ; |Comparateur|Add2~28       ; out0             ;
+; |Comparateur|Add2~29       ; |Comparateur|Add2~29       ; out0             ;
+; |Comparateur|Add2~30       ; |Comparateur|Add2~30       ; out0             ;
+; |Comparateur|Add2~31       ; |Comparateur|Add2~31       ; out0             ;
+; |Comparateur|Add2~32       ; |Comparateur|Add2~32       ; out0             ;
+; |Comparateur|Add2~33       ; |Comparateur|Add2~33       ; out0             ;
+; |Comparateur|Add2~34       ; |Comparateur|Add2~34       ; out0             ;
+; |Comparateur|Add2~35       ; |Comparateur|Add2~35       ; out0             ;
+; |Comparateur|Add2~36       ; |Comparateur|Add2~36       ; out0             ;
+; |Comparateur|Add2~37       ; |Comparateur|Add2~37       ; out0             ;
+; |Comparateur|Add2~38       ; |Comparateur|Add2~38       ; out0             ;
+; |Comparateur|Add2~39       ; |Comparateur|Add2~39       ; out0             ;
+; |Comparateur|Add2~40       ; |Comparateur|Add2~40       ; out0             ;
+; |Comparateur|Add2~41       ; |Comparateur|Add2~41       ; out0             ;
+; |Comparateur|Add2~42       ; |Comparateur|Add2~42       ; out0             ;
+; |Comparateur|Add2~43       ; |Comparateur|Add2~43       ; out0             ;
+; |Comparateur|Add2~44       ; |Comparateur|Add2~44       ; out0             ;
+; |Comparateur|Add2~45       ; |Comparateur|Add2~45       ; out0             ;
+; |Comparateur|Add2~46       ; |Comparateur|Add2~46       ; out0             ;
+; |Comparateur|Add2~47       ; |Comparateur|Add2~47       ; out0             ;
+; |Comparateur|Add2~48       ; |Comparateur|Add2~48       ; out0             ;
+; |Comparateur|Add2~49       ; |Comparateur|Add2~49       ; out0             ;
+; |Comparateur|Add2~50       ; |Comparateur|Add2~50       ; out0             ;
+; |Comparateur|Add2~51       ; |Comparateur|Add2~51       ; out0             ;
+; |Comparateur|Add2~52       ; |Comparateur|Add2~52       ; out0             ;
+; |Comparateur|Add2~53       ; |Comparateur|Add2~53       ; out0             ;
+; |Comparateur|Add2~54       ; |Comparateur|Add2~54       ; out0             ;
+; |Comparateur|Add2~55       ; |Comparateur|Add2~55       ; out0             ;
+; |Comparateur|Add2~56       ; |Comparateur|Add2~56       ; out0             ;
+; |Comparateur|Add2~57       ; |Comparateur|Add2~57       ; out0             ;
+; |Comparateur|Add2~58       ; |Comparateur|Add2~58       ; out0             ;
+; |Comparateur|Add2~59       ; |Comparateur|Add2~59       ; out0             ;
+; |Comparateur|Add2~60       ; |Comparateur|Add2~60       ; out0             ;
+; |Comparateur|Add2~61       ; |Comparateur|Add2~61       ; out0             ;
++----------------------------+----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Sep 15 11:02:20 2020
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off PWM -c PWM
+Info: Using vector source file "C:/altera/91sp2/quartus/M2SME/PWM/PWM.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      25.99 %
+Info: Number of transitions in simulation is 5328
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 152 megabytes
+    Info: Processing ended: Tue Sep 15 11:02:20 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
