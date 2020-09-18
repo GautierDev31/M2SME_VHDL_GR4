@@ -40,11 +40,7 @@ udiv : Diviseur_frequence PORT MAP(
 
 ucp : Comparateur PORT MAP(
 	clk_1kHz => clock1HZ,
-	PWM => PWMout,
-	BTN1 => BTN1,
-	BTN2 => BTN2,
-	BTN3 => BTN3,
-	BTN4 => BTN4
+	PWM => PWMout
 );
 
 
