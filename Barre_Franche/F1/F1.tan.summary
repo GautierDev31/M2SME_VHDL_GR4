@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.295 ns
+From           : vect_anemo[5]~reg0
+To             : vect_anemo[5]
+From Clock     : in_fred_anemometre
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'in_fred_anemometre'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 364.70 MHz ( period = 2.742 ns )
+From           : cpt_anemo[1]
+To             : vect_anemo[4]~reg0
+From Clock     : in_fred_anemometre
+To Clock       : in_fred_anemometre
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_1hz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 420.17 MHz ( period = 2.380 ns )
+From           : state[0]
+To             : state[0]
+From Clock     : clk_1hz
+To Clock       : clk_1hz
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
