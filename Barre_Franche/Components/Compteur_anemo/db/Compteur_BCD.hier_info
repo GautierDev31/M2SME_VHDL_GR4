@@ -1,0 +1,39 @@
+|Compteur_BCD
+clkinBCD => compteur[0].CLK
+clkinBCD => compteur[1].CLK
+clkinBCD => compteur[2].CLK
+clkinBCD => compteur[3].CLK
+clkinBCD => compteur[4].CLK
+clkinBCD => compteur[5].CLK
+clkinBCD => compteur[6].CLK
+clkinBCD => compteur[7].CLK
+clkinBCD => compteur[8].CLK
+clkinBCD => compteur[9].CLK
+clkinBCD => compteur[10].CLK
+clkinBCD => compteur[11].CLK
+clkinBCD => compteur[12].CLK
+clkinBCD => compteur[13].CLK
+clkinBCD => compteur[14].CLK
+clkinBCD => compteur[15].CLK
+clkinBCD => compteur[16].CLK
+clkinBCD => compteur[17].CLK
+clkinBCD => compteur[18].CLK
+clkinBCD => compteur[19].CLK
+clkinBCD => compteur[20].CLK
+clkinBCD => compteur[21].CLK
+clkinBCD => compteur[22].CLK
+clkinBCD => compteur[23].CLK
+clkinBCD => compteur[24].CLK
+clkinBCD => compteur[25].CLK
+clkinBCD => compteur[26].CLK
+clkinBCD => compteur[27].CLK
+clkinBCD => compteur[28].CLK
+clkinBCD => compteur[29].CLK
+clkinBCD => compteur[30].CLK
+clkinBCD => compteur[31].CLK
+cpt[0] <= cpt~3.DB_MAX_OUTPUT_PORT_TYPE
+cpt[1] <= cpt~2.DB_MAX_OUTPUT_PORT_TYPE
+cpt[2] <= cpt~1.DB_MAX_OUTPUT_PORT_TYPE
+cpt[3] <= cpt~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
