@@ -20,7 +20,7 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-Compteur_BCD
+Compteur
 # storage
 db|F1.(0).cnf
 db|F1.(0).cnf
@@ -30,8 +30,8 @@ ON
 }
 # case_insensitive
 # source_file
-|altera|91sp2|quartus|m2sme|barre_franche|components|compteur_bcd|compteur_bcd.vhd
-85d911b080a285d4f9e7f033d374f5
+|altera|91sp2|quartus|m2sme|barre_franche|components|compteur|compteur.vhd
+3f9b075d2138bc6895bd7e164a2692
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

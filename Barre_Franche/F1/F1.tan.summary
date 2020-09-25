@@ -22,14 +22,14 @@ From Clock     : in_fred_anemometre
 To Clock       : in_fred_anemometre
 Failed Paths   : 0
 
-Type           : Clock Setup: 'clk_1hz'
+Type           : Clock Setup: 'clk_2hz'
 Slack          : N/A
 Required Time  : None
 Actual Time    : Restricted to 420.17 MHz ( period = 2.380 ns )
 From           : state[0]
 To             : state[0]
-From Clock     : clk_1hz
-To Clock       : clk_1hz
+From Clock     : clk_2hz
+To Clock       : clk_2hz
 Failed Paths   : 0
 
 Type           : Total number of failed paths
