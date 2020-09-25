@@ -5,7 +5,7 @@ use ieee.std_logic_1164.all;
 entity Diviseur_50M_2hz is   port( 
 	clkin : in std_logic;
 	clkout : out std_logic);
-end Diviseur_frequence ;
+end Diviseur_50M_2hz ;
 
 
 architecture div of Diviseur_50M_2hz is

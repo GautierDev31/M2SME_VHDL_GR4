@@ -87,8 +87,8 @@ GND*                         : A14       :        :                   :         
 GND                          : A15       : gnd    :                   :         :           :                
 VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
 GND*                         : A17       :        :                   :         : 4         :                
-vect_anemo[3]                : A18       : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : A19       :        :                   :         : 4         :                
+GND*                         : A18       :        :                   :         : 4         :                
+data_anemometre[6]           : A19       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : A20       :        :                   :         : 4         :                
 GND*                         : A21       :        :                   :         : 4         :                
 GND*                         : A22       :        :                   :         : 4         :                
@@ -110,7 +110,7 @@ GND*                         : AA12      :        :                   :         
 GND*                         : AA13      :        :                   :         : 7         :                
 GND*                         : AA14      :        :                   :         : 7         :                
 GND*                         : AA15      :        :                   :         : 7         :                
-GND*                         : AA16      :        :                   :         : 7         :                
+data_anemometre[4]           : AA16      : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AA17      :        :                   :         : 7         :                
 GND*                         : AA18      :        :                   :         : 7         :                
 VCCA_PLL4                    : AA19      : power  :                   : 1.2V    :           :                
@@ -191,7 +191,7 @@ GND*                         : AD15      :        :                   :         
 GND*                         : AD16      :        :                   :         : 7         :                
 GND*                         : AD17      :        :                   :         : 7         :                
 GND                          : AD18      : gnd    :                   :         :           :                
-GND*                         : AD19      :        :                   :         : 7         :                
+data_anemometre[1]           : AD19      : output : 3.3-V LVTTL       :         : 7         : N              
 VCCIO7                       : AD20      : power  :                   : 3.3V    : 7         :                
 GND*                         : AD21      :        :                   :         : 7         :                
 GND*                         : AD22      :        :                   :         : 7         :                
@@ -218,7 +218,7 @@ GND*                         : AE16      :        :                   :         
 GND*                         : AE17      :        :                   :         : 7         :                
 GND*                         : AE18      :        :                   :         : 7         :                
 GND*                         : AE19      :        :                   :         : 7         :                
-GND*                         : AE20      :        :                   :         : 7         :                
+data_anemometre[5]           : AE20      : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AE21      :        :                   :         : 7         :                
 GND*                         : AE22      :        :                   :         : 7         :                
 GND*                         : AE23      :        :                   :         : 7         :                
@@ -287,11 +287,11 @@ GND*                         : C9        :        :                   :         
 GND*                         : C10       :        :                   :         : 3         :                
 GND*                         : C11       :        :                   :         : 3         :                
 GND*                         : C12       :        :                   :         : 3         :                
-clk_2hz                      : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND+                         : C13       :        :                   :         : 3         :                
 GND                          : C14       : gnd    :                   :         :           :                
 GND*                         : C15       :        :                   :         : 4         :                
 GND*                         : C16       :        :                   :         : 4         :                
-vect_anemo[6]                : C17       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : C17       :        :                   :         : 4         :                
 GND                          : C18       : gnd    :                   :         :           :                
 GND*                         : C19       :        :                   :         : 4         :                
 VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
@@ -310,16 +310,16 @@ GND*                         : D6        :        :                   :         
 GND*                         : D7        :        :                   :         : 3         :                
 GND*                         : D8        :        :                   :         : 3         :                
 GND*                         : D9        :        :                   :         : 3         :                
-vect_anemo[0]                : D10       : output : 3.3-V LVTTL       :         : 3         : N              
+data_anemometre[0]           : D10       : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : D11       :        :                   :         : 3         :                
 GND*                         : D12       :        :                   :         : 3         :                
 GND+                         : D13       :        :                   :         : 3         :                
 GND*                         : D14       :        :                   :         : 4         :                
 GND*                         : D15       :        :                   :         : 4         :                
 GND*                         : D16       :        :                   :         : 4         :                
-vect_anemo[4]                : D17       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : D17       :        :                   :         : 4         :                
 GND*                         : D18       :        :                   :         : 4         :                
-GND*                         : D19       :        :                   :         : 4         :                
+data_anemometre[3]           : D19       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : D20       :        :                   :         : 4         :                
 GND*                         : D21       :        :                   :         : 4         :                
 VCCIO4                       : D22       : power  :                   : 3.3V    : 4         :                
@@ -369,11 +369,11 @@ GND*                         : F13       :        :                   :         
 GND*                         : F14       :        :                   :         : 4         :                
 GND*                         : F15       :        :                   :         : 4         :                
 GND*                         : F16       :        :                   :         : 4         :                
-vect_anemo[2]                : F17       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : F17       :        :                   :         : 4         :                
 GND*                         : F18       :        :                   :         : 4         :                
 GNDA_PLL2                    : F19       : gnd    :                   :         :           :                
 GND*                         : F20       :        :                   :         : 5         :                
-vect_anemo[5]                : F21       : output : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : F21       :        :                   :         : 5         :                
 VCCIO5                       : F22       : power  :                   : 3.3V    : 5         :                
 GND*                         : F23       :        :                   :         : 5         :                
 GND*                         : F24       :        :                   :         : 5         :                
@@ -394,7 +394,7 @@ GND*                         : G12       :        :                   :         
 GND*                         : G13       :        :                   :         : 4         :                
 GND*                         : G14       :        :                   :         : 4         :                
 GND*                         : G15       :        :                   :         : 4         :                
-vect_anemo[7]                : G16       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : G16       :        :                   :         : 4         :                
 GND*                         : G17       :        :                   :         : 4         :                
 GND*                         : G18       :        :                   :         : 4         :                
 VCCA_PLL2                    : G19       : power  :                   : 1.2V    :           :                
@@ -421,7 +421,7 @@ GND                          : H13       : gnd    :                   :         
 GND                          : H14       : gnd    :                   :         :           :                
 GND*                         : H15       :        :                   :         : 4         :                
 GND*                         : H16       :        :                   :         : 4         :                
-vect_anemo[1]                : H17       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : H17       :        :                   :         : 4         :                
 VCCIO4                       : H18       : power  :                   : 3.3V    : 4         :                
 GND*                         : H19       :        :                   :         : 5         :                
 VCCD_PLL2                    : H20       : power  :                   : 1.2V    :           :                
@@ -554,16 +554,16 @@ GND                          : N16       : gnd    :                   :         
 VCCINT                       : N17       : power  :                   : 1.2V    :           :                
 GND*                         : N18       :        :                   :         : 5         :                
 GND                          : N19       : gnd    :                   :         :           :                
-GND*                         : N20       :        :                   :         : 5         :                
+data_anemometre[2]           : N20       : output : 3.3-V LVTTL       :         : 5         : N              
 NC                           : N21       :        :                   :         :           :                
 VCCIO5                       : N22       : power  :                   : 3.3V    : 5         :                
 GND*                         : N23       :        :                   :         : 5         :                
 GND*                         : N24       :        :                   :         : 5         :                
 GND+                         : N25       :        :                   :         : 5         :                
 GND+                         : N26       :        :                   :         : 5         :                
-GND+                         : P1        :        :                   :         : 1         :                
-in_fred_anemometre           : P2        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : P3        :        :                   :         : 1         :                
+in_fred_anemometre           : P1        : input  : 3.3-V LVTTL       :         : 1         : N              
+clk_50M                      : P2        : input  : 3.3-V LVTTL       :         : 1         : N              
+data_anemometre[7]           : P3        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : P4        :        :                   :         : 1         :                
 VCCIO1                       : P5        : power  :                   : 3.3V    : 1         :                
 GND*                         : P6        :        :                   :         : 1         :                

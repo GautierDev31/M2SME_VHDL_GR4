@@ -5,31 +5,31 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.295 ns
-From           : vect_anemo[5]~reg0
-To             : vect_anemo[5]
-From Clock     : in_fred_anemometre
+Actual Time    : 12.300 ns
+From           : raf_anemo:uraf|data_anemo[4]
+To             : data_anemometre[4]
+From Clock     : clk_50M
 To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_50M'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 221.39 MHz ( period = 4.517 ns )
+From           : Diviseur_50M_1hz:udiv1hz|cpt1[0]
+To             : Diviseur_50M_1hz:udiv1hz|cpt1[22]
+From Clock     : clk_50M
+To Clock       : clk_50M
 Failed Paths   : 0
 
 Type           : Clock Setup: 'in_fred_anemometre'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 364.70 MHz ( period = 2.742 ns )
-From           : cpt_anemo[1]
-To             : vect_anemo[4]~reg0
+Actual Time    : 384.02 MHz ( period = 2.604 ns )
+From           : Compteur:ucpt|cpt_anemo[4]
+To             : Compteur:ucpt|vect_anemo[4]
 From Clock     : in_fred_anemometre
 To Clock       : in_fred_anemometre
-Failed Paths   : 0
-
-Type           : Clock Setup: 'clk_2hz'
-Slack          : N/A
-Required Time  : None
-Actual Time    : Restricted to 420.17 MHz ( period = 2.380 ns )
-From           : state[0]
-To             : state[0]
-From Clock     : clk_2hz
-To Clock       : clk_2hz
 Failed Paths   : 0
 
 Type           : Total number of failed paths

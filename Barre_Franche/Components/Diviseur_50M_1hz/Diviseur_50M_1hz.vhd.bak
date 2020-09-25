@@ -5,10 +5,10 @@ use ieee.std_logic_1164.all;
 entity Diviseur_50M_1hz is   port( 
 	clkin : in std_logic;
 	clkout : out std_logic);
-end Diviseur_frequence ;
+end Diviseur_50M_1hz ;
 
 
-architecture div of Diviseur_frequence is
+architecture div of Diviseur_50M_1hz is
 	signal cpt1 : integer:= 0;
 	signal cpt2 : integer;
 	signal state : integer:= 0;

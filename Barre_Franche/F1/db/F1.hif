@@ -20,7 +20,7 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-Compteur
+F1
 # storage
 db|F1.(0).cnf
 db|F1.(0).cnf
@@ -30,8 +30,8 @@ ON
 }
 # case_insensitive
 # source_file
-|altera|91sp2|quartus|m2sme|barre_franche|components|compteur|compteur.vhd
-3f9b075d2138bc6895bd7e164a2692
+f1.vhd
+406490b15f4272fd572b7c2e09d6573
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -45,6 +45,154 @@ ON
 }
 # hierarchies {
 |
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Diviseur_50M_1hz
+# storage
+db|F1.(1).cnf
+db|F1.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|m2sme|barre_franche|components|diviseur_50m_1hz|diviseur_50m_1hz.vhd
+6e21cbfd9ecf04a72f9d978956c7ee
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Diviseur_50M_1hz:udiv1hz
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Diviseur_50M_2hz
+# storage
+db|F1.(2).cnf
+db|F1.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|m2sme|barre_franche|components|diviseur_50m_2hz|diviseur_50m_2hz.vhd
+64f883de514bfeb55fa55b19ea1c6cc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Diviseur_50M_2hz:udiv2hz
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Compteur
+# storage
+db|F1.(3).cnf
+db|F1.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|m2sme|barre_franche|components|compteur|compteur.vhd
+d8e1f1c21b797a03ab52485effdf1
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(vect_anemo)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Compteur:ucpt
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+raf_anemo
+# storage
+db|F1.(4).cnf
+db|F1.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|m2sme|barre_franche|components|raf_anemo|raf_anemo.vhd
+91ca99eeb5c73f7a7b7b377180247a28
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(vect)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_anemo)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+raf_anemo:uraf
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
