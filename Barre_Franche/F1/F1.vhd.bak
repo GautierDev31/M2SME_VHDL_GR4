@@ -7,7 +7,14 @@ use ieee.std_logic_unsigned.all;
 entity F1 is   port( 
 	in_fred_anemometre : in std_logic;
 	clk_50M : in std_logic;
-	data_anemometre : out std_logic_vector(7 downto 0));
+	led0 : out std_logic;
+	led1 : out std_logic; 
+	led2 : out std_logic; 
+	led3 : out std_logic; 
+	led4 : out std_logic; 
+	led5 : out std_logic; 
+	led6 : out std_logic; 
+	led7 : out std_logic);
 end F1;
 
 architecture ar of F1 is
@@ -39,9 +46,23 @@ Port (
 	 ) ;
 end component;
 
+
+component Affichage_8bits
+port( 
+	led1 : out std_logic; 
+	led2 : out std_logic; 
+	led3 : out std_logic; 
+	led4 : out std_logic; 
+	led5 : out std_logic; 
+	led6 : out std_logic; 
+	led7 : out std_logic;
+	leds : in std_logic_vector (7 down to 0));
+end component ;
+
 	signal clk_2hz_out : std_logic;
 	signal clk_1hz_out : std_logic;
 	signal data_anemo_out : std_logic_vector(7 downto 0);
+	signal data_anemo_aff : std_logic_vector(7 downto 0);
 	
 begin
 udiv1hz : Diviseur_50M_1hz PORT MAP(
@@ -63,8 +84,18 @@ ucpt : Compteur PORT MAP(
 uraf : raf_anemo PORT MAP(
 	clk1Hz => clk_1hz_out,
 	vect => data_anemo_out,
-	data_anemo => data_anemometre
-	
+	data_anemo => data_anemo_aff
+);
+
+uaffichage : Affichage_8bits PORT MAP(
+	led1 => led1,
+	led2 => led2, 
+	led3 => led3,
+	led4 => led4, 
+	led5 => led5,
+	led6 => led6,
+	led7 => led7,
+	leds => data_anemo_aff
 );
 
 end ar;

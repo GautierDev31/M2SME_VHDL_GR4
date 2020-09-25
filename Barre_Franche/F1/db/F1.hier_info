@@ -2,14 +2,14 @@
 in_fred_anemometre => Compteur:ucpt.in_fred_anemo
 clk_50M => Diviseur_50M_1hz:udiv1hz.clkin
 clk_50M => Diviseur_50M_2hz:udiv2hz.clkin
-data_anemometre[0] <= raf_anemo:uraf.data_anemo[0]
-data_anemometre[1] <= raf_anemo:uraf.data_anemo[1]
-data_anemometre[2] <= raf_anemo:uraf.data_anemo[2]
-data_anemometre[3] <= raf_anemo:uraf.data_anemo[3]
-data_anemometre[4] <= raf_anemo:uraf.data_anemo[4]
-data_anemometre[5] <= raf_anemo:uraf.data_anemo[5]
-data_anemometre[6] <= raf_anemo:uraf.data_anemo[6]
-data_anemometre[7] <= raf_anemo:uraf.data_anemo[7]
+led0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+led1 <= Affichage_8bits:uaffichage.led1
+led2 <= Affichage_8bits:uaffichage.led2
+led3 <= Affichage_8bits:uaffichage.led3
+led4 <= Affichage_8bits:uaffichage.led4
+led5 <= Affichage_8bits:uaffichage.led5
+led6 <= Affichage_8bits:uaffichage.led6
+led7 <= Affichage_8bits:uaffichage.led7
 
 
 |F1|Diviseur_50M_1hz:udiv1hz
@@ -234,5 +234,23 @@ data_anemo[4] <= data_anemo[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_anemo[5] <= data_anemo[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_anemo[6] <= data_anemo[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_anemo[7] <= data_anemo[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|F1|Affichage_8bits:uaffichage
+led1 <= leds[1].DB_MAX_OUTPUT_PORT_TYPE
+led2 <= leds[2].DB_MAX_OUTPUT_PORT_TYPE
+led3 <= leds[3].DB_MAX_OUTPUT_PORT_TYPE
+led4 <= leds[4].DB_MAX_OUTPUT_PORT_TYPE
+led5 <= leds[5].DB_MAX_OUTPUT_PORT_TYPE
+led6 <= leds[6].DB_MAX_OUTPUT_PORT_TYPE
+led7 <= leds[7].DB_MAX_OUTPUT_PORT_TYPE
+leds[0] => ~NO_FANOUT~
+leds[1] => led1.DATAIN
+leds[2] => led2.DATAIN
+leds[3] => led3.DATAIN
+leds[4] => led4.DATAIN
+leds[5] => led5.DATAIN
+leds[6] => led6.DATAIN
+leds[7] => led7.DATAIN
 
 

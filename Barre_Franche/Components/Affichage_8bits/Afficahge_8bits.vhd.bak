@@ -10,7 +10,7 @@ entity Affichage_8bits is   port(
 	led5 : out std_logic; 
 	led6 : out std_logic; 
 	led7 : out std_logic;
-	leds : in std_logic );
+	leds : in std_logic_vector (7 down to 0));
 end Affichage_8bits ;
 
 
@@ -19,6 +19,7 @@ architecture ar of Affichage_8bits is
 begin
 process( leds )
 begin
+	led1 <= leds(0);
 	led1 <= leds(1);	
 	led2 <= leds(2);
 	led3 <= leds(3);

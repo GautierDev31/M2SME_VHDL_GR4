@@ -204,7 +204,7 @@ VECTOR("C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/F1.vwf")
 		TOP_INDEX = 0;
 	}
 	CLOCK{
-		PERIOD = 20000000000;
+		PERIOD = 200000000;
 		OFFSET = 0;
 		DUTY_CYCLE = 50;
 	}

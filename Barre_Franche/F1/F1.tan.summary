@@ -7,7 +7,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 12.300 ns
 From           : raf_anemo:uraf|data_anemo[4]
-To             : data_anemometre[4]
+To             : led4
 From Clock     : clk_50M
 To Clock       : --
 Failed Paths   : 0
