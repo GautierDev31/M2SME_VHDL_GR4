@@ -2,34 +2,54 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.145 ns
+From           : m_start_stop
+To             : m_anemo_mococoup[7]~reg0
+From Clock     : --
+To Clock       : m_in_freq_anemometre
+Failed Paths   : 0
+
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 12.300 ns
-From           : raf_anemo:uraf|data_anemo[4]
-To             : led4
-From Clock     : clk_50M
+Actual Time    : 8.015 ns
+From           : m_anemo_mococoup[0]~reg0
+To             : m_anemo_mococoup[0]
+From Clock     : m_in_freq_anemometre
 To Clock       : --
 Failed Paths   : 0
 
-Type           : Clock Setup: 'clk_50M'
+Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 221.39 MHz ( period = 4.517 ns )
-From           : Diviseur_50M_1hz:udiv1hz|cpt1[0]
-To             : Diviseur_50M_1hz:udiv1hz|cpt1[22]
-From Clock     : clk_50M
-To Clock       : clk_50M
+Actual Time    : 0.555 ns
+From           : m_start_stop
+To             : state[0]
+From Clock     : --
+To Clock       : m_clk_1hz
 Failed Paths   : 0
 
-Type           : Clock Setup: 'in_fred_anemometre'
+Type           : Clock Setup: 'm_in_freq_anemometre'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 384.02 MHz ( period = 2.604 ns )
-From           : Compteur:ucpt|cpt_anemo[4]
-To             : Compteur:ucpt|vect_anemo[4]
-From Clock     : in_fred_anemometre
-To Clock       : in_fred_anemometre
+Actual Time    : 390.02 MHz ( period = 2.564 ns )
+From           : cpt[1]
+To             : m_anemo_mococoup[7]~reg0
+From Clock     : m_in_freq_anemometre
+To Clock       : m_in_freq_anemometre
+Failed Paths   : 0
+
+Type           : Clock Setup: 'm_clk_1hz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 420.17 MHz ( period = 2.380 ns )
+From           : state[0]
+To             : state[0]
+From Clock     : m_clk_1hz
+To Clock       : m_clk_1hz
 Failed Paths   : 0
 
 Type           : Total number of failed paths

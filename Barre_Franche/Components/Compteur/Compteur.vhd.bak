@@ -15,18 +15,18 @@ Architecture arch of Compteur is
  signal state : integer := 0;
  
 Begin
-	Process (clk_2hz, in_fred_anemometre)
+	Process (clk_1hz, in_fred_anemo)
 	Begin
-    if rising_edge(clk_2hz)then
+    if rising_edge(clk_1hz)then
 		if state = 0 then state <= 1;
 		else state <= 0;
 		end if ;
 	end if ; 
 	
 	
-	if (in_fred_anemometre = '1' and in_fred_anemometre'event)then
+	if (in_fred_anemo = '1' and in_fred_anemo'event)then
 		if state = 1 then
-		cpt_anemo <= cpt_anemo + 2; 
+		cpt_anemo <= cpt_anemo + 1; 
 		elsif state = 0 and cpt_anemo /= "00000000" then
 		vect_anemo <= cpt_anemo;
 		cpt_anemo <= "00000000";

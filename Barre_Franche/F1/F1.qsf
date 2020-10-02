@@ -46,10 +46,6 @@ set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id e
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name VHDL_FILE ../Components/Affichage_8bits/Afficahge_8bits.vhd
 set_global_assignment -name VHDL_FILE ../Components/Diviseur_50M_2hz/Diviseur_50M_2hz.vhd
 set_global_assignment -name VHDL_FILE ../Components/raf_anemo/raf_anemo.vhd
@@ -58,7 +54,6 @@ set_global_assignment -name VHDL_FILE ../Components/Compteur/Compteur.vhd
 set_global_assignment -name VHDL_FILE F1.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE F1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE ../Components/Compteur/F1.vwf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_N2 -to clk_50M
 set_location_assignment PIN_D25 -to in_fred_anemometre
@@ -70,3 +65,14 @@ set_location_assignment PIN_AD22 -to led4
 set_location_assignment PIN_AD23 -to led5
 set_location_assignment PIN_AD21 -to led6
 set_location_assignment PIN_AC21 -to led7
+set_global_assignment -name MISC_FILE "C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/F1.dpf"
+set_global_assignment -name VHDL_FILE ../Components/synchro_anemo/synchro_anemo.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../Components/synchro_anemo/F1_synchro.vwf
+set_global_assignment -name VHDL_FILE ../Components/compteur_monocoup/compteur_monocoup.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../Components/compteur_monocoup/F1_monocoup.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ../Components/compteur_monocoup/F1_monocoup.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

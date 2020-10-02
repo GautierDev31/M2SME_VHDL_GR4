@@ -6,6 +6,9 @@ use ieee.std_logic_unsigned.all;
 
 entity F1 is   port( 
 	in_fred_anemometre : in std_logic;
+	start_stop : in std_logic;
+	raz_n : in std_logic;
+	continu : in std_logic;
 	clk_50M : in std_logic;
 	led0 : out std_logic;
 	led1 : out std_logic; 
@@ -46,6 +49,26 @@ Port (
 	 ) ;
 end component;
 
+component compteur_monocoup
+Port (
+		m_start_stop : in std_logic ;
+		m_clk_2hz : in std_logic;
+		m_in_freq_anemometre : in std_logic;
+		m_anemo_mococoup : out std_logic_vector (7 downto 0)
+	 ) ;
+end component;
+
+component synchro_anemo
+Port (
+	in_continu : in std_logic;
+	in_raz_n : in std_logic;
+	in_data_anemo_continu : in std_logic_vector(7 downto 0);
+	in_data_anemo_monocoup : in std_logic_vector(7 downto 0);
+	out_data_anemometre: out std_logic_vector(7 downto 0);
+	out_data_valid : out std_logic
+	);
+end component;
+
 
 component Affichage_8bits
 port( 
@@ -63,6 +86,10 @@ end component ;
 	signal clk_1hz_out : std_logic;
 	signal data_anemo_out : std_logic_vector(7 downto 0);
 	signal data_anemo_aff : std_logic_vector(7 downto 0);
+	signal data_anemo_continu_out : std_logic_vector(7 downto 0);
+	signal data_anemo_monocoup_out : std_logic_vector(7 downto 0);
+	signal data_valid_out : std_logic;
+
 	
 begin
 udiv1hz : Diviseur_50M_1hz PORT MAP(
@@ -78,7 +105,7 @@ udiv2hz : Diviseur_50M_2hz PORT MAP(
 ucpt : Compteur PORT MAP(
 	clk_2hz => clk_2hz_out,
 	in_fred_anemo => in_fred_anemometre,
-	vect_anemo => data_anemo_out
+	vect_anemo => data_anemo_continu_out
 );
 
 uraf : raf_anemo PORT MAP(
@@ -96,6 +123,21 @@ uaffichage : Affichage_8bits PORT MAP(
 	led6 => led6,
 	led7 => led7,
 	leds => data_anemo_aff
+);
+
+ucptmono : compteur_monocoup PORT MAP (
+	m_clk_2hz => clk_2hz_out,
+	m_in_freq_anemometre => in_fred_anemometre,
+	m_anemo_mococoup => data_anemo_monocoup_out,
+	m_start_stop => start_stop
+);
+
+usynchro : synchro_anemo PORT MAP (
+	in_continu => continu,
+	in_raz_n => raz_n,
+	in_data_anemo_continu => data_anemo_continu_out,
+	in_data_anemo_monocoup => data_anemo_monocoup_out,
+	out_data_anemometre => data_anemo_monocoup_out
 );
 
 end ar;

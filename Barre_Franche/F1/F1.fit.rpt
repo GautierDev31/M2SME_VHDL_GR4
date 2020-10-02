@@ -1,5 +1,5 @@
 Fitter report for F1
-Fri Sep 25 11:08:16 2020
+Tue Sep 29 11:45:05 2020
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -23,19 +23,10 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  15. Fitter Resource Utilization by Entity
  16. Delay Chain Summary
  17. Pad To Core Delay Chain Fanout
- 18. Control Signals
- 19. Global & Other Fast Signals
- 20. Non-Global High Fan-Out Signals
- 21. Interconnect Usage Summary
- 22. LAB Logic Elements
- 23. LAB-wide Signals
- 24. LAB Signals Sourced
- 25. LAB Signals Sourced Out
- 26. LAB Distinct Inputs
- 27. Fitter Device Options
- 28. Operating Settings and Conditions
- 29. Estimated Delay Added for Hold Timing
- 30. Fitter Messages
+ 18. Interconnect Usage Summary
+ 19. Fitter Device Options
+ 20. Operating Settings and Conditions
+ 21. Fitter Messages
 
 
 
@@ -61,18 +52,18 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Fri Sep 25 11:08:16 2020        ;
+; Fitter Status                      ; Successful - Tue Sep 29 11:45:05 2020        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; F1                                           ;
 ; Top-level Entity Name              ; F1                                           ;
 ; Family                             ; Cyclone II                                   ;
 ; Device                             ; EP2C35F672C6                                 ;
 ; Timing Models                      ; Final                                        ;
-; Total logic elements               ; 150 / 33,216 ( < 1 % )                       ;
-;     Total combinational functions  ; 136 / 33,216 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 90 / 33,216 ( < 1 % )                        ;
-; Total registers                    ; 90                                           ;
-; Total pins                         ; 10 / 475 ( 2 % )                             ;
+; Total logic elements               ; 0 / 33,216 ( 0 % )                           ;
+;     Total combinational functions  ; 0 / 33,216 ( 0 % )                           ;
+;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                           ;
+; Total registers                    ; 0                                            ;
+; Total pins                         ; 13 / 475 ( 3 % )                             ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                               ;
@@ -89,6 +80,7 @@ applicable agreement for further details.
 ; Minimum Core Junction Temperature                                          ; 0                              ;                                ;
 ; Maximum Core Junction Temperature                                          ; 85                             ;                                ;
 ; Fit Attempts to Skip                                                       ; 0                              ; 0.0                            ;
+; Device I/O Standard                                                        ; 3.3-V LVTTL                    ;                                ;
 ; Use smart compilation                                                      ; Off                            ; Off                            ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                             ; On                             ;
 ; Enable compact report table                                                ; Off                            ; Off                            ;
@@ -150,8 +142,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                    ; Value              ;
 +-------------------------+--------------------+
 ; Placement               ;                    ;
-;     -- Requested        ; 0 / 243 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 243 ( 0.00 % ) ;
+;     -- Requested        ; 0 / 17 ( 0.00 % )  ;
+;     -- Achieved         ; 0 / 17 ( 0.00 % )  ;
 ;                         ;                    ;
 ; Routing (by Connection) ;                    ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )   ;
@@ -173,7 +165,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 243     ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 17      ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
@@ -183,54 +175,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/F1.pin.
 
 
-+-------------------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                                       ;
-+---------------------------------------------+---------------------------------------+
-; Resource                                    ; Usage                                 ;
-+---------------------------------------------+---------------------------------------+
-; Total logic elements                        ; 150 / 33,216 ( < 1 % )                ;
-;     -- Combinational with no register       ; 60                                    ;
-;     -- Register only                        ; 14                                    ;
-;     -- Combinational with a register        ; 76                                    ;
-;                                             ;                                       ;
-; Logic element usage by number of LUT inputs ;                                       ;
-;     -- 4 input functions                    ; 29                                    ;
-;     -- 3 input functions                    ; 9                                     ;
-;     -- <=2 input functions                  ; 98                                    ;
-;     -- Register only                        ; 14                                    ;
-;                                             ;                                       ;
-; Logic elements by mode                      ;                                       ;
-;     -- normal mode                          ; 68                                    ;
-;     -- arithmetic mode                      ; 68                                    ;
-;                                             ;                                       ;
-; Total registers*                            ; 90 / 34,593 ( < 1 % )                 ;
-;     -- Dedicated logic registers            ; 90 / 33,216 ( < 1 % )                 ;
-;     -- I/O registers                        ; 0 / 1,377 ( 0 % )                     ;
-;                                             ;                                       ;
-; Total LABs:  partially or completely used   ; 11 / 2,076 ( < 1 % )                  ;
-; User inserted logic elements                ; 0                                     ;
-; Virtual pins                                ; 0                                     ;
-; I/O pins                                    ; 10 / 475 ( 2 % )                      ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )                        ;
-; Global signals                              ; 3                                     ;
-; M4Ks                                        ; 0 / 105 ( 0 % )                       ;
-; Total block memory bits                     ; 0 / 483,840 ( 0 % )                   ;
-; Total block memory implementation bits      ; 0 / 483,840 ( 0 % )                   ;
-; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )                        ;
-; PLLs                                        ; 0 / 4 ( 0 % )                         ;
-; Global clocks                               ; 3 / 16 ( 19 % )                       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )                         ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )                         ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )                         ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                          ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%                          ;
-; Maximum fan-out node                        ; clk_50M~clkctrl                       ;
-; Maximum fan-out                             ; 66                                    ;
-; Highest non-global fan-out signal           ; Diviseur_50M_1hz:udiv1hz|process_0~10 ;
-; Highest non-global fan-out                  ; 15                                    ;
-; Total fan-out                               ; 556                                   ;
-; Average fan-out                             ; 2.21                                  ;
-+---------------------------------------------+---------------------------------------+
++-------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                     ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Total logic elements                        ; 0 / 33,216 ( 0 % )  ;
+;     -- Combinational with no register       ; 0                   ;
+;     -- Register only                        ; 0                   ;
+;     -- Combinational with a register        ; 0                   ;
+;                                             ;                     ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 0                   ;
+;     -- 3 input functions                    ; 0                   ;
+;     -- <=2 input functions                  ; 0                   ;
+;     -- Register only                        ; 0                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 0                   ;
+;     -- arithmetic mode                      ; 0                   ;
+;                                             ;                     ;
+; Total registers*                            ; 0 / 34,593 ( 0 % )  ;
+;     -- Dedicated logic registers            ; 0 / 33,216 ( 0 % )  ;
+;     -- I/O registers                        ; 0 / 1,377 ( 0 % )   ;
+;                                             ;                     ;
+; Total LABs:  partially or completely used   ; 0 / 2,076 ( 0 % )   ;
+; User inserted logic elements                ; 0                   ;
+; Virtual pins                                ; 0                   ;
+; I/O pins                                    ; 13 / 475 ( 3 % )    ;
+;     -- Clock pins                           ; 2 / 8 ( 25 % )      ;
+; Global signals                              ; 0                   ;
+; M4Ks                                        ; 0 / 105 ( 0 % )     ;
+; Total block memory bits                     ; 0 / 483,840 ( 0 % ) ;
+; Total block memory implementation bits      ; 0 / 483,840 ( 0 % ) ;
+; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )      ;
+; PLLs                                        ; 0 / 4 ( 0 % )       ;
+; Global clocks                               ; 0 / 16 ( 0 % )      ;
+; JTAGs                                       ; 0 / 1 ( 0 % )       ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
++---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
@@ -240,8 +224,11 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 +--------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name               ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +--------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clk_50M            ; P2    ; 1        ; 0            ; 18           ; 2           ; 3                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; in_fred_anemometre ; P1    ; 1        ; 0            ; 18           ; 3           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; clk_50M            ; N2    ; 2        ; 0            ; 18           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; continu            ; AD6   ; 8        ; 5            ; 0            ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; in_fred_anemometre ; D25   ; 5        ; 65           ; 31           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; raz_n              ; AE14  ; 7        ; 33           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; start_stop         ; AF14  ; 7        ; 33           ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +--------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -250,31 +237,31 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; led0 ; D10   ; 3        ; 20           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led1 ; AD19  ; 7        ; 53           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led2 ; N20   ; 5        ; 65           ; 21           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led3 ; D19   ; 4        ; 53           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led4 ; AA16  ; 7        ; 46           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led5 ; AE20  ; 7        ; 53           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led6 ; A19   ; 4        ; 53           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led7 ; P3    ; 1        ; 0            ; 17           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; led0 ; AE23  ; 7        ; 63           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led1 ; AF23  ; 7        ; 63           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led2 ; AB21  ; 7        ; 63           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led3 ; AC22  ; 7        ; 63           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led4 ; AD22  ; 7        ; 61           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led5 ; AD23  ; 7        ; 61           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led6 ; AD21  ; 7        ; 61           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led7 ; AC21  ; 7        ; 61           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
-+----------------------------------------------------------+
-; I/O Bank Usage                                           ;
-+----------+----------------+---------------+--------------+
-; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
-+----------+----------------+---------------+--------------+
-; 1        ; 3 / 64 ( 5 % ) ; 3.3V          ; --           ;
-; 2        ; 2 / 59 ( 3 % ) ; 3.3V          ; --           ;
-; 3        ; 1 / 56 ( 2 % ) ; 3.3V          ; --           ;
-; 4        ; 2 / 58 ( 3 % ) ; 3.3V          ; --           ;
-; 5        ; 1 / 65 ( 2 % ) ; 3.3V          ; --           ;
-; 6        ; 1 / 59 ( 2 % ) ; 3.3V          ; --           ;
-; 7        ; 3 / 58 ( 5 % ) ; 3.3V          ; --           ;
-; 8        ; 0 / 56 ( 0 % ) ; 3.3V          ; --           ;
-+----------+----------------+---------------+--------------+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 0 / 64 ( 0 % )   ; 3.3V          ; --           ;
+; 2        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
+; 3        ; 0 / 56 ( 0 % )   ; 3.3V          ; --           ;
+; 4        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
+; 5        ; 1 / 65 ( 2 % )   ; 3.3V          ; --           ;
+; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
+; 7        ; 10 / 58 ( 17 % ) ; 3.3V          ; --           ;
+; 8        ; 1 / 56 ( 2 % )   ; 3.3V          ; --           ;
++----------+------------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -299,7 +286,7 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A17      ; 412        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A18      ; 406        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A19      ; 394        ; 4        ; led6                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A19      ; 394        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A20      ; 390        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A21      ; 382        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A22      ; 379        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -321,7 +308,7 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; AA13     ; 192        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA14     ; 194        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA15     ; 197        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA16     ; 209        ; 7        ; led4                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA16     ; 209        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA17     ; 219        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA18     ; 220        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA19     ;            ;          ; VCCA_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -352,7 +339,7 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; AB18     ; 215        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB19     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB20     ; 225        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AB21     ; 242        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AB21     ; 242        ; 7        ; led2                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AB22     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB23     ; 258        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB24     ; 257        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -378,8 +365,8 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; AC18     ; 216        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC19     ; 222        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC20     ; 226        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC21     ; 237        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC22     ; 241        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC21     ; 237        ; 7        ; led7                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AC22     ; 241        ; 7        ; led3                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AC23     ; 245        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AC24     ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC25     ; 260        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -389,7 +376,7 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; AD3      ; 123        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD4      ; 135        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD5      ; 136        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD6      ; 139        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD6      ; 139        ; 8        ; continu                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD7      ; 140        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD8      ; 149        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD9      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -402,11 +389,11 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; AD16     ; 201        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD17     ; 208        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AD19     ; 221        ; 7        ; led1                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD19     ; 221        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD20     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AD21     ; 238        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD22     ; 240        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD23     ; 239        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD21     ; 238        ; 7        ; led6                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AD22     ; 240        ; 7        ; led4                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AD23     ; 239        ; 7        ; led5                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD24     ; 249        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD25     ; 248        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD26     ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -423,16 +410,16 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; AE11     ; 174        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE12     ; 182        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE13     ; 183        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE14     ; 188        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AE14     ; 188        ; 7        ; raz_n                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE15     ; 189        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE16     ; 200        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE17     ; 206        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE18     ; 212        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE19     ; 214        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE20     ; 224        ; 7        ; led5                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE20     ; 224        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE21     ; 228        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE22     ; 236        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE23     ; 244        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE23     ; 244        ; 7        ; led0                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE24     ; 247        ; 6        ; ~LVDS150p/nCEO~                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AE25     ; 246        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AE26     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -448,7 +435,7 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; AF11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF12     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF13     ; 184        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF14     ; 187        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AF14     ; 187        ; 7        ; start_stop                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF15     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF17     ; 205        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -457,7 +444,7 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; AF20     ; 223        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF21     ; 227        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF22     ; 235        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF23     ; 243        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF23     ; 243        ; 7        ; led1                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF24     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF25     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -521,7 +508,7 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; D7       ; 469        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D8       ; 464        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D9       ; 460        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D10      ; 449        ; 3        ; led0                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D10      ; 449        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D12      ; 443        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D13      ; 432        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -530,13 +517,13 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; D16      ; 415        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D17      ; 403        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D18      ; 396        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D19      ; 392        ; 4        ; led3                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D19      ; 392        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D20      ; 387        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D21      ; 376        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D22      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D23      ; 369        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D24      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D25      ; 358        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D25      ; 358        ; 5        ; in_fred_anemometre                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; D26      ; 359        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E1       ; 20         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E2       ; 19         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -747,7 +734,7 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; M25      ; 312        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N1       ; 65         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; N2       ; 64         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; N2       ; 64         ; 2        ; clk_50M                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N3       ; 62         ; 2        ; ^DATA0                                   ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; N4       ; 63         ; 2        ; ^nCE                                     ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -765,16 +752,16 @@ The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/
 ; N17      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N18      ; 348        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N20      ; 315        ; 5        ; led2                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N20      ; 315        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; N23      ; 311        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N24      ; 310        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N25      ; 309        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; N26      ; 308        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P1       ; 68         ; 1        ; in_fred_anemometre                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P2       ; 67         ; 1        ; clk_50M                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P3       ; 69         ; 1        ; led7                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P1       ; 68         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; P2       ; 67         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; P3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P4       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; P6       ; 78         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -995,17 +982,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                       ;
-+-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------+--------------+
-; Compilation Hierarchy Node    ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name          ; Library Name ;
-+-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------+--------------+
-; |F1                           ; 150 (0)     ; 90 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 10   ; 0            ; 60 (0)       ; 14 (0)            ; 76 (0)           ; |F1                          ; work         ;
-;    |Compteur:ucpt|            ; 19 (19)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 7 (7)             ; 8 (8)            ; |F1|Compteur:ucpt            ; work         ;
-;    |Diviseur_50M_1hz:udiv1hz| ; 62 (62)     ; 34 (34)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 34 (34)          ; |F1|Diviseur_50M_1hz:udiv1hz ;              ;
-;    |Diviseur_50M_2hz:udiv2hz| ; 62 (62)     ; 34 (34)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 34 (34)          ; |F1|Diviseur_50M_2hz:udiv2hz ;              ;
-;    |raf_anemo:uraf|           ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 0 (0)            ; |F1|raf_anemo:uraf           ; work         ;
-+-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
+; |F1                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 13   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |F1                 ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1014,6 +997,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+----------+---------------+---------------+-----------------------+-----+
 ; Name               ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +--------------------+----------+---------------+---------------+-----------------------+-----+
+; in_fred_anemometre ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
+; start_stop         ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
+; raz_n              ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
+; continu            ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
+; clk_50M            ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
 ; led0               ; Output   ; --            ; --            ; --                    ; --  ;
 ; led1               ; Output   ; --            ; --            ; --                    ; --  ;
 ; led2               ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1022,8 +1010,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led5               ; Output   ; --            ; --            ; --                    ; --  ;
 ; led6               ; Output   ; --            ; --            ; --                    ; --  ;
 ; led7               ; Output   ; --            ; --            ; --                    ; --  ;
-; in_fred_anemometre ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
-; clk_50M            ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
 +--------------------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -1033,246 +1019,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; in_fred_anemometre  ;                   ;         ;
+; start_stop          ;                   ;         ;
+; raz_n               ;                   ;         ;
+; continu             ;                   ;         ;
 ; clk_50M             ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                              ;
-+---------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                            ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Compteur:ucpt|cpt_anemo~11      ; LCCOMB_X53_Y22_N30 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Compteur:ucpt|process_0~0       ; LCCOMB_X53_Y22_N4  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Compteur:ucpt|state[0]          ; LCFF_X53_Y23_N17   ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; Diviseur_50M_1hz:udiv1hz|clkout ; LCFF_X19_Y26_N29   ; 7       ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; Diviseur_50M_2hz:udiv2hz|clkout ; LCFF_X53_Y26_N21   ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_50M                         ; PIN_P2             ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_50M                         ; PIN_P2             ; 66      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; in_fred_anemometre              ; PIN_P1             ; 14      ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-+---------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                        ;
-+---------------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; Name                            ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; Diviseur_50M_1hz:udiv1hz|clkout ; LCFF_X19_Y26_N29 ; 7       ; Global Clock         ; GCLK0            ; --                        ;
-; clk_50M                         ; PIN_P2           ; 66      ; Global Clock         ; GCLK3            ; --                        ;
-; in_fred_anemometre              ; PIN_P1           ; 14      ; Global Clock         ; GCLK1            ; --                        ;
-+---------------------------------+------------------+---------+----------------------+------------------+---------------------------+
-
-
 +-------------------------------------------------+
-; Non-Global High Fan-Out Signals                 ;
-+---------------------------------------+---------+
-; Name                                  ; Fan-Out ;
-+---------------------------------------+---------+
-; Diviseur_50M_2hz:udiv2hz|process_0~10 ; 15      ;
-; Diviseur_50M_1hz:udiv1hz|process_0~10 ; 15      ;
-; Compteur:ucpt|state[0]                ; 10      ;
-; Compteur:ucpt|cpt_anemo~11            ; 7       ;
-; Compteur:ucpt|process_0~0             ; 7       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[24]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[22]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[23]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[16]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[14]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[17]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[15]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[6]      ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|state[0]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[10]     ; 3       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[5]      ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[25]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[23]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[24]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[17]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[15]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[18]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[16]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[7]      ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|state[0]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[11]     ; 3       ;
-; Diviseur_50M_1hz:udiv1hz|cpt1[6]      ; 3       ;
-; Compteur:ucpt|cpt_anemo[7]            ; 3       ;
-; Compteur:ucpt|cpt_anemo[6]            ; 3       ;
-; Compteur:ucpt|cpt_anemo[5]            ; 3       ;
-; Compteur:ucpt|cpt_anemo[4]            ; 3       ;
-; Compteur:ucpt|cpt_anemo[3]            ; 3       ;
-; Compteur:ucpt|cpt_anemo[2]            ; 3       ;
-; Compteur:ucpt|cpt_anemo[1]            ; 3       ;
-; clk_50M                               ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|process_0~14 ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|process_0~9  ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[31]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[30]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[29]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[28]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[27]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[26]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|process_0~7  ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[25]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[21]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[20]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[19]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[18]     ; 2       ;
-; Diviseur_50M_2hz:udiv2hz|cpt1[13]     ; 2       ;
-+---------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Interconnect Usage Summary                          ;
-+----------------------------+------------------------+
-; Interconnect Resource Type ; Usage                  ;
-+----------------------------+------------------------+
-; Block interconnects        ; 154 / 94,460 ( < 1 % ) ;
-; C16 interconnects          ; 0 / 3,315 ( 0 % )      ;
-; C4 interconnects           ; 103 / 60,840 ( < 1 % ) ;
-; Direct links               ; 51 / 94,460 ( < 1 % )  ;
-; Global clocks              ; 3 / 16 ( 19 % )        ;
-; Local interconnects        ; 91 / 33,216 ( < 1 % )  ;
-; R24 interconnects          ; 7 / 3,091 ( < 1 % )    ;
-; R4 interconnects           ; 57 / 81,294 ( < 1 % )  ;
-+----------------------------+------------------------+
-
-
-+----------------------------------------------------------------------------+
-; LAB Logic Elements                                                         ;
-+---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.64) ; Number of LABs  (Total = 11) ;
-+---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 7                            ;
-+---------------------------------------------+------------------------------+
-
-
-+-------------------------------------------------------------------+
-; LAB-wide Signals                                                  ;
-+------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.09) ; Number of LABs  (Total = 11) ;
-+------------------------------------+------------------------------+
-; 1 Clock                            ; 8                            ;
-; 1 Clock enable                     ; 1                            ;
-; 2 Clocks                           ; 3                            ;
-+------------------------------------+------------------------------+
-
-
-+-----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 21.45) ; Number of LABs  (Total = 11) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 2                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
-
-
-+---------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                         ;
-+--------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 10.55) ; Number of LABs  (Total = 11) ;
-+--------------------------------------------------+------------------------------+
-; 0                                                ; 0                            ;
-; 1                                                ; 1                            ;
-; 2                                                ; 0                            ;
-; 3                                                ; 0                            ;
-; 4                                                ; 0                            ;
-; 5                                                ; 0                            ;
-; 6                                                ; 0                            ;
-; 7                                                ; 1                            ;
-; 8                                                ; 1                            ;
-; 9                                                ; 4                            ;
-; 10                                               ; 0                            ;
-; 11                                               ; 0                            ;
-; 12                                               ; 0                            ;
-; 13                                               ; 0                            ;
-; 14                                               ; 0                            ;
-; 15                                               ; 0                            ;
-; 16                                               ; 4                            ;
-+--------------------------------------------------+------------------------------+
-
-
-+-----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.55) ; Number of LABs  (Total = 11) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 2                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 2                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 2                            ;
-+----------------------------------------------+------------------------------+
+; Interconnect Usage Summary                      ;
++----------------------------+--------------------+
+; Interconnect Resource Type ; Usage              ;
++----------------------------+--------------------+
+; Block interconnects        ; 0 / 94,460 ( 0 % ) ;
+; C16 interconnects          ; 0 / 3,315 ( 0 % )  ;
+; C4 interconnects           ; 0 / 60,840 ( 0 % ) ;
+; Direct links               ; 0 / 94,460 ( 0 % ) ;
+; Global clocks              ; 0 / 16 ( 0 % )     ;
+; Local interconnects        ; 0 / 33,216 ( 0 % ) ;
+; R24 interconnects          ; 0 / 3,091 ( 0 % )  ;
+; R4 interconnects           ; 0 / 81,294 ( 0 % ) ;
++----------------------------+--------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1304,20 +1071,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing                      ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-
-
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Sep 25 11:08:07 2020
+    Info: Processing started: Tue Sep 29 11:44:59 2020
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off F1 -c F1
 Info: Selected device EP2C35F672C6 for design "F1"
 Info: Low junction temperature is 0 degrees C
@@ -1331,30 +1091,12 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~ASDO~ is reserved at location E3
     Info: Pin ~nCSO~ is reserved at location D3
     Info: Pin ~LVDS150p/nCEO~ is reserved at location AE24
-Critical Warning: No exact pin location assignment(s) for 10 pins of 10 total pins
-    Info: Pin led0 not assigned to an exact location on the device
-    Info: Pin led1 not assigned to an exact location on the device
-    Info: Pin led2 not assigned to an exact location on the device
-    Info: Pin led3 not assigned to an exact location on the device
-    Info: Pin led4 not assigned to an exact location on the device
-    Info: Pin led5 not assigned to an exact location on the device
-    Info: Pin led6 not assigned to an exact location on the device
-    Info: Pin led7 not assigned to an exact location on the device
-    Info: Pin in_fred_anemometre not assigned to an exact location on the device
-    Info: Pin clk_50M not assigned to an exact location on the device
+Critical Warning: No exact pin location assignment(s) for 3 pins of 13 total pins
+    Info: Pin start_stop not assigned to an exact location on the device
+    Info: Pin raz_n not assigned to an exact location on the device
+    Info: Pin continu not assigned to an exact location on the device
 Info: Timing-driven compilation is using the Classic Timing Analyzer
 Info: Timing requirements not specified -- quality metrics such as performance and power consumption may be sacrificed to reduce compilation time.
-Info: Automatically promoted node clk_50M (placed in PIN P2 (CLK2, LVDSCLK1p, Input))
-    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
-    Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node Diviseur_50M_1hz:udiv1hz|clkout
-        Info: Destination node Diviseur_50M_2hz:udiv2hz|clkout
-Info: Automatically promoted node in_fred_anemometre (placed in PIN P1 (CLK3, LVDSCLK1n, Input))
-    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
-Info: Automatically promoted node Diviseur_50M_1hz:udiv1hz|clkout 
-    Info: Automatically promoted destinations to use location or clock signal Global Clock
-    Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node Diviseur_50M_1hz:udiv1hz|clkout~0
 Info: Starting register packing
 Extra Info: Performing register packing on registers with non-logic cell location assignments
 Extra Info: Completed register packing on registers with non-logic cell location assignments
@@ -1365,56 +1107,27 @@ Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
 Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info: Number of I/O pins in group: 8 (unused VREF, 3.3V VCCIO, 0 input, 8 output, 0 bidirectional)
+    Info: Number of I/O pins in group: 3 (unused VREF, 3.3V VCCIO, 3 input, 0 output, 0 bidirectional)
         Info: I/O standards used: 3.3-V LVTTL.
 Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
-        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  62 pins available
-        Info: I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  57 pins available
+        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  64 pins available
+        Info: I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 3 total pin(s) used --  56 pins available
         Info: I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
         Info: I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
-        Info: I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  65 pins available
+        Info: I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  64 pins available
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  58 pins available
-        Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
+        Info: I/O bank number 7 does not use VREF pins and has 3.3V VCCIO pins. 8 total pin(s) used --  50 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
-Info: Fitter placement operations ending: elapsed time is 00:00:01
-Info: Estimated most critical path is register to register delay of 4.462 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X19_Y25; Fanout = 3; REG Node = 'Diviseur_50M_1hz:udiv1hz|cpt1[0]'
-    Info: 2: + IC(0.931 ns) + CELL(0.414 ns) = 1.345 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~1'
-    Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 1.416 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~3'
-    Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.487 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~5'
-    Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.558 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~7'
-    Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.629 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~9'
-    Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.700 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~11'
-    Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.771 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~13'
-    Info: 9: + IC(0.000 ns) + CELL(0.071 ns) = 1.842 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~15'
-    Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 1.913 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~17'
-    Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 1.984 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~19'
-    Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 2.055 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~21'
-    Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 2.126 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~23'
-    Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 2.197 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~25'
-    Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 2.268 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~27'
-    Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 2.339 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~29'
-    Info: 17: + IC(0.000 ns) + CELL(0.071 ns) = 2.410 ns; Loc. = LAB_X20_Y26; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~31'
-    Info: 18: + IC(0.090 ns) + CELL(0.071 ns) = 2.571 ns; Loc. = LAB_X20_Y25; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~33'
-    Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 2.642 ns; Loc. = LAB_X20_Y25; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~35'
-    Info: 20: + IC(0.000 ns) + CELL(0.071 ns) = 2.713 ns; Loc. = LAB_X20_Y25; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~37'
-    Info: 21: + IC(0.000 ns) + CELL(0.071 ns) = 2.784 ns; Loc. = LAB_X20_Y25; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~39'
-    Info: 22: + IC(0.000 ns) + CELL(0.071 ns) = 2.855 ns; Loc. = LAB_X20_Y25; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~41'
-    Info: 23: + IC(0.000 ns) + CELL(0.071 ns) = 2.926 ns; Loc. = LAB_X20_Y25; Fanout = 2; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~43'
-    Info: 24: + IC(0.000 ns) + CELL(0.410 ns) = 3.336 ns; Loc. = LAB_X20_Y25; Fanout = 1; COMB Node = 'Diviseur_50M_1hz:udiv1hz|Add0~44'
-    Info: 25: + IC(0.622 ns) + CELL(0.420 ns) = 4.378 ns; Loc. = LAB_X19_Y26; Fanout = 1; COMB Node = 'Diviseur_50M_1hz:udiv1hz|cpt1~12'
-    Info: 26: + IC(0.000 ns) + CELL(0.084 ns) = 4.462 ns; Loc. = LAB_X19_Y26; Fanout = 3; REG Node = 'Diviseur_50M_1hz:udiv1hz|cpt1[22]'
-    Info: Total cell delay = 2.819 ns ( 63.18 % )
-    Info: Total interconnect delay = 1.643 ns ( 36.82 % )
+Info: Fitter placement operations ending: elapsed time is 00:00:00
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X44_Y24 to location X54_Y36
+    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y24 to location X10_Y36
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -1433,8 +1146,8 @@ Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 275 megabytes
-    Info: Processing ended: Fri Sep 25 11:08:16 2020
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Processing ended: Tue Sep 29 11:45:05 2020
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
