@@ -20,72 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-Diviseur_50M_1hz
-# storage
-db|F1.(1).cnf
-db|F1.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|altera|91sp2|quartus|m2sme|barre_franche|components|diviseur_50m_1hz|diviseur_50m_1hz.vhd
-6e21cbfd9ecf04a72f9d978956c7ee
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-Diviseur_50M_1hz:udiv1hz
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-Diviseur_50M_2hz
-# storage
-db|F1.(2).cnf
-db|F1.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|altera|91sp2|quartus|m2sme|barre_franche|components|diviseur_50m_2hz|diviseur_50m_2hz.vhd
-64f883de514bfeb55fa55b19ea1c6cc
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-Diviseur_50M_2hz:udiv2hz
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 Compteur
 # storage
 db|F1.(3).cnf
@@ -207,39 +141,6 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-synchro_anemo
-# storage
-db|F1.(6).cnf
-db|F1.(6).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|altera|91sp2|quartus|m2sme|barre_franche|components|synchro_anemo|synchro_anemo.vhd
-1540202d4b2ffd624a1e02f332a29d
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-synchro_anemo:usynchro
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 compteur_monocoup
 # storage
 db|F1.(7).cnf
@@ -279,6 +180,119 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
+Diviseur_50M_1hz
+# storage
+db|F1.(1).cnf
+db|F1.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|m2sme|barre_franche|components|diviseur_50m_1hz|diviseur_50m_1hz.vhd
+5b24eadc8717aae6aaf13281b1bef3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Diviseur_50M_1hz:udiv1hz
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Diviseur_50M_2hz
+# storage
+db|F1.(2).cnf
+db|F1.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|m2sme|barre_franche|components|diviseur_50m_2hz|diviseur_50m_2hz.vhd
+a8e13f3414285fbe2d0554b358b48
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Diviseur_50M_2hz:udiv2hz
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+synchro_anemo
+# storage
+db|F1.(6).cnf
+db|F1.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|m2sme|barre_franche|components|synchro_anemo|synchro_anemo.vhd
+e17c40e236d9e6bbe6d74e9987f391c7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(in_data_anemo_continu)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_data_anemo_monocoup)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(out_data_anemometre)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+synchro_anemo:usynchro
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 F1
 # storage
 db|F1.(0).cnf
@@ -290,7 +304,7 @@ ON
 # case_insensitive
 # source_file
 f1.vhd
-70cc72b943b29ab75838f9b2d445e128
+a690c3a98275c6e8bc152a78e71e44ed
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

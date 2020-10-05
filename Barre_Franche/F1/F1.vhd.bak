@@ -17,7 +17,8 @@ entity F1 is   port(
 	led4 : out std_logic; 
 	led5 : out std_logic; 
 	led6 : out std_logic; 
-	led7 : out std_logic);
+	led7 : out std_logic;
+	data_valid : out std_logic);
 end F1;
 
 architecture ar of F1 is
@@ -87,6 +88,7 @@ end component ;
 	signal data_anemo_out : std_logic_vector(7 downto 0);
 	signal data_anemo_aff : std_logic_vector(7 downto 0);
 	signal data_anemo_continu_out : std_logic_vector(7 downto 0);
+	signal data_anemo_continu_raf_out : std_logic_vector(7 downto 0);
 	signal data_anemo_monocoup_out : std_logic_vector(7 downto 0);
 	signal data_valid_out : std_logic;
 
@@ -111,7 +113,7 @@ ucpt : Compteur PORT MAP(
 uraf : raf_anemo PORT MAP(
 	clk1Hz => clk_1hz_out,
 	vect => data_anemo_out,
-	data_anemo => data_anemo_aff
+	data_anemo => data_anemo_continu_raf_out
 );
 
 uaffichage : Affichage_8bits PORT MAP(
@@ -135,9 +137,10 @@ ucptmono : compteur_monocoup PORT MAP (
 usynchro : synchro_anemo PORT MAP (
 	in_continu => continu,
 	in_raz_n => raz_n,
-	in_data_anemo_continu => data_anemo_continu_out,
+	in_data_anemo_continu => data_anemo_continu_raf_out,
 	in_data_anemo_monocoup => data_anemo_monocoup_out,
-	out_data_anemometre => data_anemo_aff
+	out_data_anemometre => data_anemo_aff,
+	out_data_valid => data_valid
 );
 
 end ar;

@@ -70,7 +70,7 @@ set_global_assignment -name VHDL_FILE ../Components/synchro_anemo/synchro_anemo.
 set_global_assignment -name VECTOR_WAVEFORM_FILE ../Components/synchro_anemo/F1_synchro.vwf
 set_global_assignment -name VHDL_FILE ../Components/compteur_monocoup/compteur_monocoup.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE ../Components/compteur_monocoup/F1_monocoup.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ../Components/compteur_monocoup/F1_monocoup.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE F1.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"

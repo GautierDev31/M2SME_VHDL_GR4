@@ -39,6 +39,7 @@ begin
 	then 
 	out_data_valid <= '1';
 	else out_data_valid <= '0';
+	end if ;
 	
 	out_data_anemometre <= out_data_anemo;
 	

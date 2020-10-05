@@ -18,7 +18,7 @@ architecture ar of synchro_anemo is
 	signal out_data_anemo : std_logic_vector(7 downto 0) := "00000000";
 
 begin
-process( in_continu, in_raz_n, in_data_anemo_continu, in_data_anemo_monocoup)
+process( in_continu, in_raz_n, in_data_anemo_continu, in_data_anemo_monocoup, out_data_anemo)
 begin
 	
 	if in_continu = '0' 

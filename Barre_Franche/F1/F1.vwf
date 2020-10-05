@@ -25,7 +25,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 1000000000.0;
+	DATA_DURATION = 5000000000.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -42,97 +42,117 @@ SIGNAL("clk_50M")
 	PARENT = "";
 }
 
-SIGNAL("data_anemometre")
+SIGNAL("continu")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 8;
-	LSB_INDEX = 0;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("in_fred_anemometre")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("led0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
 	PARENT = "";
 }
 
-SIGNAL("data_anemometre[7]")
+SIGNAL("led1")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "data_anemometre";
+	PARENT = "";
 }
 
-SIGNAL("data_anemometre[6]")
+SIGNAL("led2")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "data_anemometre";
+	PARENT = "";
 }
 
-SIGNAL("data_anemometre[5]")
+SIGNAL("led3")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "data_anemometre";
+	PARENT = "";
 }
 
-SIGNAL("data_anemometre[4]")
+SIGNAL("led4")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "data_anemometre";
+	PARENT = "";
 }
 
-SIGNAL("data_anemometre[3]")
+SIGNAL("led5")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "data_anemometre";
+	PARENT = "";
 }
 
-SIGNAL("data_anemometre[2]")
+SIGNAL("led6")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "data_anemometre";
+	PARENT = "";
 }
 
-SIGNAL("data_anemometre[1]")
+SIGNAL("led7")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "data_anemometre";
+	PARENT = "";
 }
 
-SIGNAL("data_anemometre[0]")
+SIGNAL("raz_n")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "data_anemometre";
+	DIRECTION = INPUT;
+	PARENT = "";
 }
 
-SIGNAL("in_fred_anemometre")
+SIGNAL("start_stop")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -149,82 +169,19 @@ TRANSITION_LIST("clk_50M")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 5000;
-			LEVEL 0 FOR 100000.0;
-			LEVEL 1 FOR 100000.0;
+			REPEAT = 2500;
+			LEVEL 0 FOR 1000000.0;
+			LEVEL 1 FOR 1000000.0;
 		}
 	}
 }
 
-TRANSITION_LIST("data_anemometre[7]")
+TRANSITION_LIST("continu")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000000.0;
-	}
-}
-
-TRANSITION_LIST("data_anemometre[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000000000.0;
-	}
-}
-
-TRANSITION_LIST("data_anemometre[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000000000.0;
-	}
-}
-
-TRANSITION_LIST("data_anemometre[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000000000.0;
-	}
-}
-
-TRANSITION_LIST("data_anemometre[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000000000.0;
-	}
-}
-
-TRANSITION_LIST("data_anemometre[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000000000.0;
-	}
-}
-
-TRANSITION_LIST("data_anemometre[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000000000.0;
-	}
-}
-
-TRANSITION_LIST("data_anemometre[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000000000.0;
+		LEVEL 1 FOR 5000000000.0;
 	}
 }
 
@@ -235,16 +192,106 @@ TRANSITION_LIST("in_fred_anemometre")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10000000.0;
-			LEVEL 1 FOR 10000000.0;
+			REPEAT = 25;
+			LEVEL 0 FOR 100000000.0;
+			LEVEL 1 FOR 100000000.0;
 		}
+	}
+}
+
+TRANSITION_LIST("led0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("led1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("led2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("led3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("led4")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("led5")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("led6")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("led7")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("raz_n")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5000000000.0;
+	}
+}
+
+TRANSITION_LIST("start_stop")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5000000000.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "in_fred_anemometre";
+	CHANNEL = "clk_50M";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 0;
@@ -253,7 +300,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "clk_50M";
+	CHANNEL = "continu";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 1;
@@ -262,92 +309,101 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre";
+	CHANNEL = "in_fred_anemometre";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
-	CHILDREN = 3, 4, 5, 6, 7, 8, 9, 10;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre[7]";
+	CHANNEL = "led0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 3;
-	TREE_LEVEL = 1;
-	PARENT = 2;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre[6]";
+	CHANNEL = "led1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 4;
-	TREE_LEVEL = 1;
-	PARENT = 2;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre[5]";
+	CHANNEL = "led2";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 2;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre[4]";
+	CHANNEL = "led3";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 6;
-	TREE_LEVEL = 1;
-	PARENT = 2;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre[3]";
+	CHANNEL = "led4";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 7;
-	TREE_LEVEL = 1;
-	PARENT = 2;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre[2]";
+	CHANNEL = "led5";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 8;
-	TREE_LEVEL = 1;
-	PARENT = 2;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre[1]";
+	CHANNEL = "led6";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 9;
-	TREE_LEVEL = 1;
-	PARENT = 2;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_anemometre[0]";
+	CHANNEL = "led7";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 10;
-	TREE_LEVEL = 1;
-	PARENT = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "raz_n";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "start_stop";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

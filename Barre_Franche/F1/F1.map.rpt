@@ -1,5 +1,5 @@
 Analysis & Synthesis report for F1
-Tue Sep 29 11:44:58 2020
+Fri Oct 02 09:46:03 2020
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -13,10 +13,12 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Port Connectivity Checks: "synchro_anemo:usynchro"
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +44,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 29 11:44:58 2020        ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 02 09:46:03 2020        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; F1                                           ;
 ; Top-level Entity Name              ; F1                                           ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 0                                            ;
-;     Total combinational functions  ; 0                                            ;
-;     Dedicated logic registers      ; 0                                            ;
-; Total registers                    ; 0                                            ;
-; Total pins                         ; 13                                           ;
+; Total logic elements               ; 164                                          ;
+;     Total combinational functions  ; 143                                          ;
+;     Dedicated logic registers      ; 105                                          ;
+; Total registers                    ; 105                                          ;
+; Total pins                         ; 14                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -165,50 +167,96 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 13    ;
-+---------------------------------------------+-------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 164     ;
+;                                             ;         ;
+; Total combinational functions               ; 143     ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 41      ;
+;     -- 3 input functions                    ; 6       ;
+;     -- <=2 input functions                  ; 96      ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 69      ;
+;     -- arithmetic mode                      ; 74      ;
+;                                             ;         ;
+; Total registers                             ; 105     ;
+;     -- Dedicated logic registers            ; 105     ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 14      ;
+; Maximum fan-out node                        ; clk_50M ;
+; Maximum fan-out                             ; 68      ;
+; Total fan-out                               ; 629     ;
+; Average fan-out                             ; 2.40    ;
++---------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |F1                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |F1                 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+; |F1                             ; 143 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |F1                            ; work         ;
+;    |Compteur:ucpt|              ; 12 (12)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|Compteur:ucpt              ;              ;
+;    |Diviseur_50M_1hz:udiv1hz|   ; 55 (55)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|Diviseur_50M_1hz:udiv1hz   ;              ;
+;    |Diviseur_50M_2hz:udiv2hz|   ; 55 (55)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|Diviseur_50M_2hz:udiv2hz   ;              ;
+;    |compteur_monocoup:ucptmono| ; 12 (12)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|compteur_monocoup:ucptmono ;              ;
+;    |raf_anemo:uraf|             ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|raf_anemo:uraf             ;              ;
+;    |synchro_anemo:usynchro|     ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|synchro_anemo:usynchro     ;              ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                         ;
-+--------------------------------------------+-----------------------------------------------+
-; Register name                              ; Reason for Removal                            ;
-+--------------------------------------------+-----------------------------------------------+
-; Diviseur_50M_1hz:udiv1hz|state[1..3,5..31] ; Merged with Diviseur_50M_1hz:udiv1hz|state[4] ;
-; Diviseur_50M_1hz:udiv1hz|state[4]          ; Stuck at GND due to stuck port data_in        ;
-; raf_anemo:uraf|data_anemo[1..7]            ; Stuck at GND due to stuck port data_in        ;
-; Total Number of Removed Registers = 38     ;                                               ;
-+--------------------------------------------+-----------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; synchro_anemo:usynchro|out_data_anemo[1]           ; VCC                 ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[2]           ; VCC                 ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[3]           ; VCC                 ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[4]           ; VCC                 ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[5]           ; VCC                 ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[6]           ; VCC                 ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[7]           ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++------------------------------------------------+-----------------------------------------------+
+; Register name                                  ; Reason for Removal                            ;
++------------------------------------------------+-----------------------------------------------+
+; compteur_monocoup:ucptmono|state[1..31]        ; Stuck at GND due to stuck port data_in        ;
+; Compteur:ucpt|state[1..31]                     ; Stuck at GND due to stuck port data_in        ;
+; compteur_monocoup:ucptmono|cpt[0]              ; Stuck at GND due to stuck port data_in        ;
+; Compteur:ucpt|cpt_anemo[0]                     ; Stuck at GND due to stuck port data_in        ;
+; compteur_monocoup:ucptmono|m_anemo_mococoup[0] ; Stuck at GND due to stuck port data_in        ;
+; Compteur:ucpt|vect_anemo[0]                    ; Stuck at GND due to stuck port data_in        ;
+; raf_anemo:uraf|data_anemo[0]                   ; Stuck at GND due to stuck port data_in        ;
+; Diviseur_50M_2hz:udiv2hz|state[1,3..31]        ; Merged with Diviseur_50M_2hz:udiv2hz|state[2] ;
+; Diviseur_50M_1hz:udiv1hz|state[1,3..31]        ; Merged with Diviseur_50M_1hz:udiv1hz|state[2] ;
+; Diviseur_50M_2hz:udiv2hz|state[2]              ; Stuck at GND due to stuck port data_in        ;
+; Diviseur_50M_1hz:udiv1hz|state[2]              ; Stuck at GND due to stuck port data_in        ;
+; Total Number of Removed Registers = 129        ;                                               ;
++------------------------------------------------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                   ;
++------------------------+---------------------------+----------------------------------------------------------+
+; Register name          ; Reason for Removal        ; Registers Removed due to This Register                   ;
++------------------------+---------------------------+----------------------------------------------------------+
+; Compteur:ucpt|state[1] ; Stuck at GND              ; Compteur:ucpt|cpt_anemo[0], Compteur:ucpt|vect_anemo[0], ;
+;                        ; due to stuck port data_in ; raf_anemo:uraf|data_anemo[0]                             ;
++------------------------+---------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -216,23 +264,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 105   ;
+; Number of registers using Synchronous Clear  ; 14    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 28    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "synchro_anemo:usynchro"                                                                       ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; out_data_valid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |F1|Diviseur_50M_1hz:udiv1hz|state[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |F1|Diviseur_50M_2hz:udiv2hz|clkout   ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |F1|compteur_monocoup:ucptmono|cpt[1] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |F1|Compteur:ucpt|cpt_anemo[1]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
 +-------------------------------+
@@ -241,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Sep 29 11:44:55 2020
+    Info: Processing started: Fri Oct 02 09:46:01 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off F1 -c F1
 Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/m2sme/barre_franche/components/affichage_8bits/afficahge_8bits.vhd
     Info: Found design unit 1: Affichage_8bits-ar
@@ -269,7 +320,6 @@ Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/q
     Info: Found entity 1: compteur_monocoup
 Info: Elaborating entity "F1" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at F1.vhd(13): used implicit default value for signal "led0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at F1.vhd(87): used implicit default value for signal "data_anemo_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info: Elaborating entity "Diviseur_50M_1hz" for hierarchy "Diviseur_50M_1hz:udiv1hz"
 Info: Elaborating entity "Diviseur_50M_2hz" for hierarchy "Diviseur_50M_2hz:udiv2hz"
 Info: Elaborating entity "Compteur" for hierarchy "Compteur:ucpt"
@@ -277,8 +327,6 @@ Info: Elaborating entity "raf_anemo" for hierarchy "raf_anemo:uraf"
 Info: Elaborating entity "Affichage_8bits" for hierarchy "Affichage_8bits:uaffichage"
 Info: Elaborating entity "compteur_monocoup" for hierarchy "compteur_monocoup:ucptmono"
 Info: Elaborating entity "synchro_anemo" for hierarchy "synchro_anemo:usynchro"
-Warning (10492): VHDL Process Statement warning at synchro_anemo.vhd(38): signal "out_data_anemo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at synchro_anemo.vhd(44): signal "out_data_anemo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at synchro_anemo.vhd(21): inferring latch(es) for signal or variable "out_data_anemo", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "out_data_anemo[0]" at synchro_anemo.vhd(21)
 Info (10041): Inferred latch for "out_data_anemo[1]" at synchro_anemo.vhd(21)
@@ -290,26 +338,14 @@ Info (10041): Inferred latch for "out_data_anemo[6]" at synchro_anemo.vhd(21)
 Info (10041): Inferred latch for "out_data_anemo[7]" at synchro_anemo.vhd(21)
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "led0" is stuck at GND
-    Warning (13410): Pin "led1" is stuck at GND
-    Warning (13410): Pin "led2" is stuck at GND
-    Warning (13410): Pin "led3" is stuck at GND
-    Warning (13410): Pin "led4" is stuck at GND
-    Warning (13410): Pin "led5" is stuck at GND
-    Warning (13410): Pin "led6" is stuck at GND
-    Warning (13410): Pin "led7" is stuck at GND
-Warning: Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "in_fred_anemometre"
-    Warning (15610): No output dependent on input pin "start_stop"
-    Warning (15610): No output dependent on input pin "raz_n"
-    Warning (15610): No output dependent on input pin "continu"
-    Warning (15610): No output dependent on input pin "clk_50M"
-Info: Implemented 13 device resources after synthesis - the final resource count might be different
+Info: Implemented 178 device resources after synthesis - the final resource count might be different
     Info: Implemented 5 input pins
-    Info: Implemented 8 output pins
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 229 megabytes
-    Info: Processing ended: Tue Sep 29 11:44:58 2020
-    Info: Elapsed time: 00:00:03
+    Info: Implemented 9 output pins
+    Info: Implemented 164 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 238 megabytes
+    Info: Processing ended: Fri Oct 02 09:46:03 2020
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:04
 
 
