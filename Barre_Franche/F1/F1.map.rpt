@@ -1,6 +1,6 @@
 Analysis & Synthesis report for F1
-Fri Oct 02 09:46:03 2020
-Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+Tue Oct 06 11:31:50 2020
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -14,18 +14,20 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Analysis & Synthesis Messages
+  9. Logic Cells Representing Combinational Loops
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2010 Altera Corporation
+Copyright (C) 1991-2011 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,24 +43,24 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 02 09:46:03 2020        ;
-; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
-; Revision Name                      ; F1                                           ;
-; Top-level Entity Name              ; F1                                           ;
-; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 164                                          ;
-;     Total combinational functions  ; 143                                          ;
-;     Dedicated logic registers      ; 105                                          ;
-; Total registers                    ; 105                                          ;
-; Total pins                         ; 14                                           ;
-; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 0                                            ;
-; Embedded Multiplier 9-bit elements ; 0                                            ;
-; Total PLLs                         ; 0                                            ;
-+------------------------------------+----------------------------------------------+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 06 11:31:50 2020         ;
+; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
+; Revision Name                      ; F1                                            ;
+; Top-level Entity Name              ; F1                                            ;
+; Family                             ; Cyclone II                                    ;
+; Total logic elements               ; 202                                           ;
+;     Total combinational functions  ; 181                                           ;
+;     Dedicated logic registers      ; 105                                           ;
+; Total registers                    ; 105                                           ;
+; Total pins                         ; 14                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -68,8 +70,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
 ; Top-level entity name                                                      ; F1                 ; F1                 ;
-; Family name                                                                ; Cyclone II         ; Stratix II         ;
-; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -108,6 +109,7 @@ applicable agreement for further details.
 ; Auto ROM Replacement                                                       ; On                 ; On                 ;
 ; Auto RAM Replacement                                                       ; On                 ; On                 ;
 ; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
 ; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
 ; Strict RAM Replacement                                                     ; Off                ; Off                ;
 ; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
@@ -120,7 +122,9 @@ applicable agreement for further details.
 ; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
 ; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
-; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
 ; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
@@ -137,6 +141,7 @@ applicable agreement for further details.
 ; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
@@ -146,25 +151,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 2      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
-+-------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+
-; File Name with User-Entered Path                      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                   ;
-+-------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+
-; ../Components/Affichage_8bits/Afficahge_8bits.vhd     ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/Components/Affichage_8bits/Afficahge_8bits.vhd     ;
-; ../Components/Diviseur_50M_2hz/Diviseur_50M_2hz.vhd   ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/Components/Diviseur_50M_2hz/Diviseur_50M_2hz.vhd   ;
-; ../Components/raf_anemo/raf_anemo.vhd                 ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/Components/raf_anemo/raf_anemo.vhd                 ;
-; ../Components/Diviseur_50M_1hz/Diviseur_50M_1hz.vhd   ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/Components/Diviseur_50M_1hz/Diviseur_50M_1hz.vhd   ;
-; ../Components/Compteur/Compteur.vhd                   ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/Components/Compteur/Compteur.vhd                   ;
-; F1.vhd                                                ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/F1.vhd                                          ;
-; ../Components/synchro_anemo/synchro_anemo.vhd         ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/Components/synchro_anemo/synchro_anemo.vhd         ;
-; ../Components/compteur_monocoup/compteur_monocoup.vhd ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/Components/compteur_monocoup/compteur_monocoup.vhd ;
-+-------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
++-------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                     ;
++-------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+
+; ../Components/Affichage_8bits/Afficahge_8bits.vhd     ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/M2SME_VHDL_GR4-F1test/Barre_Franche/Components/Affichage_8bits/Afficahge_8bits.vhd     ;
+; ../Components/Diviseur_50M_2hz/Diviseur_50M_2hz.vhd   ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/M2SME_VHDL_GR4-F1test/Barre_Franche/Components/Diviseur_50M_2hz/Diviseur_50M_2hz.vhd   ;
+; ../Components/raf_anemo/raf_anemo.vhd                 ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/M2SME_VHDL_GR4-F1test/Barre_Franche/Components/raf_anemo/raf_anemo.vhd                 ;
+; ../Components/Diviseur_50M_1hz/Diviseur_50M_1hz.vhd   ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/M2SME_VHDL_GR4-F1test/Barre_Franche/Components/Diviseur_50M_1hz/Diviseur_50M_1hz.vhd   ;
+; ../Components/Compteur/Compteur.vhd                   ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/M2SME_VHDL_GR4-F1test/Barre_Franche/Components/Compteur/Compteur.vhd                   ;
+; F1.vhd                                                ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/M2SME_VHDL_GR4-F1test/Barre_Franche/F1/F1.vhd                                          ;
+; ../Components/synchro_anemo/synchro_anemo.vhd         ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/M2SME_VHDL_GR4-F1test/Barre_Franche/Components/synchro_anemo/synchro_anemo.vhd         ;
+; ../Components/compteur_monocoup/compteur_monocoup.vhd ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/M2SME_VHDL_GR4-F1test/Barre_Franche/Components/compteur_monocoup/compteur_monocoup.vhd ;
++-------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -172,16 +177,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 164     ;
+; Estimated Total logic elements              ; 202     ;
 ;                                             ;         ;
-; Total combinational functions               ; 143     ;
+; Total combinational functions               ; 181     ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 41      ;
-;     -- 3 input functions                    ; 6       ;
-;     -- <=2 input functions                  ; 96      ;
+;     -- 4 input functions                    ; 52      ;
+;     -- 3 input functions                    ; 20      ;
+;     -- <=2 input functions                  ; 109     ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 69      ;
+;     -- normal mode                          ; 107     ;
 ;     -- arithmetic mode                      ; 74      ;
 ;                                             ;         ;
 ; Total registers                             ; 105     ;
@@ -191,8 +196,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 14      ;
 ; Maximum fan-out node                        ; clk_50M ;
 ; Maximum fan-out                             ; 68      ;
-; Total fan-out                               ; 629     ;
-; Average fan-out                             ; 2.40    ;
+; Total fan-out                               ; 741     ;
+; Average fan-out                             ; 2.47    ;
 +---------------------------------------------+---------+
 
 
@@ -201,32 +206,50 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; |F1                             ; 143 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |F1                            ; work         ;
+; |F1                             ; 181 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |F1                            ;              ;
 ;    |Compteur:ucpt|              ; 12 (12)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|Compteur:ucpt              ;              ;
-;    |Diviseur_50M_1hz:udiv1hz|   ; 55 (55)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|Diviseur_50M_1hz:udiv1hz   ;              ;
-;    |Diviseur_50M_2hz:udiv2hz|   ; 55 (55)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|Diviseur_50M_2hz:udiv2hz   ;              ;
+;    |Diviseur_50M_1hz:udiv1hz|   ; 62 (62)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|Diviseur_50M_1hz:udiv1hz   ;              ;
+;    |Diviseur_50M_2hz:udiv2hz|   ; 62 (62)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|Diviseur_50M_2hz:udiv2hz   ;              ;
 ;    |compteur_monocoup:ucptmono| ; 12 (12)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|compteur_monocoup:ucptmono ;              ;
 ;    |raf_anemo:uraf|             ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|raf_anemo:uraf             ;              ;
-;    |synchro_anemo:usynchro|     ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|synchro_anemo:usynchro     ;              ;
+;    |synchro_anemo:usynchro|     ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |F1|synchro_anemo:usynchro     ;              ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; synchro_anemo:usynchro|out_data_anemo[1]           ; VCC                 ; yes                    ;
-; synchro_anemo:usynchro|out_data_anemo[2]           ; VCC                 ; yes                    ;
-; synchro_anemo:usynchro|out_data_anemo[3]           ; VCC                 ; yes                    ;
-; synchro_anemo:usynchro|out_data_anemo[4]           ; VCC                 ; yes                    ;
-; synchro_anemo:usynchro|out_data_anemo[5]           ; VCC                 ; yes                    ;
-; synchro_anemo:usynchro|out_data_anemo[6]           ; VCC                 ; yes                    ;
-; synchro_anemo:usynchro|out_data_anemo[7]           ; VCC                 ; yes                    ;
-; Number of user-specified and inferred latches = 7  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                     ;
++-----------------------------------------------------+------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                      ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------------+------------------------+
+; synchro_anemo:usynchro|out_data_anemo[1]            ; synchro_anemo:usynchro|out_data_anemo[7] ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[2]            ; synchro_anemo:usynchro|out_data_anemo[7] ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[3]            ; synchro_anemo:usynchro|out_data_anemo[7] ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[4]            ; synchro_anemo:usynchro|out_data_anemo[7] ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[5]            ; synchro_anemo:usynchro|out_data_anemo[7] ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[6]            ; synchro_anemo:usynchro|out_data_anemo[7] ; yes                    ;
+; synchro_anemo:usynchro|out_data_anemo[7]            ; synchro_anemo:usynchro|out_data_anemo[7] ; yes                    ;
+; synchro_anemo:usynchro|monocoup[1]                  ; synchro_anemo:usynchro|process_0         ; yes                    ;
+; synchro_anemo:usynchro|monocoup[2]                  ; synchro_anemo:usynchro|process_0         ; yes                    ;
+; synchro_anemo:usynchro|monocoup[3]                  ; synchro_anemo:usynchro|process_0         ; yes                    ;
+; synchro_anemo:usynchro|monocoup[4]                  ; synchro_anemo:usynchro|process_0         ; yes                    ;
+; synchro_anemo:usynchro|monocoup[5]                  ; synchro_anemo:usynchro|process_0         ; yes                    ;
+; synchro_anemo:usynchro|monocoup[6]                  ; synchro_anemo:usynchro|process_0         ; yes                    ;
+; synchro_anemo:usynchro|monocoup[7]                  ; synchro_anemo:usynchro|process_0         ; yes                    ;
+; Number of user-specified and inferred latches = 14  ;                                          ;                        ;
++-----------------------------------------------------+------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; synchro_anemo:usynchro|out_data_valid~0                ;   ;
+; Number of logic cells representing combinational loops ; 1 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------------------------------------------------+
@@ -241,10 +264,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; compteur_monocoup:ucptmono|m_anemo_mococoup[0] ; Stuck at GND due to stuck port data_in        ;
 ; Compteur:ucpt|vect_anemo[0]                    ; Stuck at GND due to stuck port data_in        ;
 ; raf_anemo:uraf|data_anemo[0]                   ; Stuck at GND due to stuck port data_in        ;
-; Diviseur_50M_2hz:udiv2hz|state[1,3..31]        ; Merged with Diviseur_50M_2hz:udiv2hz|state[2] ;
-; Diviseur_50M_1hz:udiv1hz|state[1,3..31]        ; Merged with Diviseur_50M_1hz:udiv1hz|state[2] ;
-; Diviseur_50M_2hz:udiv2hz|state[2]              ; Stuck at GND due to stuck port data_in        ;
-; Diviseur_50M_1hz:udiv1hz|state[2]              ; Stuck at GND due to stuck port data_in        ;
+; Diviseur_50M_2hz:udiv2hz|state[1..3,5..31]     ; Merged with Diviseur_50M_2hz:udiv2hz|state[4] ;
+; Diviseur_50M_1hz:udiv1hz|state[1..3,5..31]     ; Merged with Diviseur_50M_1hz:udiv1hz|state[4] ;
+; Diviseur_50M_2hz:udiv2hz|state[4]              ; Stuck at GND due to stuck port data_in        ;
+; Diviseur_50M_1hz:udiv1hz|state[4]              ; Stuck at GND due to stuck port data_in        ;
 ; Total Number of Removed Registers = 129        ;                                               ;
 +------------------------------------------------+-----------------------------------------------+
 
@@ -274,16 +297,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |F1|Diviseur_50M_1hz:udiv1hz|state[0] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |F1|Diviseur_50M_2hz:udiv2hz|clkout   ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |F1|compteur_monocoup:ucptmono|cpt[1] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |F1|Compteur:ucpt|cpt_anemo[1]        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                            ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; |F1|Diviseur_50M_1hz:udiv1hz|clkout   ;                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; |F1|Diviseur_50M_2hz:udiv2hz|clkout   ;                            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; |F1|compteur_monocoup:ucptmono|cpt[1] ;                            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; |F1|Compteur:ucpt|cpt_anemo[3]        ;                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |F1|synchro_anemo:usynchro|state[0]   ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -291,35 +324,35 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
-    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Oct 02 09:46:01 2020
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 06 11:31:49 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off F1 -c F1
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/m2sme/barre_franche/components/affichage_8bits/afficahge_8bits.vhd
+Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 2 design units, including 1 entities, in source file /users/etudiant/desktop/m2sme_vhdl_gr4-f1test/barre_franche/components/affichage_8bits/afficahge_8bits.vhd
     Info: Found design unit 1: Affichage_8bits-ar
     Info: Found entity 1: Affichage_8bits
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/m2sme/barre_franche/components/diviseur_50m_2hz/diviseur_50m_2hz.vhd
+Info: Found 2 design units, including 1 entities, in source file /users/etudiant/desktop/m2sme_vhdl_gr4-f1test/barre_franche/components/diviseur_50m_2hz/diviseur_50m_2hz.vhd
     Info: Found design unit 1: Diviseur_50M_2hz-div
     Info: Found entity 1: Diviseur_50M_2hz
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/m2sme/barre_franche/components/raf_anemo/raf_anemo.vhd
+Info: Found 2 design units, including 1 entities, in source file /users/etudiant/desktop/m2sme_vhdl_gr4-f1test/barre_franche/components/raf_anemo/raf_anemo.vhd
     Info: Found design unit 1: raf_anemo-arch
     Info: Found entity 1: raf_anemo
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/m2sme/barre_franche/components/diviseur_50m_1hz/diviseur_50m_1hz.vhd
+Info: Found 2 design units, including 1 entities, in source file /users/etudiant/desktop/m2sme_vhdl_gr4-f1test/barre_franche/components/diviseur_50m_1hz/diviseur_50m_1hz.vhd
     Info: Found design unit 1: Diviseur_50M_1hz-div
     Info: Found entity 1: Diviseur_50M_1hz
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/m2sme/barre_franche/components/compteur/compteur.vhd
+Info: Found 2 design units, including 1 entities, in source file /users/etudiant/desktop/m2sme_vhdl_gr4-f1test/barre_franche/components/compteur/compteur.vhd
     Info: Found design unit 1: Compteur-arch
     Info: Found entity 1: Compteur
 Info: Found 2 design units, including 1 entities, in source file f1.vhd
     Info: Found design unit 1: F1-ar
     Info: Found entity 1: F1
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/m2sme/barre_franche/components/synchro_anemo/synchro_anemo.vhd
+Info: Found 2 design units, including 1 entities, in source file /users/etudiant/desktop/m2sme_vhdl_gr4-f1test/barre_franche/components/synchro_anemo/synchro_anemo.vhd
     Info: Found design unit 1: synchro_anemo-ar
     Info: Found entity 1: synchro_anemo
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/m2sme/barre_franche/components/compteur_monocoup/compteur_monocoup.vhd
+Info: Found 2 design units, including 1 entities, in source file /users/etudiant/desktop/m2sme_vhdl_gr4-f1test/barre_franche/components/compteur_monocoup/compteur_monocoup.vhd
     Info: Found design unit 1: compteur_monocoup-ar
     Info: Found entity 1: compteur_monocoup
 Info: Elaborating entity "F1" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at F1.vhd(13): used implicit default value for signal "led0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info: Elaborating entity "Diviseur_50M_1hz" for hierarchy "Diviseur_50M_1hz:udiv1hz"
 Info: Elaborating entity "Diviseur_50M_2hz" for hierarchy "Diviseur_50M_2hz:udiv2hz"
 Info: Elaborating entity "Compteur" for hierarchy "Compteur:ucpt"
@@ -327,25 +360,100 @@ Info: Elaborating entity "raf_anemo" for hierarchy "raf_anemo:uraf"
 Info: Elaborating entity "Affichage_8bits" for hierarchy "Affichage_8bits:uaffichage"
 Info: Elaborating entity "compteur_monocoup" for hierarchy "compteur_monocoup:ucptmono"
 Info: Elaborating entity "synchro_anemo" for hierarchy "synchro_anemo:usynchro"
-Warning (10631): VHDL Process Statement warning at synchro_anemo.vhd(21): inferring latch(es) for signal or variable "out_data_anemo", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "out_data_anemo[0]" at synchro_anemo.vhd(21)
-Info (10041): Inferred latch for "out_data_anemo[1]" at synchro_anemo.vhd(21)
-Info (10041): Inferred latch for "out_data_anemo[2]" at synchro_anemo.vhd(21)
-Info (10041): Inferred latch for "out_data_anemo[3]" at synchro_anemo.vhd(21)
-Info (10041): Inferred latch for "out_data_anemo[4]" at synchro_anemo.vhd(21)
-Info (10041): Inferred latch for "out_data_anemo[5]" at synchro_anemo.vhd(21)
-Info (10041): Inferred latch for "out_data_anemo[6]" at synchro_anemo.vhd(21)
-Info (10041): Inferred latch for "out_data_anemo[7]" at synchro_anemo.vhd(21)
+Warning (10492): VHDL Process Statement warning at synchro_anemo.vhd(42): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at synchro_anemo.vhd(46): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at synchro_anemo.vhd(46): signal "monocoup" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at synchro_anemo.vhd(56): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at synchro_anemo.vhd(23): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at synchro_anemo.vhd(23): inferring latch(es) for signal or variable "out_data_anemo", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at synchro_anemo.vhd(23): inferring latch(es) for signal or variable "monocoup", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "monocoup[0]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "monocoup[1]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "monocoup[2]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "monocoup[3]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "monocoup[4]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "monocoup[5]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "monocoup[6]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "monocoup[7]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "out_data_anemo[0]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "out_data_anemo[1]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "out_data_anemo[2]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "out_data_anemo[3]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "out_data_anemo[4]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "out_data_anemo[5]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "out_data_anemo[6]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "out_data_anemo[7]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[0]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[1]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[2]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[3]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[4]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[5]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[6]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[7]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[8]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[9]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[10]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[11]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[12]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[13]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[14]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[15]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[16]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[17]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[18]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[19]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[20]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[21]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[22]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[23]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[24]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[25]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[26]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[27]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[28]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[29]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[30]" at synchro_anemo.vhd(23)
+Info (10041): Inferred latch for "state[31]" at synchro_anemo.vhd(23)
+Warning: Latch synchro_anemo:usynchro|out_data_anemo[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[1]
+Warning: Latch synchro_anemo:usynchro|out_data_anemo[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[2]
+Warning: Latch synchro_anemo:usynchro|out_data_anemo[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[3]
+Warning: Latch synchro_anemo:usynchro|out_data_anemo[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[4]
+Warning: Latch synchro_anemo:usynchro|out_data_anemo[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[5]
+Warning: Latch synchro_anemo:usynchro|out_data_anemo[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[6]
+Warning: Latch synchro_anemo:usynchro|out_data_anemo[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[7]
+Warning: Latch synchro_anemo:usynchro|monocoup[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[1]
+Warning: Latch synchro_anemo:usynchro|monocoup[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[2]
+Warning: Latch synchro_anemo:usynchro|monocoup[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[3]
+Warning: Latch synchro_anemo:usynchro|monocoup[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[4]
+Warning: Latch synchro_anemo:usynchro|monocoup[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[5]
+Warning: Latch synchro_anemo:usynchro|monocoup[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[6]
+Warning: Latch synchro_anemo:usynchro|monocoup[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal compteur_monocoup:ucptmono|m_anemo_mococoup[7]
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "led0" is stuck at GND
-Info: Implemented 178 device resources after synthesis - the final resource count might be different
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Info: Implemented 216 device resources after synthesis - the final resource count might be different
     Info: Implemented 5 input pins
     Info: Implemented 9 output pins
-    Info: Implemented 164 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 238 megabytes
-    Info: Processing ended: Fri Oct 02 09:46:03 2020
+    Info: Implemented 202 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 288 megabytes
+    Info: Processing ended: Tue Oct 06 11:31:51 2020
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
 
 

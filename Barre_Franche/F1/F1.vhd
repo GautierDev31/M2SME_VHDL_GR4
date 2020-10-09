@@ -73,6 +73,7 @@ end component;
 
 component Affichage_8bits
 port( 
+	led0 : out std_logic; 
 	led1 : out std_logic; 
 	led2 : out std_logic; 
 	led3 : out std_logic; 
@@ -117,6 +118,7 @@ uraf : raf_anemo PORT MAP(
 );
 
 uaffichage : Affichage_8bits PORT MAP(
+	led0 => led0,
 	led1 => led1,
 	led2 => led2, 
 	led3 => led3,

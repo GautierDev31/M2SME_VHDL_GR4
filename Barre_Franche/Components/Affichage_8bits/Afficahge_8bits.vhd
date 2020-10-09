@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 
 
 entity Affichage_8bits is   port( 
+	led0 : out std_logic; 
 	led1 : out std_logic; 
 	led2 : out std_logic; 
 	led3 : out std_logic; 
@@ -19,7 +20,7 @@ architecture ar of Affichage_8bits is
 begin
 process( leds )
 begin
-	led1 <= leds(0);
+	led0 <= leds(0);
 	led1 <= leds(1);	
 	led2 <= leds(2);
 	led3 <= leds(3);

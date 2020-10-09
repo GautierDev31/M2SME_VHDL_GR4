@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk_50M'
+Slack : -3.519
+TNS   : -166.262
+
+Type  : Slow Model Setup 'continu'
+Slack : -1.945
+TNS   : -9.536
+
+Type  : Slow Model Setup 'in_fred_anemometre'
+Slack : -1.809
+TNS   : -45.833
+
+Type  : Slow Model Setup 'Diviseur_50M_1hz:udiv1hz|clkout'
+Slack : 0.051
+TNS   : 0.000
+
+Type  : Slow Model Setup 'Diviseur_50M_2hz:udiv2hz|clkout'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk_50M'
+Slack : -2.541
+TNS   : -5.076
+
+Type  : Slow Model Hold 'continu'
+Slack : -0.652
+TNS   : -4.426
+
+Type  : Slow Model Hold 'Diviseur_50M_1hz:udiv1hz|clkout'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Slow Model Hold 'Diviseur_50M_2hz:udiv2hz|clkout'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'in_fred_anemometre'
+Slack : 0.675
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk_50M'
+Slack : -1.380
+TNS   : -69.380
+
+Type  : Slow Model Minimum Pulse Width 'continu'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Slow Model Minimum Pulse Width 'in_fred_anemometre'
+Slack : -1.222
+TNS   : -29.222
+
+Type  : Slow Model Minimum Pulse Width 'Diviseur_50M_1hz:udiv1hz|clkout'
+Slack : -0.500
+TNS   : -7.000
+
+Type  : Slow Model Minimum Pulse Width 'Diviseur_50M_2hz:udiv2hz|clkout'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Fast Model Setup 'clk_50M'
+Slack : -1.149
+TNS   : -41.615
+
+Type  : Fast Model Setup 'in_fred_anemometre'
+Slack : -0.456
+TNS   : -9.301
+
+Type  : Fast Model Setup 'continu'
+Slack : -0.388
+TNS   : -0.405
+
+Type  : Fast Model Setup 'Diviseur_50M_2hz:udiv2hz|clkout'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Fast Model Setup 'Diviseur_50M_1hz:udiv1hz|clkout'
+Slack : 0.717
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk_50M'
+Slack : -1.584
+TNS   : -3.161
+
+Type  : Fast Model Hold 'continu'
+Slack : -0.639
+TNS   : -4.377
+
+Type  : Fast Model Hold 'Diviseur_50M_1hz:udiv1hz|clkout'
+Slack : -0.065
+TNS   : -0.188
+
+Type  : Fast Model Hold 'Diviseur_50M_2hz:udiv2hz|clkout'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'in_fred_anemometre'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk_50M'
+Slack : -1.380
+TNS   : -69.380
+
+Type  : Fast Model Minimum Pulse Width 'continu'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Fast Model Minimum Pulse Width 'in_fred_anemometre'
+Slack : -1.222
+TNS   : -29.222
+
+Type  : Fast Model Minimum Pulse Width 'Diviseur_50M_1hz:udiv1hz|clkout'
+Slack : -0.500
+TNS   : -7.000
+
+Type  : Fast Model Minimum Pulse Width 'Diviseur_50M_2hz:udiv2hz|clkout'
+Slack : -0.500
+TNS   : -2.000
+
+------------------------------------------------------------

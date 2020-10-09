@@ -1,6 +1,6 @@
 Flow report for F1
-Fri Oct 02 09:46:22 2020
-Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+Tue Oct 06 11:31:59 2020
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -19,7 +19,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2010 Altera Corporation
+Copyright (C) 1991-2011 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -35,27 +35,26 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Flow Summary                                                                      ;
-+------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Fri Oct 02 09:46:22 2020        ;
-; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
-; Revision Name                      ; F1                                           ;
-; Top-level Entity Name              ; F1                                           ;
-; Family                             ; Cyclone II                                   ;
-; Device                             ; EP2C35F672C6                                 ;
-; Timing Models                      ; Final                                        ;
-; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 157 / 33,216 ( < 1 % )                       ;
-;     Total combinational functions  ; 143 / 33,216 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 105 / 33,216 ( < 1 % )                       ;
-; Total registers                    ; 105                                          ;
-; Total pins                         ; 14 / 475 ( 3 % )                             ;
-; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 0 / 483,840 ( 0 % )                          ;
-; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                               ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                ;
-+------------------------------------+----------------------------------------------+
++------------------------------------------------------------------------------------+
+; Flow Summary                                                                       ;
++------------------------------------+-----------------------------------------------+
+; Flow Status                        ; Successful - Tue Oct 06 11:31:58 2020         ;
+; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
+; Revision Name                      ; F1                                            ;
+; Top-level Entity Name              ; F1                                            ;
+; Family                             ; Cyclone II                                    ;
+; Device                             ; EP2C35F672C6                                  ;
+; Timing Models                      ; Final                                         ;
+; Total logic elements               ; 195 / 33,216 ( < 1 % )                        ;
+;     Total combinational functions  ; 181 / 33,216 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 105 / 33,216 ( < 1 % )                        ;
+; Total registers                    ; 105                                           ;
+; Total pins                         ; 14 / 475 ( 3 % )                              ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0 / 483,840 ( 0 % )                           ;
+; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                 ;
++------------------------------------+-----------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,50 +62,51 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/02/2020 09:46:01 ;
+; Start date & time ; 10/06/2020 11:31:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; F1                  ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                          ;
-+------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 1099358999964.160162476128080                         ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                                                     ; --            ; --          ; --             ;
-; MISC_FILE                          ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/F1.dpf ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                                              ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                                                ; --            ; --          ; Top            ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                   ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                           ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 47100569237.160197670907344                           ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; C:/altera/91sp2/quartus/M2SME/Barre_Franche/F1/F1.dpf ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                                   ; --            ; --          ; eda_blast_fpga ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                           ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 238 MB              ; 00:00:03                           ;
-; Fitter                  ; 00:00:12     ; 1.0                     ; 279 MB              ; 00:00:13                           ;
-; Assembler               ; 00:00:03     ; 1.0                     ; 261 MB              ; 00:00:03                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 166 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:18     ; --                      ; --                  ; 00:00:20                           ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 288 MB              ; 00:00:01                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 359 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 301 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 261 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:08                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+-------------------------+------------------+---------------+------------+----------------+
-; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
-+-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                  ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler               ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-; Classic Timing Analyzer ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-+-------------------------+------------------+---------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; U4-305p7         ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; U4-305p7         ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; U4-305p7         ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; U4-305p7         ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
@@ -115,7 +115,7 @@ applicable agreement for further details.
 quartus_map --read_settings_files=on --write_settings_files=off F1 -c F1
 quartus_fit --read_settings_files=off --write_settings_files=off F1 -c F1
 quartus_asm --read_settings_files=off --write_settings_files=off F1 -c F1
-quartus_tan --read_settings_files=off --write_settings_files=off F1 -c F1 --timing_analysis_only
+quartus_sta F1 -c F1
 
 
 
