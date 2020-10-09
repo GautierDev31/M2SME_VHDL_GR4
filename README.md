@@ -7,3 +7,11 @@ TB_Base -> Réalisation d'un compteur avec afficheur 7 segments
 PWM -> Réalisation d'un PWM avec 4 découpage possible de la fréquence
 
 ![PWM](images/PWM1.PNG)
+
+## Projet Barre Franche :
+
+### F1 : Anemometre :
+
+Analyse fonctionelle :  
+
+![Analyse fonctionelle F1](images/AF_F1.PNG)
