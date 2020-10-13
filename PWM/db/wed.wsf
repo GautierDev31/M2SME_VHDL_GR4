@@ -20,13 +20,13 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("C:/altera/91sp2/quartus/M2SME/PWM/PWM.vwf")
+VECTOR("C:/altera/91sp2/quartus/M2SME/PWM/db/PWM.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 158000;
-		NUMERATOR = 790;
-		DENOMINATOR = 158000;
+		ZEND = 379388;
+		NUMERATOR = 655;
+		DENOMINATOR = 379388;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -87,13 +87,13 @@ VECTOR("C:/altera/91sp2/quartus/M2SME/PWM/PWM.vwf")
 	}
 }
 
-VECTOR("C:/altera/91sp2/quartus/M2SME/PWM/db/PWM.sim.cvwf")
+VECTOR("C:/altera/91sp2/quartus/M2SME/PWM/PWM.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 379388;
-		NUMERATOR = 655;
-		DENOMINATOR = 379388;
+		ZEND = 158000;
+		NUMERATOR = 790;
+		DENOMINATOR = 158000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

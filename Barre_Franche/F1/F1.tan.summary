@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.083 ns
+From           : start_stop
+To             : compteur_monocoup:ucptmono|m_anemo_mococoup[7]
+From Clock     : --
+To Clock       : in_fred_anemometre
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.640 ns
+From           : raf_anemo:uraf|data_anemo[2]
+To             : led2
+From Clock     : clk_50M
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.350 ns
+From           : raz_n
+To             : led2
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.146 ns
+From           : start_stop
+To             : compteur_monocoup:ucptmono|state[0]
+From Clock     : --
+To Clock       : clk_50M
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_50M'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 234.96 MHz ( period = 4.256 ns )
+From           : Diviseur_50M_1hz:udiv1hz|cpt1[0]
+To             : Diviseur_50M_1hz:udiv1hz|cpt1[31]
+From Clock     : clk_50M
+To Clock       : clk_50M
+Failed Paths   : 0
+
+Type           : Clock Setup: 'in_fred_anemometre'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 358.55 MHz ( period = 2.789 ns )
+From           : Compteur:ucpt|cpt_anemo[1]
+To             : Compteur:ucpt|vect_anemo[7]
+From Clock     : in_fred_anemometre
+To Clock       : in_fred_anemometre
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

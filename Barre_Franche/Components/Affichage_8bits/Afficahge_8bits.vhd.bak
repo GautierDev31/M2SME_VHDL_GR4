@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity Affichage_8bits is   port( 
+	led1 : out std_logic; 
+	led2 : out std_logic; 
+	led3 : out std_logic; 
+	led4 : out std_logic; 
+	led5 : out std_logic; 
+	led6 : out std_logic; 
+	led7 : out std_logic;
+	leds : in std_logic_vector (7 down to 0));
+end Affichage_8bits ;
+
+
+architecture ar of Affichage_8bits is
+
+begin
+process( leds )
+begin
+	led1 <= leds(0);
+	led1 <= leds(1);	
+	led2 <= leds(2);
+	led3 <= leds(3);
+	led4 <= leds(4);
+	led5 <= leds(5);
+	led6 <= leds(6);
+	led7 <= leds(7);
+	
+	
+end process;
+end ar;
+	
