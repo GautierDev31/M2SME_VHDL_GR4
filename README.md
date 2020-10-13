@@ -10,7 +10,7 @@ PWM -> Réalisation d'un PWM avec 4 découpage possible de la fréquence
 
 ## Projet Barre Franche :
 
-### F1 : Anemometre :
+### F1 Anemometre :
 
 Analyse fonctionelle :  
 
