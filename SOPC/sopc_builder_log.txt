@@ -1,6 +1,6 @@
-15 oct. 2020 18:55:37 com.altera.utilities.Launcher launch
+15 oct. 2020 19:17:15 com.altera.utilities.Launcher launch
 INFO: Launching:c:\altera\11.1sp2\quartus//bin/quartus_sh.exe -t sopc_add_qip_file.tcl
-15 oct. 2020 18:55:37 com.altera.utilities.Launcher launch
+15 oct. 2020 19:17:15 com.altera.utilities.Launcher launch
 INFO: Launching:C:/altera/11.1sp2/quartus/bin/cygwin/bin/sh.exe -c . C:/altera/11.1sp2/quartus/sopc_builder/bin/nios_sh ; C:/altera/11.1sp2/quartus/sopc_builder/bin/sopc_builder --classic --no_splash --refresh C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.ptf
-15 oct. 2020 18:55:42 com.altera.utilities.Launcher launch
+15 oct. 2020 19:17:20 com.altera.utilities.Launcher launch
 INFO: Launching:C:/altera/11.1sp2/quartus/bin/cygwin/bin/sh.exe -c . C:/altera/11.1sp2/quartus/sopc_builder/bin/nios_sh ; C:/altera/11.1sp2/quartus/sopc_builder/bin/sopc_builder --classic --generate C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.ptf

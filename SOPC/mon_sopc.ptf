@@ -500,7 +500,7 @@ SYSTEM mon_sopc
                span = "0x00005000";
                is_bridge = "0";
             }
-            Entry Bouttons/s1
+            Entry Boutons/s1
             {
                address = "0x00011000";
                span = "0x00000010";
@@ -1405,7 +1405,7 @@ SYSTEM mon_sopc
                }
             }
          }
-         contents_info = "QUARTUS_PROJECT_DIR/onchip_memory2_0.hex 1602780953 ";
+         contents_info = "";
       }
       SIMULATION 
       {
@@ -1497,7 +1497,7 @@ SYSTEM mon_sopc
       {
       }
    }
-   MODULE Bouttons
+   MODULE Boutons
    {
       SLAVE s1
       {
@@ -1640,7 +1640,7 @@ SYSTEM mon_sopc
       {
          Precompiled_Simulation_Library_Files = "";
          Simulation_HDL_Files = "";
-         Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/Bouttons.vhd";
+         Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/Boutons.vhd";
          Synthesis_Only_Files = "";
       }
    }
@@ -2152,7 +2152,7 @@ SYSTEM mon_sopc
          Has_Clock = "1";
          View 
          {
-            Settings_Summary = "System ID (at last Generate):<br> <b>00000000</b>    (unique ID tag) <br> <b>5F887EC9</b> (timestamp: Thu Oct 15, 2020 @6:54 PM)";
+            Settings_Summary = "System ID (at last Generate):<br> <b>00000000</b>    (unique ID tag) <br> <b>5F888400</b> (timestamp: Thu Oct 15, 2020 @7:16 PM)";
             MESSAGES 
             {
             }
@@ -2161,7 +2161,7 @@ SYSTEM mon_sopc
       WIZARD_SCRIPT_ARGUMENTS 
       {
          id = "0u";
-         timestamp = "1602780873u";
+         timestamp = "1602782208u";
          regenerate_values = "0";
          MAKE 
          {
@@ -2170,7 +2170,7 @@ SYSTEM mon_sopc
                verifysysid 
                {
                   All_Depends_On = "0";
-                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x00011028 --id=0 --timestamp=1602780873";
+                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x00011028 --id=0 --timestamp=1602782208";
                   Is_Phony = "1";
                   Target_File = "dummy_verifysysid_file";
                }

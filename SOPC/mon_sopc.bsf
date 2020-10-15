@@ -20,8 +20,8 @@
 (port
 (pt 0 80)
 (input)
-(text "in_port_to_the_Bouttons[1..0] " (rect 0 0 141 16)(font "Arial" (font_size 8)))
-(text "in_port_to_the_Bouttons[1..0] " (rect 20 73 161 89)(font "Arial" (font_size 8)))
+(text "in_port_to_the_Boutons[1..0] " (rect 0 0 138 16)(font "Arial" (font_size 8)))
+(text "in_port_to_the_Boutons[1..0] " (rect 20 73 158 89)(font "Arial" (font_size 8)))
 (line (pt 0 80)(pt 16 80)(line_width 3))
 )
 (port

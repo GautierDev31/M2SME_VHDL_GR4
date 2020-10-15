@@ -249,7 +249,7 @@ int main()
 
  volatile uint8_t *leds = (volatile uint8_t *) LEDS_BASE ;
 	  // registre, eviter toute optimisation (stockee en RAM, la ou elle etait)
- volatile uint8_t *butt = (volatile uint8_t *) BOUTTONS_BASE ;
+ volatile uint8_t *butt = (volatile uint8_t *) BOUTONS_BASE ;
 
  alt_putstr("Hello from Nios II!\n");
     8060:	01000074 	movhi	r4,1
@@ -266,7 +266,7 @@ int main()
 
  volatile uint8_t *leds = (volatile uint8_t *) LEDS_BASE ;
 	  // registre, eviter toute optimisation (stockee en RAM, la ou elle etait)
- volatile uint8_t *butt = (volatile uint8_t *) BOUTTONS_BASE ;
+ volatile uint8_t *butt = (volatile uint8_t *) BOUTONS_BASE ;
 
  alt_putstr("Hello from Nios II!\n");
     8074:	00081b40 	call	81b4 <alt_putstr>

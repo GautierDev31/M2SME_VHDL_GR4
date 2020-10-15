@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>15 oct. 2020 19:09:16</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1602781756896</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>15 oct. 2020 19:20:11</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1602782411763</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\altera\M2SME_VHDL_GR4\SOPC\software\sopc_test_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\altera\M2SME_VHDL_GR4\SOPC\mon_sopc.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu_0</Cpu>
@@ -857,7 +857,7 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>Bouttons</slaveDescriptor>
+                <slaveDescriptor>Boutons</slaveDescriptor>
                 <addressRange>0x00011000 - 0x0001100F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>

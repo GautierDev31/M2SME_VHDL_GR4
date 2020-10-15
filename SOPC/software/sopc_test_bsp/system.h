@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'mon_sopc'
  * SOPC Builder design path: C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.sopcinfo
  *
- * Generated: Thu Oct 15 19:09:17 CEST 2020
+ * Generated: Thu Oct 15 19:20:12 CEST 2020
  */
 
 /*
@@ -56,30 +56,30 @@
 
 
 /*
- * Bouttons configuration
+ * Boutons configuration
  *
  */
 
-#define ALT_MODULE_CLASS_Bouttons altera_avalon_pio
-#define BOUTTONS_BASE 0x11000
-#define BOUTTONS_BIT_CLEARING_EDGE_REGISTER 0
-#define BOUTTONS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define BOUTTONS_CAPTURE 0
-#define BOUTTONS_DATA_WIDTH 2
-#define BOUTTONS_DO_TEST_BENCH_WIRING 0
-#define BOUTTONS_DRIVEN_SIM_VALUE 0x0
-#define BOUTTONS_EDGE_TYPE "NONE"
-#define BOUTTONS_FREQ 50000000u
-#define BOUTTONS_HAS_IN 1
-#define BOUTTONS_HAS_OUT 0
-#define BOUTTONS_HAS_TRI 0
-#define BOUTTONS_IRQ -1
-#define BOUTTONS_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define BOUTTONS_IRQ_TYPE "NONE"
-#define BOUTTONS_NAME "/dev/Bouttons"
-#define BOUTTONS_RESET_VALUE 0x0
-#define BOUTTONS_SPAN 16
-#define BOUTTONS_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_Boutons altera_avalon_pio
+#define BOUTONS_BASE 0x11000
+#define BOUTONS_BIT_CLEARING_EDGE_REGISTER 0
+#define BOUTONS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define BOUTONS_CAPTURE 0
+#define BOUTONS_DATA_WIDTH 2
+#define BOUTONS_DO_TEST_BENCH_WIRING 0
+#define BOUTONS_DRIVEN_SIM_VALUE 0x0
+#define BOUTONS_EDGE_TYPE "NONE"
+#define BOUTONS_FREQ 50000000u
+#define BOUTONS_HAS_IN 1
+#define BOUTONS_HAS_OUT 0
+#define BOUTONS_HAS_TRI 0
+#define BOUTONS_IRQ -1
+#define BOUTONS_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define BOUTONS_IRQ_TYPE "NONE"
+#define BOUTONS_NAME "/dev/Boutons"
+#define BOUTONS_RESET_VALUE 0x0
+#define BOUTONS_SPAN 16
+#define BOUTONS_TYPE "altera_avalon_pio"
 
 
 /*
@@ -289,7 +289,7 @@
 #define SYSID_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_0_NAME "/dev/sysid_0"
 #define SYSID_0_SPAN 8
-#define SYSID_0_TIMESTAMP 1602780873u
+#define SYSID_0_TIMESTAMP 1602782208u
 #define SYSID_0_TYPE "altera_avalon_sysid"
 
 #endif /* __SYSTEM_H_ */

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sopc_compteur
-Thu Oct 15 19:06:59 2020
+Thu Oct 15 19:18:03 2020
 Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
@@ -100,13 +100,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 15 19:06:59 2020         ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 15 19:18:03 2020         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; sopc_compteur                                 ;
 ; Top-level Entity Name              ; sopc_compteur                                 ;
 ; Family                             ; Cyclone IV E                                  ;
-; Total logic elements               ; 1,429                                         ;
-;     Total combinational functions  ; 1,306                                         ;
+; Total logic elements               ; 1,428                                         ;
+;     Total combinational functions  ; 1,305                                         ;
 ;     Dedicated logic registers      ; 720                                           ;
 ; Total registers                    ; 720                                           ;
 ; Total pins                         ; 11                                            ;
@@ -213,61 +213,62 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+-------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
-; File Name with User-Entered Path    ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                ;
-+-------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
-; sopc_compteur.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/altera/M2SME_VHDL_GR4/SOPC/sopc_compteur.bdf                             ;
-; mon_sopc.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.vhd                                  ;
-; bouttons.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/bouttons.vhd                                  ;
-; leds.vhd                            ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/leds.vhd                                      ;
-; cpu_0.vhd                           ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0.vhd                                     ;
-; cpu_0_test_bench.vhd                ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_test_bench.vhd                          ;
-; altsyncram.tdf                      ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altsyncram.tdf            ;
-; stratix_ram_block.inc               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/stratix_ram_block.inc     ;
-; lpm_mux.inc                         ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mux.inc               ;
-; lpm_decode.inc                      ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_decode.inc            ;
-; aglobal111.inc                      ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/aglobal111.inc            ;
-; a_rdenreg.inc                       ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_rdenreg.inc             ;
-; altrom.inc                          ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altrom.inc                ;
-; altram.inc                          ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altram.inc                ;
-; altdpram.inc                        ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altdpram.inc              ;
-; db/altsyncram_hff1.tdf              ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_hff1.tdf                        ;
-; cpu_0_rf_ram_a.mif                  ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_rf_ram_a.mif                            ;
-; db/altsyncram_iff1.tdf              ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_iff1.tdf                        ;
-; cpu_0_rf_ram_b.mif                  ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_rf_ram_b.mif                            ;
-; db/altsyncram_u972.tdf              ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_u972.tdf                        ;
-; cpu_0_ociram_default_contents.mif   ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_ociram_default_contents.mif             ;
-; cpu_0_oci_test_bench.vhd            ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_oci_test_bench.vhd                      ;
-; db/altsyncram_0a02.tdf              ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_0a02.tdf                        ;
-; cpu_0_jtag_debug_module_wrapper.vhd ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_wrapper.vhd           ;
-; cpu_0_jtag_debug_module_tck.vhd     ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_tck.vhd               ;
-; altera_std_synchronizer.v           ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altera_std_synchronizer.v ;
-; cpu_0_jtag_debug_module_sysclk.vhd  ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_sysclk.vhd            ;
-; sld_virtual_jtag_basic.v            ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v  ;
-; jtag_uart_0.vhd                     ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/jtag_uart_0.vhd                               ;
-; scfifo.tdf                          ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/scfifo.tdf                ;
-; a_regfifo.inc                       ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_regfifo.inc             ;
-; a_dpfifo.inc                        ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_dpfifo.inc              ;
-; a_i2fifo.inc                        ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_i2fifo.inc              ;
-; a_fffifo.inc                        ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_fffifo.inc              ;
-; a_f2fifo.inc                        ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_f2fifo.inc              ;
-; db/scfifo_jr21.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/scfifo_jr21.tdf                            ;
-; db/a_dpfifo_q131.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/a_dpfifo_q131.tdf                          ;
-; db/a_fefifo_7cf.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/a_fefifo_7cf.tdf                           ;
-; db/cntr_do7.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/cntr_do7.tdf                               ;
-; db/dpram_nl21.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/dpram_nl21.tdf                             ;
-; db/altsyncram_r1m1.tdf              ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_r1m1.tdf                        ;
-; db/cntr_1ob.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/cntr_1ob.tdf                               ;
-; alt_jtag_atlantic.v                 ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/alt_jtag_atlantic.v       ;
-; onchip_memory2_0.vhd                ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/onchip_memory2_0.vhd                          ;
-; db/altsyncram_68c1.tdf              ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_68c1.tdf                        ;
-; onchip_memory2_0.hex                ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/onchip_memory2_0.hex                          ;
-; sysid_0.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/sysid_0.vhd                                   ;
-; sld_hub.vhd                         ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_hub.vhd               ;
-; sld_rom_sr.vhd                      ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_rom_sr.vhd            ;
-+-------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++--------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
+; File Name with User-Entered Path           ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                ;
++--------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
+; sopc_compteur.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/altera/M2SME_VHDL_GR4/SOPC/sopc_compteur.bdf                             ;
+; mon_sopc.vhd                               ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.vhd                                  ;
+; boutons.vhd                                ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/boutons.vhd                                   ;
+; leds.vhd                                   ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/leds.vhd                                      ;
+; cpu_0.vhd                                  ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0.vhd                                     ;
+; cpu_0_test_bench.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_test_bench.vhd                          ;
+; altsyncram.tdf                             ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altsyncram.tdf            ;
+; stratix_ram_block.inc                      ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/stratix_ram_block.inc     ;
+; lpm_mux.inc                                ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mux.inc               ;
+; lpm_decode.inc                             ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_decode.inc            ;
+; aglobal111.inc                             ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/aglobal111.inc            ;
+; a_rdenreg.inc                              ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_rdenreg.inc             ;
+; altrom.inc                                 ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altrom.inc                ;
+; altram.inc                                 ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altram.inc                ;
+; altdpram.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altdpram.inc              ;
+; db/altsyncram_hff1.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_hff1.tdf                        ;
+; cpu_0_rf_ram_a.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_rf_ram_a.mif                            ;
+; db/altsyncram_iff1.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_iff1.tdf                        ;
+; cpu_0_rf_ram_b.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_rf_ram_b.mif                            ;
+; db/altsyncram_u972.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_u972.tdf                        ;
+; cpu_0_ociram_default_contents.mif          ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_ociram_default_contents.mif             ;
+; cpu_0_oci_test_bench.vhd                   ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_oci_test_bench.vhd                      ;
+; db/altsyncram_0a02.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_0a02.tdf                        ;
+; cpu_0_jtag_debug_module_wrapper.vhd        ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_wrapper.vhd           ;
+; cpu_0_jtag_debug_module_tck.vhd            ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_tck.vhd               ;
+; altera_std_synchronizer.v                  ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altera_std_synchronizer.v ;
+; cpu_0_jtag_debug_module_sysclk.vhd         ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_sysclk.vhd            ;
+; sld_virtual_jtag_basic.v                   ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v  ;
+; jtag_uart_0.vhd                            ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/jtag_uart_0.vhd                               ;
+; scfifo.tdf                                 ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/scfifo.tdf                ;
+; a_regfifo.inc                              ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_regfifo.inc             ;
+; a_dpfifo.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_dpfifo.inc              ;
+; a_i2fifo.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_i2fifo.inc              ;
+; a_fffifo.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_fffifo.inc              ;
+; a_f2fifo.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_f2fifo.inc              ;
+; db/scfifo_jr21.tdf                         ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/scfifo_jr21.tdf                            ;
+; db/a_dpfifo_q131.tdf                       ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/a_dpfifo_q131.tdf                          ;
+; db/a_fefifo_7cf.tdf                        ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/a_fefifo_7cf.tdf                           ;
+; db/cntr_do7.tdf                            ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/cntr_do7.tdf                               ;
+; db/dpram_nl21.tdf                          ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/dpram_nl21.tdf                             ;
+; db/altsyncram_r1m1.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_r1m1.tdf                        ;
+; db/cntr_1ob.tdf                            ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/cntr_1ob.tdf                               ;
+; alt_jtag_atlantic.v                        ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/alt_jtag_atlantic.v       ;
+; onchip_memory2_0.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/onchip_memory2_0.vhd                          ;
+; db/altsyncram_68c1.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_68c1.tdf                        ;
+; onchip_memory2_0.hex                       ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/onchip_memory2_0.hex                          ;
+; sysid_0.vhd                                ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/sysid_0.vhd                                   ;
+; sld_hub.vhd                                ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_hub.vhd               ;
+; sld_rom_sr.vhd                             ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_rom_sr.vhd            ;
+; C:/altera/M2SME_VHDL_GR4/SOPC/bouttons.vhd ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/bouttons.vhd                                  ;
++--------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------+
@@ -275,16 +276,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,429     ;
+; Estimated Total logic elements              ; 1,428     ;
 ;                                             ;           ;
-; Total combinational functions               ; 1306      ;
+; Total combinational functions               ; 1305      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 689       ;
-;     -- 3 input functions                    ; 452       ;
+;     -- 4 input functions                    ; 692       ;
+;     -- 3 input functions                    ; 448       ;
 ;     -- <=2 input functions                  ; 165       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1169      ;
+;     -- normal mode                          ; 1168      ;
 ;     -- arithmetic mode                      ; 137       ;
 ;                                             ;           ;
 ; Total registers                             ; 720       ;
@@ -305,13 +306,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                         ; Library Name ;
 +-------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |sopc_compteur                                                                                  ; 1306 (1)          ; 720 (0)      ; 175104      ; 0            ; 0       ; 0         ; 11   ; 0            ; |sopc_compteur                                                                                                                                                                                                                                                              ;              ;
-;    |mon_sopc:inst|                                                                              ; 1183 (0)          ; 644 (0)      ; 175104      ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst                                                                                                                                                                                                                                                ;              ;
-;       |Bouttons:the_Bouttons|                                                                   ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|Bouttons:the_Bouttons                                                                                                                                                                                                                          ;              ;
-;       |Bouttons_s1_arbitrator:the_Bouttons_s1|                                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|Bouttons_s1_arbitrator:the_Bouttons_s1                                                                                                                                                                                                         ;              ;
-;       |LEDs:the_LEDs|                                                                           ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|LEDs:the_LEDs                                                                                                                                                                                                                                  ;              ;
+; |sopc_compteur                                                                                  ; 1305 (1)          ; 720 (0)      ; 175104      ; 0            ; 0       ; 0         ; 11   ; 0            ; |sopc_compteur                                                                                                                                                                                                                                                              ;              ;
+;    |mon_sopc:inst|                                                                              ; 1182 (0)          ; 644 (0)      ; 175104      ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst                                                                                                                                                                                                                                                ;              ;
+;       |Boutons:the_Boutons|                                                                     ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|Boutons:the_Boutons                                                                                                                                                                                                                            ;              ;
+;       |Boutons_s1_arbitrator:the_Boutons_s1|                                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|Boutons_s1_arbitrator:the_Boutons_s1                                                                                                                                                                                                           ;              ;
+;       |LEDs:the_LEDs|                                                                           ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|LEDs:the_LEDs                                                                                                                                                                                                                                  ;              ;
 ;       |LEDs_s1_arbitrator:the_LEDs_s1|                                                          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|LEDs_s1_arbitrator:the_LEDs_s1                                                                                                                                                                                                                 ;              ;
-;       |cpu_0:the_cpu_0|                                                                         ; 897 (664)         ; 487 (304)    ; 10240       ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0:the_cpu_0                                                                                                                                                                                                                                ;              ;
+;       |cpu_0:the_cpu_0|                                                                         ; 894 (661)         ; 487 (304)    ; 10240       ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0:the_cpu_0                                                                                                                                                                                                                                ;              ;
 ;          |cpu_0_nios2_oci:the_cpu_0_nios2_oci|                                                  ; 233 (30)          ; 182 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci                                                                                                                                                                                            ;              ;
 ;             |cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|               ; 102 (0)           ; 96 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper                                                                                                                        ;              ;
 ;                |cpu_0_jtag_debug_module_sysclk:the_cpu_0_jtag_debug_module_sysclk|              ; 6 (6)             ; 49 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_sysclk:the_cpu_0_jtag_debug_module_sysclk                                                      ;              ;
@@ -335,7 +336,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram:the_altsyncram|                                                         ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram                                                                                                                                                   ;              ;
 ;                |altsyncram_iff1:auto_generated|                                                 ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram|altsyncram_iff1:auto_generated                                                                                                                    ;              ;
 ;          |cpu_0_test_bench:the_cpu_0_test_bench|                                                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_test_bench:the_cpu_0_test_bench                                                                                                                                                                                          ;              ;
-;       |cpu_0_data_master_arbitrator:the_cpu_0_data_master|                                      ; 67 (67)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master                                                                                                                                                                                             ;              ;
+;       |cpu_0_data_master_arbitrator:the_cpu_0_data_master|                                      ; 71 (71)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master                                                                                                                                                                                             ;              ;
 ;       |cpu_0_instruction_master_arbitrator:the_cpu_0_instruction_master|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0_instruction_master_arbitrator:the_cpu_0_instruction_master                                                                                                                                                                               ;              ;
 ;       |cpu_0_jtag_debug_module_arbitrator:the_cpu_0_jtag_debug_module|                          ; 30 (30)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|cpu_0_jtag_debug_module_arbitrator:the_cpu_0_jtag_debug_module                                                                                                                                                                                 ;              ;
 ;       |jtag_uart_0:the_jtag_uart_0|                                                             ; 146 (42)          ; 112 (13)     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sopc_compteur|mon_sopc:inst|jtag_uart_0:the_jtag_uart_0                                                                                                                                                                                                                    ;              ;
@@ -456,7 +457,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_dbrk:the_cpu_0_nios2_oci_dbrk|dbrk_break_pulse                       ; Stuck at GND due to stuck port data_in                                                                                                                    ;
 ; mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_dbrk:the_cpu_0_nios2_oci_dbrk|dbrk_goto0                             ; Stuck at GND due to stuck port data_in                                                                                                                    ;
 ; mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_xbrk:the_cpu_0_nios2_oci_xbrk|xbrk_break                             ; Stuck at GND due to stuck port data_in                                                                                                                    ;
-; mon_sopc:inst|Bouttons:the_Bouttons|readdata[2..6,8..31]                                                                                               ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; mon_sopc:inst|Boutons:the_Boutons|readdata[2..6,8..31]                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                    ;
 ; mon_sopc:inst|cpu_0:the_cpu_0|W_control_rd_data[1..15,17..31]                                                                                          ; Stuck at GND due to stuck port data_in                                                                                                                    ;
 ; mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|trc_jtag_addr[0..16]                       ; Lost fanout                                                                                                                                               ;
 ; mon_sopc:inst|onchip_memory2_0_s1_arbitrator:the_onchip_memory2_0_s1|onchip_memory2_0_s1_slavearbiterlockenable                                        ; Stuck at GND due to stuck port data_in                                                                                                                    ;
@@ -508,7 +509,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_dbrk:the_cpu_0_nios2_oci_dbrk|internal_dbrk_break                    ; Stuck at GND due to stuck port data_in                                                                                                                    ;
 ; mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_break:the_cpu_0_nios2_oci_break|trigbrktype                          ; Stuck at GND due to stuck port data_in                                                                                                                    ;
 ; mon_sopc:inst|onchip_memory2_0_s1_arbitrator:the_onchip_memory2_0_s1|onchip_memory2_0_s1_saved_chosen_master_vector[0]                                 ; Lost fanout                                                                                                                                               ;
-; mon_sopc:inst|jtag_uart_0:the_jtag_uart_0|alt_jtag_atlantic:jtag_uart_0_alt_jtag_atlantic|rst1                                                         ; Merged with mon_sopc:inst|Bouttons:the_Bouttons|readdata[7]                                                                                               ;
+; mon_sopc:inst|jtag_uart_0:the_jtag_uart_0|alt_jtag_atlantic:jtag_uart_0_alt_jtag_atlantic|rst1                                                         ; Merged with mon_sopc:inst|Boutons:the_Boutons|readdata[7]                                                                                                 ;
 ; Total Number of Removed Registers = 245                                                                                                                ;                                                                                                                                                           ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -1550,14 +1551,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Oct 15 19:06:51 2020
+    Info: Processing started: Thu Oct 15 19:17:54 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sopc_compteur -c sopc_compteur
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file sopc_compteur.bdf
     Info (12023): Found entity 1: sopc_compteur
 Info (12127): Elaborating entity "sopc_compteur" for the top level hierarchy
 Warning (12125): Using design file mon_sopc.vhd, which is not specified as a design file for the current project, but contains definitions for 20 design units and 10 entities in project
-    Info (12022): Found design unit 1: Bouttons_s1_arbitrator-europa
+    Info (12022): Found design unit 1: Boutons_s1_arbitrator-europa
     Info (12022): Found design unit 2: LEDs_s1_arbitrator-europa
     Info (12022): Found design unit 3: cpu_0_jtag_debug_module_arbitrator-europa
     Info (12022): Found design unit 4: cpu_0_data_master_arbitrator-europa
@@ -1567,7 +1568,7 @@ Warning (12125): Using design file mon_sopc.vhd, which is not specified as a des
     Info (12022): Found design unit 8: sysid_0_control_slave_arbitrator-europa
     Info (12022): Found design unit 9: mon_sopc_reset_clk_0_domain_synch_module-europa
     Info (12022): Found design unit 10: mon_sopc-europa
-    Info (12023): Found entity 1: Bouttons_s1_arbitrator
+    Info (12023): Found entity 1: Boutons_s1_arbitrator
     Info (12023): Found entity 2: LEDs_s1_arbitrator
     Info (12023): Found entity 3: cpu_0_jtag_debug_module_arbitrator
     Info (12023): Found entity 4: cpu_0_data_master_arbitrator
@@ -1578,14 +1579,14 @@ Warning (12125): Using design file mon_sopc.vhd, which is not specified as a des
     Info (12023): Found entity 9: mon_sopc_reset_clk_0_domain_synch_module
     Info (12023): Found entity 10: mon_sopc
 Info (12128): Elaborating entity "mon_sopc" for hierarchy "mon_sopc:inst"
-Info (12128): Elaborating entity "Bouttons_s1_arbitrator" for hierarchy "mon_sopc:inst|Bouttons_s1_arbitrator:the_Bouttons_s1"
-Warning (10541): VHDL Signal Declaration warning at mon_sopc.vhd(50): used implicit default value for signal "cpu_0_data_master_read_data_valid_Bouttons_s1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "Boutons_s1_arbitrator" for hierarchy "mon_sopc:inst|Boutons_s1_arbitrator:the_Boutons_s1"
+Warning (10541): VHDL Signal Declaration warning at mon_sopc.vhd(50): used implicit default value for signal "cpu_0_data_master_read_data_valid_Boutons_s1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
 Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
-Warning (12125): Using design file bouttons.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Bouttons-europa
-    Info (12023): Found entity 1: Bouttons
-Info (12128): Elaborating entity "Bouttons" for hierarchy "mon_sopc:inst|Bouttons:the_Bouttons"
+Warning (12125): Using design file boutons.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Boutons-europa
+    Info (12023): Found entity 1: Boutons
+Info (12128): Elaborating entity "Boutons" for hierarchy "mon_sopc:inst|Boutons:the_Boutons"
 Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
 Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
 Info (12128): Elaborating entity "LEDs_s1_arbitrator" for hierarchy "mon_sopc:inst|LEDs_s1_arbitrator:the_LEDs_s1"
@@ -2030,15 +2031,15 @@ Info (17049): 64 registers lost all their fanouts during netlist optimizations. 
     Info (17050): Register "mon_sopc:inst|cpu_0_jtag_debug_module_arbitrator:the_cpu_0_jtag_debug_module|cpu_0_jtag_debug_module_reg_firsttransfer" lost all its fanouts during netlist optimizations.
     Info (17050): Register "mon_sopc:inst|onchip_memory2_0_s1_arbitrator:the_onchip_memory2_0_s1|onchip_memory2_0_s1_saved_chosen_master_vector[0]" lost all its fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-Info (21057): Implemented 1633 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1632 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 1473 logic cells
+    Info (21061): Implemented 1472 logic cells
     Info (21064): Implemented 144 RAM segments
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 90 warnings
     Info: Peak virtual memory: 411 megabytes
-    Info: Processing ended: Thu Oct 15 19:06:59 2020
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Thu Oct 15 19:18:03 2020
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:08
 
 

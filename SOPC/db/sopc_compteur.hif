@@ -22,84 +22,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-mon_sopc
-# storage
-db|sopc_compteur.(1).cnf
-db|sopc_compteur.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-mon_sopc:inst
-}
-# macro_sequence
-
-# end
-# entity
-Bouttons_s1_arbitrator
-# storage
-db|sopc_compteur.(2).cnf
-db|sopc_compteur.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(bouttons_s1_readdata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(bouttons_s1_address)
-1 downto 0
-PARAMETER_STRING
-USR
- constraint(bouttons_s1_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|Bouttons_s1_arbitrator:the_Bouttons_s1
-}
-# macro_sequence
-
-# end
-# entity
 Bouttons
 # storage
 db|sopc_compteur.(3).cnf
@@ -136,65 +58,6 @@ USR
 31 downto 0
 PARAMETER_STRING
 USR
-}
-# hierarchies {
-mon_sopc:inst|Bouttons:the_Bouttons
-}
-# macro_sequence
-
-# end
-# entity
-LEDs_s1_arbitrator
-# storage
-db|sopc_compteur.(4).cnf
-db|sopc_compteur.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(leds_s1_readdata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_writedata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(leds_s1_address)
-1 downto 0
-PARAMETER_STRING
-USR
- constraint(leds_s1_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(leds_s1_writedata)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|LEDs_s1_arbitrator:the_LEDs_s1
 }
 # macro_sequence
 
@@ -243,198 +106,6 @@ USR
 }
 # hierarchies {
 mon_sopc:inst|LEDs:the_LEDs
-}
-# macro_sequence
-
-# end
-# entity
-cpu_0_jtag_debug_module_arbitrator
-# storage
-db|sopc_compteur.(6).cnf
-db|sopc_compteur.(6).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(cpu_0_data_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_byteenable)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_writedata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_instruction_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_jtag_debug_module_readdata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_jtag_debug_module_address)
-8 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_jtag_debug_module_byteenable)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_jtag_debug_module_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_jtag_debug_module_writedata)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|cpu_0_jtag_debug_module_arbitrator:the_cpu_0_jtag_debug_module
-}
-# macro_sequence
-
-# end
-# entity
-cpu_0_data_master_arbitrator
-# storage
-db|sopc_compteur.(7).cnf
-db|sopc_compteur.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(bouttons_s1_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(leds_s1_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_address)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_jtag_debug_module_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(jtag_uart_0_avalon_jtag_slave_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(onchip_memory2_0_s1_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(sysid_0_control_slave_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_irq)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_readdata)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master
-}
-# macro_sequence
-
-# end
-# entity
-cpu_0_instruction_master_arbitrator
-# storage
-db|sopc_compteur.(8).cnf
-db|sopc_compteur.(8).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(cpu_0_instruction_master_address)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_jtag_debug_module_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(onchip_memory2_0_s1_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_instruction_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_instruction_master_readdata)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|cpu_0_instruction_master_arbitrator:the_cpu_0_instruction_master
 }
 # macro_sequence
 
@@ -5917,58 +5588,6 @@ mon_sopc:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_deb
 MASK_8_BITS255INST_BIT_INDEX0MASK_11_BITS2047MFG_BIT_INDEX8MASK_8_BITS255TYPE_BIT_INDEX19MASK_5_BITS31VERION_BIT_INDEX27
 # end
 # entity
-jtag_uart_0_avalon_jtag_slave_arbitrator
-# storage
-db|sopc_compteur.(46).cnf
-db|sopc_compteur.(46).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(cpu_0_data_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_writedata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(jtag_uart_0_avalon_jtag_slave_readdata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(jtag_uart_0_avalon_jtag_slave_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(jtag_uart_0_avalon_jtag_slave_writedata)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|jtag_uart_0_avalon_jtag_slave_arbitrator:the_jtag_uart_0_avalon_jtag_slave
-}
-# macro_sequence
-
-# end
-# entity
 jtag_uart_0
 # storage
 db|sopc_compteur.(47).cnf
@@ -6968,74 +6587,6 @@ mon_sopc:inst|jtag_uart_0:the_jtag_uart_0|alt_jtag_atlantic:jtag_uart_0_alt_jtag
 
 # end
 # entity
-onchip_memory2_0_s1_arbitrator
-# storage
-db|sopc_compteur.(59).cnf
-db|sopc_compteur.(59).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(cpu_0_data_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_byteenable)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_data_master_writedata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(cpu_0_instruction_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(onchip_memory2_0_s1_readdata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(onchip_memory2_0_s1_address)
-12 downto 0
-PARAMETER_STRING
-USR
- constraint(onchip_memory2_0_s1_byteenable)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(onchip_memory2_0_s1_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(onchip_memory2_0_s1_writedata)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|onchip_memory2_0_s1_arbitrator:the_onchip_memory2_0_s1
-}
-# macro_sequence
-
-# end
-# entity
 onchip_memory2_0
 # storage
 db|sopc_compteur.(60).cnf
@@ -7856,116 +7407,6 @@ mon_sopc:inst|onchip_memory2_0:the_onchip_memory2_0|altsyncram:the_altsyncram|al
 
 # end
 # entity
-sysid_0_control_slave_arbitrator
-# storage
-db|sopc_compteur.(63).cnf
-db|sopc_compteur.(63).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(cpu_0_data_master_address_to_slave)
-16 downto 0
-PARAMETER_STRING
-USR
- constraint(sysid_0_control_slave_readdata)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(sysid_0_control_slave_readdata_from_sa)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|sysid_0_control_slave_arbitrator:the_sysid_0_control_slave
-}
-# macro_sequence
-
-# end
-# entity
-sysid_0
-# storage
-db|sopc_compteur.(64).cnf
-db|sopc_compteur.(64).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-sysid_0.vhd
-1b4e8b84019e9767286f7b21c5232a
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(readdata)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-mon_sopc:inst|sysid_0:the_sysid_0
-}
-# macro_sequence
-
-# end
-# entity
-mon_sopc_reset_clk_0_domain_synch_module
-# storage
-db|sopc_compteur.(65).cnf
-db|sopc_compteur.(65).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mon_sopc.vhd
-8b4d3932a1e920fcccf390faff1149b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-mon_sopc:inst|mon_sopc_reset_clk_0_domain_synch_module:mon_sopc_reset_clk_0_domain_synch
-}
-# macro_sequence
-
-# end
-# entity
 sld_hub
 # storage
 db|sopc_compteur.(66).cnf
@@ -8142,7 +7583,7 @@ db|sopc_compteur.(0).cnf
 # case_insensitive
 # source_file
 sopc_compteur.bdf
-4afd9f79528230c5dceb81e25a3813e2
+6937752d49134eb756de22ec6af013
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -8150,6 +7591,606 @@ AUTO
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+mon_sopc
+# storage
+db|sopc_compteur.(1).cnf
+db|sopc_compteur.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+mon_sopc:inst
+}
+# macro_sequence
+
+# end
+# entity
+Boutons_s1_arbitrator
+# storage
+db|sopc_compteur.(2).cnf
+db|sopc_compteur.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(boutons_s1_readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(boutons_s1_address)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(boutons_s1_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|Boutons_s1_arbitrator:the_Boutons_s1
+}
+# macro_sequence
+
+# end
+# entity
+Boutons
+# storage
+db|sopc_compteur.(4).cnf
+db|sopc_compteur.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+boutons.vhd
+911fd56cc96c48410c1f690d3cd14
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(address)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_port)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|Boutons:the_Boutons
+}
+# macro_sequence
+
+# end
+# entity
+LEDs_s1_arbitrator
+# storage
+db|sopc_compteur.(6).cnf
+db|sopc_compteur.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(leds_s1_readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_writedata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(leds_s1_address)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(leds_s1_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(leds_s1_writedata)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|LEDs_s1_arbitrator:the_LEDs_s1
+}
+# macro_sequence
+
+# end
+# entity
+cpu_0_jtag_debug_module_arbitrator
+# storage
+db|sopc_compteur.(7).cnf
+db|sopc_compteur.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(cpu_0_data_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_byteenable)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_writedata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_instruction_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_jtag_debug_module_readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_jtag_debug_module_address)
+8 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_jtag_debug_module_byteenable)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_jtag_debug_module_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_jtag_debug_module_writedata)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|cpu_0_jtag_debug_module_arbitrator:the_cpu_0_jtag_debug_module
+}
+# macro_sequence
+
+# end
+# entity
+cpu_0_data_master_arbitrator
+# storage
+db|sopc_compteur.(8).cnf
+db|sopc_compteur.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(boutons_s1_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(leds_s1_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_address)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_jtag_debug_module_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(jtag_uart_0_avalon_jtag_slave_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(onchip_memory2_0_s1_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(sysid_0_control_slave_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_irq)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master
+}
+# macro_sequence
+
+# end
+# entity
+cpu_0_instruction_master_arbitrator
+# storage
+db|sopc_compteur.(46).cnf
+db|sopc_compteur.(46).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(cpu_0_instruction_master_address)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_jtag_debug_module_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(onchip_memory2_0_s1_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_instruction_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_instruction_master_readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|cpu_0_instruction_master_arbitrator:the_cpu_0_instruction_master
+}
+# macro_sequence
+
+# end
+# entity
+jtag_uart_0_avalon_jtag_slave_arbitrator
+# storage
+db|sopc_compteur.(59).cnf
+db|sopc_compteur.(59).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(cpu_0_data_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_writedata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(jtag_uart_0_avalon_jtag_slave_readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(jtag_uart_0_avalon_jtag_slave_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(jtag_uart_0_avalon_jtag_slave_writedata)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|jtag_uart_0_avalon_jtag_slave_arbitrator:the_jtag_uart_0_avalon_jtag_slave
+}
+# macro_sequence
+
+# end
+# entity
+onchip_memory2_0_s1_arbitrator
+# storage
+db|sopc_compteur.(63).cnf
+db|sopc_compteur.(63).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(cpu_0_data_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_byteenable)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_data_master_writedata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(cpu_0_instruction_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(onchip_memory2_0_s1_readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(onchip_memory2_0_s1_address)
+12 downto 0
+PARAMETER_STRING
+USR
+ constraint(onchip_memory2_0_s1_byteenable)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(onchip_memory2_0_s1_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(onchip_memory2_0_s1_writedata)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|onchip_memory2_0_s1_arbitrator:the_onchip_memory2_0_s1
+}
+# macro_sequence
+
+# end
+# entity
+sysid_0_control_slave_arbitrator
+# storage
+db|sopc_compteur.(64).cnf
+db|sopc_compteur.(64).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(cpu_0_data_master_address_to_slave)
+16 downto 0
+PARAMETER_STRING
+USR
+ constraint(sysid_0_control_slave_readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(sysid_0_control_slave_readdata_from_sa)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|sysid_0_control_slave_arbitrator:the_sysid_0_control_slave
+}
+# macro_sequence
+
+# end
+# entity
+sysid_0
+# storage
+db|sopc_compteur.(65).cnf
+db|sopc_compteur.(65).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+sysid_0.vhd
+1179c6b71fb362dcf7d913efbf49d27
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(readdata)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mon_sopc:inst|sysid_0:the_sysid_0
+}
+# macro_sequence
+
+# end
+# entity
+mon_sopc_reset_clk_0_domain_synch_module
+# storage
+db|sopc_compteur.(69).cnf
+db|sopc_compteur.(69).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mon_sopc.vhd
+b8c16dd51892708ad3603e1aceb8806e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+mon_sopc:inst|mon_sopc_reset_clk_0_domain_synch_module:mon_sopc_reset_clk_0_domain_synch
 }
 # macro_sequence
 
