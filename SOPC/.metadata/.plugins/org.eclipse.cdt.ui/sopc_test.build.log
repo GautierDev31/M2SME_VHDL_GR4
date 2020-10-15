@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project sopc_test ****
+
+make all 
+Info: Building ../sopc_test_bsp/
+make --no-print-directory -C ../sopc_test_bsp/
+[BSP build complete]
+[sopc_test build complete]
