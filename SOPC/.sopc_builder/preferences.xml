@@ -17,6 +17,5 @@
   </columns>
  </clocktable>
  <window width="1138" height="775" x="0" y="0" />
- <library
-   expandedCategories="Project,Library/Peripherals/Debug and Performance,Library,Library/Peripherals" />
+ <library expandedCategories="Library,Library/Other,Project" />
 </preferences>

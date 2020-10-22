@@ -83,6 +83,19 @@
 #include <unistd.h>
 #include <stdint.h>
 
+// DELs et BOUTONS
+ volatile uint8_t *leds = (volatile uint8_t *) LEDS_BASE ;
+// registre, eviter toute optimisation (stockee en RAM, la ou elle etait)
+ volatile uint8_t *butt = (volatile uint8_t *) BOUTONS_BASE ;
+
+ // PWM avec interface Avalon
+ volatile uint32_t *freq = (volatile uint32_t *) AVALON_PWM_0_BASE ;
+ volatile uint32_t *duty = (volatile uint32_t *) (AVALON_PWM_0_BASE +4) ;
+ volatile uint32_t *control = (volatile uint32_t *) (AVALON_PWM_0_BASE +8) ;
+
+
+
+
  enum MAE
  {
      IDLE = 0,
@@ -94,23 +107,22 @@
 
 int main()
 { 
-
- volatile uint8_t *leds = (volatile uint8_t *) LEDS_BASE ;
-	  // registre, eviter toute optimisation (stockee en RAM, la ou elle etait)
- volatile uint8_t *butt = (volatile uint8_t *) BOUTONS_BASE ;
-
-
  alt_putstr("Hello from Nios II!\n");
 
  int i ;
  *leds = 0 ;
+
  enum MAE state = IDLE ;
+
+ *freq = 0x2625A0 ; // CLK divisee par 2 500 000 => freq = 20 Hz
+ *duty = 0x3D090 ; //10% de 2 500 000 => duty = 10%
+ *control = 0x3 ;
 
  	 while (1){
 
 /*********************** CHENILLARD *****************************/
 /****************************************************************/
-/*		  for (i = 0; i < 8; i++) {
+		  for (i = 0; i < 8; i++) {
 			  	  *leds = (1<<i) ; // Decallage a gauche
 			  	  usleep(500000) ;
 		  }
@@ -119,13 +131,13 @@ int main()
 			  	  *leds = (0x80>>i) ; // Decallage a droite
 		  		  usleep(500000) ;
 		 }
-*/
+
 /*********************** MACHINE A ETAT *****************************/
 /**********************COMPTEUR AVEC BOUTONS*************************/
 //		  char *butt = NULL;
 //		  char *leds = NULL;
 
-		  switch (state)
+/*		  switch (state)
 		  {
 		    case IDLE:
 		      if ((*butt & 0x1) == 0) // masquage. Si bit_1 = 0 alors bouton_D est appuye (logique negative)
@@ -160,7 +172,7 @@ int main()
 		    break;
 		  }
 
-
+*/
  	 } // End while(1)
 
 

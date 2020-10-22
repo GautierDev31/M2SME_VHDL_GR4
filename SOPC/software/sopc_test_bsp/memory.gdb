@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu_0' in SOPC Builder design 'mon_sopc'
 # SOPC Builder design path: C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.sopcinfo
 #
-# Generated: Thu Oct 15 19:09:17 CEST 2020
+# Generated: Thu Oct 22 16:42:46 CEST 2020
 
 # DO NOT MODIFY THIS FILE
 #
