@@ -1,7 +1,7 @@
 PACKAGE install2 
 {
    # This file informs the Nios II IDE of non-legacy component paths.
-   # Generated 2020.10.15.19:17:15
+   # Generated 2020.10.22.15:18:19
    COMPONENT alt_interlaken_hp_mac 
    {
       VERSION 11.1 
@@ -2422,6 +2422,13 @@ PACKAGE install2
       VERSION 11.1 
       {
          local = "C:/altera/11.1sp2/ip/altera/audio_extract/src";
+      }
+   }
+   COMPONENT avalon_pwm 
+   {
+      VERSION 1.0 
+      {
+         local = "C:/altera/M2SME_VHDL_GR4/SOPC/Avalon_PWM";
       }
    }
    COMPONENT clocked_audio_input 

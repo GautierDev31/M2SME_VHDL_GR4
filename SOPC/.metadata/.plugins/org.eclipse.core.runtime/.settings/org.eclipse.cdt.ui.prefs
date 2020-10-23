@@ -1,6 +1,7 @@
-#Thu Oct 15 19:12:47 CEST 2020
+#Wed Oct 21 16:16:13 CEST 2020
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
 content_assist_disabled_computers=org.eclipse.cdt.ui.parserProposalCategory\u0000org.eclipse.cdt.ui.textProposalCategory\u0000
 eclipse.preferences.version=1
+sourceHoverBackgroundColor=255,255,225
 useQuickDiffPrefPage=true
