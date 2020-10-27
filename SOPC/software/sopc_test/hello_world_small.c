@@ -85,7 +85,7 @@
 
 // DELs et BOUTONS
  volatile uint8_t *leds = (volatile uint8_t *) LEDS_BASE ;
-// registre, eviter toute optimisation (stockee en RAM, la ou elle etait)
+ // registre, evite toute optimisation (stockee en RAM, la ou elle etait)
  volatile uint8_t *butt = (volatile uint8_t *) BOUTONS_BASE ;
 
  // PWM avec interface Avalon
@@ -93,7 +93,9 @@
  volatile uint32_t *duty = (volatile uint32_t *) (AVALON_PWM_0_BASE +4) ;
  volatile uint32_t *control = (volatile uint32_t *) (AVALON_PWM_0_BASE +8) ;
 
-
+ // Anemometre avec interface Avalon
+ volatile uint32_t *config = (volatile uint32_t *) AVALON_ANEMO_0_BASE ;
+ volatile uint32_t *data = (volatile uint32_t *) (AVALON_ANEMO_0_BASE + 4) ;
 
 
  enum MAE
@@ -107,7 +109,7 @@
 
 int main()
 { 
- alt_putstr("Hello from Nios II!\n");
+ alt_putstr("Hello/Coucou from Nios II!\n");
 
  int i ;
  *leds = 0 ;
@@ -115,8 +117,10 @@ int main()
  enum MAE state = IDLE ;
 
  *freq = 0x2625A0 ; // CLK divisee par 2 500 000 => freq = 20 Hz
- *duty = 0x3D090 ; //10% de 2 500 000 => duty = 10%
+ *duty = 0x1312D0 ; //10% de 2 500 000 => duty = 10%
  *control = 0x3 ;
+
+ *config = 0x2 ;
 
  	 while (1){
 
@@ -124,12 +128,12 @@ int main()
 /****************************************************************/
 		  for (i = 0; i < 8; i++) {
 			  	  *leds = (1<<i) ; // Decallage a gauche
-			  	  usleep(500000) ;
+			  	  usleep(50000) ;
 		  }
 
 		  for (i = 0; i < 8; i++) {
 			  	  *leds = (0x80>>i) ; // Decallage a droite
-		  		  usleep(500000) ;
+		  		  usleep(50000) ;
 		 }
 
 /*********************** MACHINE A ETAT *****************************/
@@ -173,6 +177,12 @@ int main()
 		  }
 
 */
+
+/*********************** DATA ANEMOMETRE *****************************/
+/*********************************************************************/
+		  *data = *data&0x3FF ;
+		  printf("reg = 0x%08X\n", *data) ;
+		  alt_printf("config = 0x%x\n", *config) ;
  	 } // End while(1)
 
 

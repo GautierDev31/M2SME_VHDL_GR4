@@ -56,7 +56,7 @@ out_pwm <= pwm_on and control(0);
 
 
 --************************ Ecriture registres *******************
-process_write: process (clk, reset_n)
+process_write: process (clk, reset_n) -- sigaux qui vont declancher le process (sigaux de sensibilite)
 	begin
 	if reset_n = '0' then
 	freq <= (others => '0');

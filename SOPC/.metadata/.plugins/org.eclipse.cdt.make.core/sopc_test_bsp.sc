@@ -4,6 +4,9 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.383458098;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.383458098.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.23031010;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.2146822929">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/HAL/inc"/>
+<includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp"/>
+<includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/drivers/inc"/>
 <includePath path="c:\altera\11.1sp2\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\3.4.4\include\c++"/>
 <includePath path="c:\altera\11.1sp2\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\3.4.4\include\c++\i686-pc-cygwin"/>
 <includePath path="c:\altera\11.1sp2\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\3.4.4\include\c++\backward"/>
@@ -95,10 +98,23 @@
 <definedSymbol symbol="unix=1"/>
 <definedSymbol symbol="__unix__=1"/>
 <definedSymbol symbol="__unix=1"/>
+<definedSymbol symbol="SYSTEM_BUS_WIDTH=32"/>
+<definedSymbol symbol="__hal__=1"/>
+<definedSymbol symbol="ALT_NO_C_PLUS_PLUS=1"/>
+<definedSymbol symbol="ALT_NO_CLEAN_EXIT=1"/>
+<definedSymbol symbol="ALT_NO_EXIT=1"/>
+<definedSymbol symbol="ALT_USE_DIRECT_DRIVERS=1"/>
+<definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
+<definedSymbol symbol="ALT_USE_SMALL_DRIVERS=1"/>
+<definedSymbol symbol="SMALL_C_LIB=1"/>
+<definedSymbol symbol="ALT_SINGLE_THREADED=1"/>
 </collector>
 </instance>
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.383458098;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.383458098.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.678393209;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.322641945">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/HAL/inc"/>
+<includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp"/>
+<includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/drivers/inc"/>
 <includePath path="c:\altera\11.1sp2\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\3.4.4\include"/>
 <includePath path="c:\altera\11.1sp2\quartus\bin\cygwin\usr\include"/>
 <includePath path="c:\altera\11.1sp2\quartus\bin\cygwin\usr\include\w32api"/>
@@ -181,6 +197,16 @@
 <definedSymbol symbol="unix=1"/>
 <definedSymbol symbol="__unix__=1"/>
 <definedSymbol symbol="__unix=1"/>
+<definedSymbol symbol="SYSTEM_BUS_WIDTH=32"/>
+<definedSymbol symbol="__hal__=1"/>
+<definedSymbol symbol="ALT_NO_C_PLUS_PLUS=1"/>
+<definedSymbol symbol="ALT_NO_CLEAN_EXIT=1"/>
+<definedSymbol symbol="ALT_NO_EXIT=1"/>
+<definedSymbol symbol="ALT_USE_DIRECT_DRIVERS=1"/>
+<definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
+<definedSymbol symbol="ALT_USE_SMALL_DRIVERS=1"/>
+<definedSymbol symbol="SMALL_C_LIB=1"/>
+<definedSymbol symbol="ALT_SINGLE_THREADED=1"/>
 </collector>
 </instance>
 </scannerInfo>

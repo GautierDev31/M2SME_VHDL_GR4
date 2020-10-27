@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'mon_sopc'
  * SOPC Builder design path: C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.sopcinfo
  *
- * Generated: Thu Oct 22 16:42:46 CEST 2020
+ * Generated: Thu Oct 22 23:10:38 CEST 2020
  */
 
 /*
@@ -155,6 +155,7 @@
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_AVALON_SYSID
 #define __ALTERA_NIOS2
+#define __AVALON_ANEMO
 #define __AVALON_PWM
 
 
@@ -201,24 +202,38 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x11030
+#define ALT_STDERR_BASE 0x11040
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x11030
+#define ALT_STDIN_BASE 0x11040
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x11030
+#define ALT_STDOUT_BASE 0x11040
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "mon_sopc"
+
+
+/*
+ * avalon_anemo_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_avalon_anemo_0 avalon_anemo
+#define AVALON_ANEMO_0_BASE 0x11030
+#define AVALON_ANEMO_0_IRQ -1
+#define AVALON_ANEMO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define AVALON_ANEMO_0_NAME "/dev/avalon_anemo_0"
+#define AVALON_ANEMO_0_SPAN 16
+#define AVALON_ANEMO_0_TYPE "avalon_anemo"
 
 
 /*
@@ -251,7 +266,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x11030
+#define JTAG_UART_0_BASE 0x11040
 #define JTAG_UART_0_IRQ 16
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -298,13 +313,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid_0 altera_avalon_sysid
-#define SYSID_0_BASE 0x11038
+#define SYSID_0_BASE 0x11048
 #define SYSID_0_ID 0u
 #define SYSID_0_IRQ -1
 #define SYSID_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_0_NAME "/dev/sysid_0"
 #define SYSID_0_SPAN 8
-#define SYSID_0_TIMESTAMP 1603372688u
+#define SYSID_0_TIMESTAMP 1603400855u
 #define SYSID_0_TYPE "altera_avalon_sysid"
 
 #endif /* __SYSTEM_H_ */
