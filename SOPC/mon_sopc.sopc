@@ -18,11 +18,19 @@
          type = "int";
       }
    }
+   element avalon_anemo_0
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
    element jtag_uart_0.avalon_jtag_slave
    {
       datum baseAddress
       {
-         value = "69680";
+         value = "69696";
          type = "long";
       }
    }
@@ -42,6 +50,14 @@
          type = "long";
       }
    }
+   element avalon_anemo_0.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "69680";
+         type = "long";
+      }
+   }
    element clk_0
    {
       datum _sortIndex
@@ -54,7 +70,7 @@
    {
       datum baseAddress
       {
-         value = "69688";
+         value = "69704";
          type = "long";
       }
    }
@@ -144,8 +160,8 @@
  <parameter name="maxAdditionalLatency" value="0" />
  <parameter name="projectName" value="sopc_compteur.qpf" />
  <parameter name="sopcBorderPoints" value="true" />
- <parameter name="systemHash" value="-19895815914" />
- <parameter name="timeStamp" value="1603372688439" />
+ <parameter name="systemHash" value="-20828490972" />
+ <parameter name="timeStamp" value="1603400854848" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <module kind="clock_source" version="11.1" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="50000000" />
@@ -246,7 +262,7 @@
   <parameter name="dcache_numTCDM" value="_0" />
   <parameter name="dcache_lineSize" value="_32" />
   <parameter name="dcache_bursts" value="false" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' /><slave name='cpu_0.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='Boutons.s1' start='0x11000' end='0x11010' /><slave name='LEDs.s1' start='0x11010' end='0x11020' /><slave name='avalon_pwm_0.avalon_slave_0' start='0x11020' end='0x11030' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11030' end='0x11038' /><slave name='sysid_0.control_slave' start='0x11038' end='0x11040' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' /><slave name='cpu_0.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='Boutons.s1' start='0x11000' end='0x11010' /><slave name='LEDs.s1' start='0x11010' end='0x11020' /><slave name='avalon_pwm_0.avalon_slave_0' start='0x11020' end='0x11030' /><slave name='avalon_anemo_0.avalon_slave_0' start='0x11030' end='0x11040' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11040' end='0x11048' /><slave name='sysid_0.control_slave' start='0x11048' end='0x11050' /></address-map>]]></parameter>
   <parameter name="dataAddrWidth" value="17" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="cpuReset" value="false" />
@@ -328,7 +344,10 @@
  <module kind="altera_avalon_sysid" version="11.1" enabled="1" name="sysid_0">
   <parameter name="id" value="0" />
  </module>
- <module kind="avalon_pwm" version="1.0" enabled="1" name="avalon_pwm_0" />
+ <module kind="avalon_pwm" version="1.0" enabled="1" name="avalon_pwm_0">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <module kind="avalon_anemo" version="1.0" enabled="1" name="avalon_anemo_0" />
  <connection kind="clock" version="11.1" start="clk_0.clk" end="cpu_0.clk" />
  <connection
    kind="avalon"
@@ -388,7 +407,7 @@
    start="cpu_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="baseAddress" value="0x00011040" />
  </connection>
  <connection
    kind="interrupt"
@@ -404,7 +423,7 @@
    start="cpu_0.data_master"
    end="sysid_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011038" />
+  <parameter name="baseAddress" value="0x00011048" />
  </connection>
  <connection
    kind="clock"
@@ -418,5 +437,18 @@
    end="avalon_pwm_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011020" />
+ </connection>
+ <connection
+   kind="clock"
+   version="11.1"
+   start="clk_0.clk"
+   end="avalon_anemo_0.clock" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="cpu_0.data_master"
+   end="avalon_anemo_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011030" />
  </connection>
 </system>
