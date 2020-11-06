@@ -46,8 +46,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name BDF_FILE sopc_compteur.bdf
-set_global_assignment -name QIP_FILE mon_sopc.qip
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_E1 -to Key[1]
 set_location_assignment PIN_R8 -to CLK
@@ -60,8 +58,20 @@ set_location_assignment PIN_D1 -to LEDs[4]
 set_location_assignment PIN_F3 -to LEDs[5]
 set_location_assignment PIN_B1 -to LEDs[6]
 set_location_assignment PIN_L3 -to LEDs[7]
-set_global_assignment -name VHDL_FILE Avalon_PWM/avalon_pwm.vhd
 set_location_assignment PIN_D3 -to OUT_PWM
+set_global_assignment -name VHDL_FILE ../Barre_Franche/Components/synchro_anemo/synchro_anemo.vhd
+set_global_assignment -name VHDL_FILE ../Barre_Franche/Components/raf_anemo/raf_anemo.vhd
+set_global_assignment -name VHDL_FILE ../Barre_Franche/Components/Diviseur_50M_2hz/Diviseur_50M_2hz.vhd
+set_global_assignment -name VHDL_FILE ../Barre_Franche/Components/Diviseur_50M_1hz/Diviseur_50M_1hz.vhd
+set_global_assignment -name VHDL_FILE ../Barre_Franche/Components/compteur_monocoup/compteur_monocoup.vhd
+set_global_assignment -name VHDL_FILE ../Barre_Franche/Components/Compteur/Compteur.vhd
+set_global_assignment -name VHDL_FILE ../Barre_Franche/Components/Affichage_8bits/Afficahge_8bits.vhd
+set_global_assignment -name BDF_FILE sopc_compteur.bdf
+set_global_assignment -name QIP_FILE mon_sopc.qip
+set_global_assignment -name VHDL_FILE Avalon_PWM/avalon_pwm.vhd
+set_global_assignment -name VHDL_FILE Avalon_Anemo/avalon_anemo.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="104" y="104">
+<window height="848" maximized="true" width="1526" x="104" y="104">
 <fastViewData fastViewLocation="1024"/>
 <intro standby="true"/>
 <perspectiveBar>
@@ -37,11 +37,11 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_world_small.c" partName="hello_world_small.c" path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test/hello_world_small.c" title="hello_world_small.c" tooltip="sopc_test/hello_world_small.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sopc_test/hello_world_small.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4495" selectionTopPixel="1037"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4817" selectionTopPixel="1819"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" partName="system.h" path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/system.h" title="system.h" tooltip="sopc_test_bsp/system.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sopc_test_bsp/system.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="6654" selectionTopPixel="3570"/>
+<editorState selectionHorizontalPixel="0" selectionLength="18" selectionOffset="6684" selectionTopPixel="3451"/>
 </editor>
 </editors>
 <views>
@@ -313,6 +313,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sopc_test_bsp/system.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sopc_test_bsp/system.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sopc_test_bsp/system.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sopc_test_bsp/system.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sopc_test_bsp/system.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sopc_test_bsp/system.h"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\altera\11.1sp2\quartus\bin\cygwin\usr\include\stdint.h" project="sopc_test"/>
 </editors>
 <item historyLabel="hello_world_small.c" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -380,8 +384,53 @@
 <item historyLabel="system.h" index="6">
 <position info="not_deleted" x="6654" y="17"/>
 </item>
-<item active="true" historyLabel="hello_world_small.c" index="0">
+<item historyLabel="hello_world_small.c" index="0">
 <position info="not_deleted" x="3975" y="0"/>
+</item>
+<item historyLabel="system.h" index="7">
+<position info="not_deleted" x="6654" y="17"/>
+</item>
+<item historyLabel="hello_world_small.c" index="0">
+<position info="not_deleted" x="3728" y="0"/>
+</item>
+<item historyLabel="system.h" index="7">
+<position info="not_deleted" x="4917" y="17"/>
+</item>
+<item historyLabel="hello_world_small.c" index="0">
+<position/>
+</item>
+<item historyLabel="system.h" index="8">
+<position info="not_deleted" x="6683" y="19"/>
+</item>
+<item historyLabel="hello_world_small.c" index="0">
+<position/>
+</item>
+<item historyLabel="system.h" index="8">
+<position info="not_deleted" x="6683" y="19"/>
+</item>
+<item historyLabel="hello_world_small.c" index="0">
+<position info="not_deleted" x="999" y="0"/>
+</item>
+<item historyLabel="system.h" index="8">
+<position info="not_deleted" x="6683" y="19"/>
+</item>
+<item historyLabel="hello_world_small.c" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="hello_world_small.c" index="0">
+<position info="not_deleted" x="4242" y="0"/>
+</item>
+<item historyLabel="system.h" index="9">
+<position info="not_deleted" x="6684" y="18"/>
+</item>
+<item historyLabel="hello_world_small.c" index="0">
+<position info="not_deleted" x="3646" y="0"/>
+</item>
+<item historyLabel="stdint.h" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="hello_world_small.c" index="0">
+<position info="not_deleted" x="3646" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -400,6 +449,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stdint.h" tooltip="C:\altera\11.1sp2\quartus\bin\cygwin\usr\include\stdint.h">
+<persistable path="C:\altera\11.1sp2\quartus\bin\cygwin\usr\include\stdint.h" project="sopc_test"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="sopc_test_bsp/system.h">
 <persistable path="/sopc_test_bsp/system.h"/>
 </file>
