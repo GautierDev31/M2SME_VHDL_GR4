@@ -1,5 +1,5 @@
 Fitter report for sopc_compteur
-Thu Oct 22 16:46:16 2020
+Tue Nov 03 10:34:22 2020
 Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
@@ -71,7 +71,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Thu Oct 22 16:46:16 2020         ;
+; Fitter Status                      ; Successful - Tue Nov 03 10:34:21 2020         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; sopc_compteur                                 ;
 ; Top-level Entity Name              ; sopc_compteur                                 ;
@@ -155,7 +155,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -233,7 +233,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/altera/M2SME_VHDL_GR4/SOPC/sopc_compteur.pin.
+The pin-out file can be found in C:/altera/91sp2/quartus/M2SME/SOPC/sopc_compteur.pin.
 
 
 +--------------------------------------------------------------------------+
@@ -2937,7 +2937,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Fitter
     Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Oct 22 16:46:10 2020
+    Info: Processing started: Tue Nov 03 10:34:06 2020
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off sopc_compteur -c sopc_compteur
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP4CE22F17C6 for design "sopc_compteur"
@@ -3030,25 +3030,25 @@ Extra Info (176248): Moving registers into I/O cells, Multiplier Blocks, and RAM
 Extra Info (176249): Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks
 Info (176235): Finished register packing
     Extra Info (176218): Packed 8 registers into blocks of type EC
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 3% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 23% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 460 megabytes
-    Info: Processing ended: Thu Oct 22 16:46:17 2020
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 458 megabytes
+    Info: Processing ended: Tue Nov 03 10:34:22 2020
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
 
 

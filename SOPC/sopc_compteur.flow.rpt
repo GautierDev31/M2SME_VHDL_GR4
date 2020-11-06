@@ -1,5 +1,5 @@
 Flow report for sopc_compteur
-Thu Oct 22 16:46:20 2020
+Tue Nov 03 10:34:31 2020
 Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 22 16:46:19 2020         ;
+; Flow Status                        ; Successful - Tue Nov 03 10:34:28 2020         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; sopc_compteur                                 ;
 ; Top-level Entity Name              ; sopc_compteur                                 ;
@@ -62,29 +62,29 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/22/2020 16:46:01 ;
+; Start date & time ; 11/03/2020 10:33:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sopc_compteur       ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                 ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 193989703688551.160337796110680 ; --            ; --          ; --         ;
-; IP_TOOL_ENV                         ; sopc                            ; --            ; mon_sopc    ; --         ;
-; IP_TOOL_NAME                        ; sopc                            ; --            ; mon_sopc    ; --         ;
-; IP_TOOL_VERSION                     ; 11.1sp2                         ; --            ; mon_sopc    ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
-; SOPC_BUILDER_SIGNATURE_ID           ; B06ebf60e167000001755075d007    ; --            ; --          ; --         ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
++----------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                               ;
++-------------------------------------+-------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                         ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+-------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 1099358999964.160439602210404 ; --            ; --          ; --         ;
+; IP_TOOL_ENV                         ; sopc                          ; --            ; mon_sopc    ; --         ;
+; IP_TOOL_NAME                        ; sopc                          ; --            ; mon_sopc    ; --         ;
+; IP_TOOL_VERSION                     ; 11.1sp2                       ; --            ; mon_sopc    ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                            ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                             ; --            ; --          ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                          ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                      ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING         ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                        ; --            ; --          ; Top        ;
+; SOPC_BUILDER_SIGNATURE_ID           ; B06ebf60e167000001755075d007  ; --            ; --          ; --         ;
++-------------------------------------+-------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -92,11 +92,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 413 MB              ; 00:00:08                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 460 MB              ; 00:00:06                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 357 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 363 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 400 MB              ; 00:00:21                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 458 MB              ; 00:00:14                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 366 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 376 MB              ; 00:00:07                           ;
+; Total                     ; 00:00:47     ; --                      ; --                  ; 00:00:46                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,10 +105,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-I2DT9M9  ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; DESKTOP-I2DT9M9  ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; DESKTOP-I2DT9M9  ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-I2DT9M9  ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

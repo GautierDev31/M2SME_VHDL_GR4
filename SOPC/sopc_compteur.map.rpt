@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sopc_compteur
-Thu Oct 22 16:46:09 2020
+Tue Nov 03 10:34:04 2020
 Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
@@ -100,7 +100,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 22 16:46:09 2020         ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 03 10:34:04 2020         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; sopc_compteur                                 ;
 ; Top-level Entity Name              ; sopc_compteur                                 ;
@@ -208,69 +208,69 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+--------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
-; File Name with User-Entered Path           ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                ;
-+--------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
-; sopc_compteur.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/altera/M2SME_VHDL_GR4/SOPC/sopc_compteur.bdf                             ;
-; Avalon_PWM/avalon_pwm.vhd                  ; yes             ; User VHDL File                         ; C:/altera/M2SME_VHDL_GR4/SOPC/Avalon_PWM/avalon_pwm.vhd                     ;
-; avalon_pwm_0.vhd                           ; yes             ; User VHDL File                         ; C:/altera/M2SME_VHDL_GR4/SOPC/avalon_pwm_0.vhd                              ;
-; mon_sopc.vhd                               ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.vhd                                  ;
-; boutons.vhd                                ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/boutons.vhd                                   ;
-; leds.vhd                                   ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/leds.vhd                                      ;
-; cpu_0.vhd                                  ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0.vhd                                     ;
-; cpu_0_test_bench.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_test_bench.vhd                          ;
-; altsyncram.tdf                             ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altsyncram.tdf            ;
-; stratix_ram_block.inc                      ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/stratix_ram_block.inc     ;
-; lpm_mux.inc                                ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mux.inc               ;
-; lpm_decode.inc                             ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_decode.inc            ;
-; aglobal111.inc                             ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/aglobal111.inc            ;
-; a_rdenreg.inc                              ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_rdenreg.inc             ;
-; altrom.inc                                 ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altrom.inc                ;
-; altram.inc                                 ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altram.inc                ;
-; altdpram.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altdpram.inc              ;
-; db/altsyncram_hff1.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_hff1.tdf                        ;
-; cpu_0_rf_ram_a.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_rf_ram_a.mif                            ;
-; db/altsyncram_iff1.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_iff1.tdf                        ;
-; cpu_0_rf_ram_b.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_rf_ram_b.mif                            ;
-; db/altsyncram_u972.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_u972.tdf                        ;
-; cpu_0_ociram_default_contents.mif          ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_ociram_default_contents.mif             ;
-; cpu_0_oci_test_bench.vhd                   ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_oci_test_bench.vhd                      ;
-; db/altsyncram_0a02.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_0a02.tdf                        ;
-; cpu_0_jtag_debug_module_wrapper.vhd        ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_wrapper.vhd           ;
-; cpu_0_jtag_debug_module_tck.vhd            ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_tck.vhd               ;
-; altera_std_synchronizer.v                  ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altera_std_synchronizer.v ;
-; cpu_0_jtag_debug_module_sysclk.vhd         ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/cpu_0_jtag_debug_module_sysclk.vhd            ;
-; sld_virtual_jtag_basic.v                   ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v  ;
-; jtag_uart_0.vhd                            ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/jtag_uart_0.vhd                               ;
-; scfifo.tdf                                 ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/scfifo.tdf                ;
-; a_regfifo.inc                              ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_regfifo.inc             ;
-; a_dpfifo.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_dpfifo.inc              ;
-; a_i2fifo.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_i2fifo.inc              ;
-; a_fffifo.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_fffifo.inc              ;
-; a_f2fifo.inc                               ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_f2fifo.inc              ;
-; db/scfifo_jr21.tdf                         ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/scfifo_jr21.tdf                            ;
-; db/a_dpfifo_q131.tdf                       ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/a_dpfifo_q131.tdf                          ;
-; db/a_fefifo_7cf.tdf                        ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/a_fefifo_7cf.tdf                           ;
-; db/cntr_do7.tdf                            ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/cntr_do7.tdf                               ;
-; db/dpram_nl21.tdf                          ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/dpram_nl21.tdf                             ;
-; db/altsyncram_r1m1.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_r1m1.tdf                        ;
-; db/cntr_1ob.tdf                            ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/cntr_1ob.tdf                               ;
-; alt_jtag_atlantic.v                        ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/alt_jtag_atlantic.v       ;
-; onchip_memory2_0.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/onchip_memory2_0.vhd                          ;
-; db/altsyncram_68c1.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/altera/M2SME_VHDL_GR4/SOPC/db/altsyncram_68c1.tdf                        ;
-; onchip_memory2_0.hex                       ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/M2SME_VHDL_GR4/SOPC/onchip_memory2_0.hex                          ;
-; sysid_0.vhd                                ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/sysid_0.vhd                                   ;
-; sld_hub.vhd                                ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_hub.vhd               ;
-; sld_rom_sr.vhd                             ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_rom_sr.vhd            ;
-; C:/altera/M2SME_VHDL_GR4/SOPC/bouttons.vhd ; yes             ; Auto-Found VHDL File                   ; C:/altera/M2SME_VHDL_GR4/SOPC/bouttons.vhd                                  ;
-+--------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++-------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
+; File Name with User-Entered Path                ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                ;
++-------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
+; sopc_compteur.bdf                               ; yes             ; User Block Diagram/Schematic File      ; C:/altera/91sp2/quartus/M2SME/SOPC/sopc_compteur.bdf                        ;
+; Avalon_PWM/avalon_pwm.vhd                       ; yes             ; User VHDL File                         ; C:/altera/91sp2/quartus/M2SME/SOPC/Avalon_PWM/avalon_pwm.vhd                ;
+; avalon_pwm_0.vhd                                ; yes             ; User VHDL File                         ; C:/altera/91sp2/quartus/M2SME/SOPC/avalon_pwm_0.vhd                         ;
+; mon_sopc.vhd                                    ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc.vhd                             ;
+; boutons.vhd                                     ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/boutons.vhd                              ;
+; leds.vhd                                        ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/leds.vhd                                 ;
+; cpu_0.vhd                                       ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0.vhd                                ;
+; cpu_0_test_bench.vhd                            ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0_test_bench.vhd                     ;
+; altsyncram.tdf                                  ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altsyncram.tdf            ;
+; stratix_ram_block.inc                           ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/stratix_ram_block.inc     ;
+; lpm_mux.inc                                     ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mux.inc               ;
+; lpm_decode.inc                                  ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_decode.inc            ;
+; aglobal111.inc                                  ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/aglobal111.inc            ;
+; a_rdenreg.inc                                   ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_rdenreg.inc             ;
+; altrom.inc                                      ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altrom.inc                ;
+; altram.inc                                      ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altram.inc                ;
+; altdpram.inc                                    ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altdpram.inc              ;
+; db/altsyncram_hff1.tdf                          ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/altsyncram_hff1.tdf                   ;
+; cpu_0_rf_ram_a.mif                              ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0_rf_ram_a.mif                       ;
+; db/altsyncram_iff1.tdf                          ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/altsyncram_iff1.tdf                   ;
+; cpu_0_rf_ram_b.mif                              ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0_rf_ram_b.mif                       ;
+; db/altsyncram_u972.tdf                          ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/altsyncram_u972.tdf                   ;
+; cpu_0_ociram_default_contents.mif               ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0_ociram_default_contents.mif        ;
+; cpu_0_oci_test_bench.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0_oci_test_bench.vhd                 ;
+; db/altsyncram_0a02.tdf                          ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/altsyncram_0a02.tdf                   ;
+; cpu_0_jtag_debug_module_wrapper.vhd             ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0_jtag_debug_module_wrapper.vhd      ;
+; cpu_0_jtag_debug_module_tck.vhd                 ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0_jtag_debug_module_tck.vhd          ;
+; altera_std_synchronizer.v                       ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altera_std_synchronizer.v ;
+; cpu_0_jtag_debug_module_sysclk.vhd              ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/cpu_0_jtag_debug_module_sysclk.vhd       ;
+; sld_virtual_jtag_basic.v                        ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v  ;
+; jtag_uart_0.vhd                                 ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/jtag_uart_0.vhd                          ;
+; scfifo.tdf                                      ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/scfifo.tdf                ;
+; a_regfifo.inc                                   ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_regfifo.inc             ;
+; a_dpfifo.inc                                    ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_dpfifo.inc              ;
+; a_i2fifo.inc                                    ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_i2fifo.inc              ;
+; a_fffifo.inc                                    ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_fffifo.inc              ;
+; a_f2fifo.inc                                    ; yes             ; Megafunction                           ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_f2fifo.inc              ;
+; db/scfifo_jr21.tdf                              ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/scfifo_jr21.tdf                       ;
+; db/a_dpfifo_q131.tdf                            ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/a_dpfifo_q131.tdf                     ;
+; db/a_fefifo_7cf.tdf                             ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/a_fefifo_7cf.tdf                      ;
+; db/cntr_do7.tdf                                 ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/cntr_do7.tdf                          ;
+; db/dpram_nl21.tdf                               ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/dpram_nl21.tdf                        ;
+; db/altsyncram_r1m1.tdf                          ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/altsyncram_r1m1.tdf                   ;
+; db/cntr_1ob.tdf                                 ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/cntr_1ob.tdf                          ;
+; alt_jtag_atlantic.v                             ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/alt_jtag_atlantic.v       ;
+; onchip_memory2_0.vhd                            ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/onchip_memory2_0.vhd                     ;
+; db/altsyncram_68c1.tdf                          ; yes             ; Auto-Generated Megafunction            ; C:/altera/91sp2/quartus/M2SME/SOPC/db/altsyncram_68c1.tdf                   ;
+; onchip_memory2_0.hex                            ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/91sp2/quartus/M2SME/SOPC/onchip_memory2_0.hex                     ;
+; sysid_0.vhd                                     ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/sysid_0.vhd                              ;
+; sld_hub.vhd                                     ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_hub.vhd               ;
+; sld_rom_sr.vhd                                  ; yes             ; Encrypted Megafunction                 ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sld_rom_sr.vhd            ;
+; C:/altera/91sp2/quartus/M2SME/SOPC/bouttons.vhd ; yes             ; Auto-Found VHDL File                   ; C:/altera/91sp2/quartus/M2SME/SOPC/bouttons.vhd                             ;
++-------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------+
@@ -394,13 +394,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+-----------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                     ;
-+--------+--------------+---------+--------------+--------------+------------------------------+--------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance              ; IP Include File                            ;
-+--------+--------------+---------+--------------+--------------+------------------------------+--------------------------------------------+
-; Altera ; sopc         ; 11.1sp2 ; N/A          ; N/A          ; |sopc_compteur|mon_sopc:inst ; C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.vhd ;
-+--------+--------------+---------+--------------+--------------+------------------------------+--------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                          ;
++--------+--------------+---------+--------------+--------------+------------------------------+-------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance              ; IP Include File                                 ;
++--------+--------------+---------+--------------+--------------+------------------------------+-------------------------------------------------+
+; Altera ; sopc         ; 11.1sp2 ; N/A          ; N/A          ; |sopc_compteur|mon_sopc:inst ; C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc.vhd ;
++--------+--------------+---------+--------------+--------------+------------------------------+-------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1549,7 +1549,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -1559,7 +1559,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Oct 22 16:46:01 2020
+    Info: Processing started: Tue Nov 03 10:33:41 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sopc_compteur -c sopc_compteur
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file sopc_compteur.bdf
@@ -2061,9 +2061,9 @@ Info (21057): Implemented 1860 device resources after synthesis - the final reso
     Info (21061): Implemented 1699 logic cells
     Info (21064): Implemented 144 RAM segments
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 413 megabytes
-    Info: Processing ended: Thu Oct 22 16:46:09 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 400 megabytes
+    Info: Processing ended: Tue Nov 03 10:34:04 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:22
 
 

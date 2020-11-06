@@ -15,3 +15,9 @@ PWM -> Réalisation d'un PWM avec 4 découpage possible de la fréquence
 Analyse fonctionelle :  
 
 ![Analyse fonctionelle F1](images/AF_F1.PNG)
+
+### F7 Commande barreur :
+
+Analyse fonctionelle :  
+
+![Analyse fonctionelle F1](images/AF_F7.PNG)
