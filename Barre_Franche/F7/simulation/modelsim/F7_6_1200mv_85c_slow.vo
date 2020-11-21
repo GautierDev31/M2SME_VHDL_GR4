@@ -1,0 +1,189 @@
+// Copyright (C) 1991-2010 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
+
+// DATE "11/09/2020 10:38:53"
+
+// 
+// Device: Altera EP4CE22F17C6 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module CompteurBP (
+	inCompteurBP_clk_50M,
+	inCompteurBP_BP_Babord,
+	inCompteurBP_BP_Tribord,
+	inCompteurBP_BP_STBY,
+	outCompteurBP_BP_Tribord,
+	outCompteurBP_BP_Babord,
+	outCompteurBP_BP_STBY,
+	outCompteurBP_BP_Appuis);
+input 	inCompteurBP_clk_50M;
+input 	inCompteurBP_BP_Babord;
+input 	inCompteurBP_BP_Tribord;
+input 	inCompteurBP_BP_STBY;
+output 	outCompteurBP_BP_Tribord;
+output 	outCompteurBP_BP_Babord;
+output 	outCompteurBP_BP_STBY;
+output 	outCompteurBP_BP_Appuis;
+
+// Design Ports Information
+// inCompteurBP_clk_50M	=>  Location: PIN_F15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// inCompteurBP_BP_Babord	=>  Location: PIN_F1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// inCompteurBP_BP_Tribord	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// inCompteurBP_BP_STBY	=>  Location: PIN_B3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// outCompteurBP_BP_Tribord	=>  Location: PIN_L15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// outCompteurBP_BP_Babord	=>  Location: PIN_A15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// outCompteurBP_BP_STBY	=>  Location: PIN_B5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// outCompteurBP_BP_Appuis	=>  Location: PIN_G5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_H1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_H2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_F16,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("F7_6_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
+wire \inCompteurBP_clk_50M~input_o ;
+wire \inCompteurBP_BP_Babord~input_o ;
+wire \inCompteurBP_BP_Tribord~input_o ;
+wire \inCompteurBP_BP_STBY~input_o ;
+wire \outCompteurBP_BP_Tribord~output_o ;
+wire \outCompteurBP_BP_Babord~output_o ;
+wire \outCompteurBP_BP_STBY~output_o ;
+wire \outCompteurBP_BP_Appuis~output_o ;
+
+
+// Location: IOOBUF_X53_Y11_N2
+cycloneive_io_obuf \outCompteurBP_BP_Tribord~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outCompteurBP_BP_Tribord~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outCompteurBP_BP_Tribord~output .bus_hold = "false";
+defparam \outCompteurBP_BP_Tribord~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X38_Y34_N16
+cycloneive_io_obuf \outCompteurBP_BP_Babord~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outCompteurBP_BP_Babord~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outCompteurBP_BP_Babord~output .bus_hold = "false";
+defparam \outCompteurBP_BP_Babord~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y34_N2
+cycloneive_io_obuf \outCompteurBP_BP_STBY~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outCompteurBP_BP_STBY~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outCompteurBP_BP_STBY~output .bus_hold = "false";
+defparam \outCompteurBP_BP_STBY~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y24_N16
+cycloneive_io_obuf \outCompteurBP_BP_Appuis~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outCompteurBP_BP_Appuis~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outCompteurBP_BP_Appuis~output .bus_hold = "false";
+defparam \outCompteurBP_BP_Appuis~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y22_N8
+cycloneive_io_ibuf \inCompteurBP_clk_50M~input (
+	.i(inCompteurBP_clk_50M),
+	.ibar(gnd),
+	.o(\inCompteurBP_clk_50M~input_o ));
+// synopsys translate_off
+defparam \inCompteurBP_clk_50M~input .bus_hold = "false";
+defparam \inCompteurBP_clk_50M~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y23_N1
+cycloneive_io_ibuf \inCompteurBP_BP_Babord~input (
+	.i(inCompteurBP_BP_Babord),
+	.ibar(gnd),
+	.o(\inCompteurBP_BP_Babord~input_o ));
+// synopsys translate_off
+defparam \inCompteurBP_BP_Babord~input .bus_hold = "false";
+defparam \inCompteurBP_BP_Babord~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y23_N15
+cycloneive_io_ibuf \inCompteurBP_BP_Tribord~input (
+	.i(inCompteurBP_BP_Tribord),
+	.ibar(gnd),
+	.o(\inCompteurBP_BP_Tribord~input_o ));
+// synopsys translate_off
+defparam \inCompteurBP_BP_Tribord~input .bus_hold = "false";
+defparam \inCompteurBP_BP_Tribord~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X3_Y34_N1
+cycloneive_io_ibuf \inCompteurBP_BP_STBY~input (
+	.i(inCompteurBP_BP_STBY),
+	.ibar(gnd),
+	.o(\inCompteurBP_BP_STBY~input_o ));
+// synopsys translate_off
+defparam \inCompteurBP_BP_STBY~input .bus_hold = "false";
+defparam \inCompteurBP_BP_STBY~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign outCompteurBP_BP_Tribord = \outCompteurBP_BP_Tribord~output_o ;
+
+assign outCompteurBP_BP_Babord = \outCompteurBP_BP_Babord~output_o ;
+
+assign outCompteurBP_BP_STBY = \outCompteurBP_BP_STBY~output_o ;
+
+assign outCompteurBP_BP_Appuis = \outCompteurBP_BP_Appuis~output_o ;
+
+endmodule
