@@ -43,7 +43,7 @@ begin
 	
 	-- Tribord 10° / Mode manuel
 	elsif (in_Synchro_BP_Tribord = '1' and in_Synchro_Appuis = 0 and mode = 0) then
-	out_code_fonction = "0110"; -- decrement 10°
+	out_code_fonction = "0110";
 	
 	-- STBY = Mode pilote automatique / manuel
 	elsif (in_Synchro_BP_STBY = '1' and in_Synchro_Appuis = 0) then
