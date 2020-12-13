@@ -4,6 +4,9 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.152952190;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.152952190.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1380466181;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1498115144">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/altera/91sp2/quartus/M2SME/SOPC/software/sopc_test_bsp/HAL/inc"/>
+<includePath path="C:/altera/91sp2/quartus/M2SME/SOPC/software/sopc_test_bsp/"/>
+<includePath path="C:/altera/91sp2/quartus/M2SME/SOPC/software/sopc_test_bsp/drivers/inc"/>
 <includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/HAL/inc"/>
 <includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/"/>
 <includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/drivers/inc"/>
@@ -112,6 +115,9 @@
 </instance>
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.152952190;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.152952190.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1304063290;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1879416351">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/altera/91sp2/quartus/M2SME/SOPC/software/sopc_test_bsp/HAL/inc"/>
+<includePath path="C:/altera/91sp2/quartus/M2SME/SOPC/software/sopc_test_bsp/"/>
+<includePath path="C:/altera/91sp2/quartus/M2SME/SOPC/software/sopc_test_bsp/drivers/inc"/>
 <includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/HAL/inc"/>
 <includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/"/>
 <includePath path="C:/altera/M2SME_VHDL_GR4/SOPC/software/sopc_test_bsp/drivers/inc"/>

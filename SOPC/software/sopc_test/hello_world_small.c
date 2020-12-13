@@ -97,6 +97,11 @@
  volatile uint32_t *config = (volatile uint32_t *) AVALON_ANEMO_0_BASE ;
  volatile uint32_t *data = (volatile uint32_t *) (AVALON_ANEMO_0_BASE + 4) ;
 
+ // F7 avec interface Avalon
+ volatile uint32_t *config_F7 = (volatile uint32_t *) AVALON_F7_0_BASE ;
+ volatile uint32_t *data_F7 = (volatile uint32_t *) (AVALON_F7_0_BASE + 4) ;
+
+
 
  enum MAE
  {
@@ -121,6 +126,7 @@ int main()
  *control = 0x3 ;
 
  *config = 0x2 ;
+
 
  	 while (1){
 
@@ -180,9 +186,15 @@ int main()
 
 /*********************** DATA ANEMOMETRE *****************************/
 /*********************************************************************/
-		  *data = *data&0x3FF ;
+		 /* *data = *data&0x3FF ;
 		  printf("reg = 0x%08X\n", *data) ;
-		  alt_printf("config = 0x%x\n", *config) ;
+		  alt_printf("config = 0x%x\n", *config) ;*/
+
+/*********************** CODE FONCTION F7 *****************************/
+/*********************************************************************/
+		  *data_F7 = *data_F7&0xF ;
+		  printf("reg = 0x%08X\n", *data_F7) ;
+		  usleep(20000);
  	 } // End while(1)
 
 

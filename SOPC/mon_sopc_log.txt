@@ -3,78 +3,80 @@ Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
 
 
 No .sopc_builder configuration file(!)
-# 2020.10.22 23:07:51 (*) mk_custom_sdk starting
-# 2020.10.22 23:07:51 (*) Reading project C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.ptf.
+# 2020.12.13 17:51:27 (*) mk_custom_sdk starting
+# 2020.12.13 17:51:27 (*) Reading project C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc.ptf.
 
-# 2020.10.22 23:07:51 (*) Finding all CPUs
-# 2020.10.22 23:07:51 (*) Finding all available components
-# 2020.10.22 23:07:51 (*) Reading C:/altera/M2SME_VHDL_GR4/SOPC/.sopc_builder/install.ptf
+# 2020.12.13 17:51:27 (*) Finding all CPUs
+# 2020.12.13 17:51:27 (*) Finding all available components
+# 2020.12.13 17:51:27 (*) Reading C:/altera/91sp2/quartus/M2SME/SOPC/.sopc_builder/install.ptf
 
-# 2020.10.22 23:07:51 (*) Found 63 components
+# 2020.12.13 17:51:27 (*) Found 63 components
 
-# 2020.10.22 23:07:51 (*) Finding all peripherals
+# 2020.12.13 17:51:29 (*) Finding all peripherals
 
-# 2020.10.22 23:07:51 (*) Finding software components
+# 2020.12.13 17:51:29 (*) Finding software components
 
-# 2020.10.22 23:07:51 (*) (Legacy SDK Generation Skipped)
-# 2020.10.22 23:07:51 (*) (All TCL Script Generation Skipped)
-# 2020.10.22 23:07:51 (*) (No Libraries Built)
-# 2020.10.22 23:07:51 (*) (Contents Generation Skipped)
-# 2020.10.22 23:07:51 (*) mk_custom_sdk finishing
+# 2020.12.13 17:51:29 (*) (Legacy SDK Generation Skipped)
+# 2020.12.13 17:51:29 (*) (All TCL Script Generation Skipped)
+# 2020.12.13 17:51:29 (*) (No Libraries Built)
+# 2020.12.13 17:51:29 (*) (Contents Generation Skipped)
+# 2020.12.13 17:51:29 (*) mk_custom_sdk finishing
 
-# 2020.10.22 23:07:51 (*) Starting generation for system: mon_sopc.
+# 2020.12.13 17:51:29 (*) Starting generation for system: mon_sopc.
 
 .
 .
-..
-..
+.
+.
+.
+.
 
-# 2020.10.22 23:07:52 (*) Running Generator Program for cpu_0
+# 2020.12.13 17:51:31 (*) Running Generator Program for cpu_0
 
-# 2020.10.22 23:07:53 (*) Starting Nios II generation
-# 2020.10.22 23:07:53 (*)   Checking for plaintext license.
-# 2020.10.22 23:07:53 (*)   Couldn't query license setup in Quartus directory c:/altera/11.1sp2/quartus
-# 2020.10.22 23:07:53 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-# 2020.10.22 23:07:53 (*)   LM_LICENSE_FILE environment variable is empty
-# 2020.10.22 23:07:53 (*)   Plaintext license not found.
-# 2020.10.22 23:07:53 (*)   No license required to generate encrypted Nios II/e.
+# 2020.12.13 17:51:34 (*) Starting Nios II generation
+# 2020.12.13 17:51:34 (*)   Checking for plaintext license.
+# 2020.12.13 17:51:36 (*)   Couldn't query license setup in Quartus directory c:/altera/11.1sp2/quartus
+# 2020.12.13 17:51:36 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+# 2020.12.13 17:51:36 (*)   LM_LICENSE_FILE environment variable is empty
+# 2020.12.13 17:51:36 (*)   Plaintext license not found.
+# 2020.12.13 17:51:36 (*)   No license required to generate encrypted Nios II/e.
 
-# 2020.10.22 23:07:53 (*)   Getting CPU configuration settings
-# 2020.10.22 23:07:53 (*)   Elaborating CPU configuration settings
-# 2020.10.22 23:07:53 (*)   Creating all objects for CPU
-# 2020.10.22 23:07:54 (*)   Generating HDL from CPU objects
-# 2020.10.22 23:07:54 (*)   Creating plain-text HDL
-# 2020.10.22 23:07:58 (*) Done Nios II generation
+# 2020.12.13 17:51:36 (*)   Getting CPU configuration settings
+# 2020.12.13 17:51:36 (*)   Elaborating CPU configuration settings
+# 2020.12.13 17:51:36 (*)   Creating all objects for CPU
+# 2020.12.13 17:51:41 (*)   Generating HDL from CPU objects
+# 2020.12.13 17:51:41 (*)   Creating plain-text HDL
+# 2020.12.13 17:51:56 (*) Done Nios II generation
 
-# 2020.10.22 23:07:58 (*) Running Generator Program for onchip_memory2_0
+# 2020.12.13 17:51:56 (*) Running Generator Program for onchip_memory2_0
 
-# 2020.10.22 23:07:59 (*) Running Generator Program for Boutons
+# 2020.12.13 17:51:58 (*) Running Generator Program for Boutons
 
-# 2020.10.22 23:07:59 (*) Running Generator Program for LEDs
+# 2020.12.13 17:52:01 (*) Running Generator Program for LEDs
 
-# 2020.10.22 23:08:00 (*) Running Generator Program for jtag_uart_0
+# 2020.12.13 17:52:03 (*) Running Generator Program for jtag_uart_0
 
-# 2020.10.22 23:08:00 (*) Running Generator Program for sysid_0
-
-
-# 2020.10.22 23:08:01 (*) Making arbitration and system (top) modules.
-
-# 2020.10.22 23:08:04 (*) Generating Quartus symbol for top level: mon_sopc
-
-# 2020.10.22 23:08:04 (*) Generating Symbol C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.bsf
-
-# 2020.10.22 23:08:04 (*) Creating command-line system-generation script: C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc_generation_script
-
-# 2020.10.22 23:08:04 (*) Running setup for HDL simulator: modelsim
+# 2020.12.13 17:52:06 (*) Running Generator Program for sysid_0
 
 
-# 2020.10.22 23:08:05 (*) Completed generation for system: mon_sopc.
-# 2020.10.22 23:08:05 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
-  SOPC Builder database : C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.ptf 
-  System HDL Model : C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.vhd 
-  System Generation Script : C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc_generation_script 
+# 2020.12.13 17:52:08 (*) Making arbitration and system (top) modules.
 
-# 2020.10.22 23:08:05 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+# 2020.12.13 17:52:22 (*) Generating Quartus symbol for top level: mon_sopc
+
+# 2020.12.13 17:52:22 (*) Generating Symbol C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc.bsf
+
+# 2020.12.13 17:52:22 (*) Creating command-line system-generation script: C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc_generation_script
+
+# 2020.12.13 17:52:23 (*) Running setup for HDL simulator: modelsim
+
+
+# 2020.12.13 17:52:24 (*) Completed generation for system: mon_sopc.
+# 2020.12.13 17:52:24 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc.ptf 
+  System HDL Model : C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc.vhd 
+  System Generation Script : C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc_generation_script 
+
+# 2020.12.13 17:52:24 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
 
 
 Press 'Exit' to exit.

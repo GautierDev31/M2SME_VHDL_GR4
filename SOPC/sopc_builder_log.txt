@@ -1,6 +1,6 @@
-27 oct. 2020 00:54:00 com.altera.utilities.Launcher launch
-INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/altera/M2SME_VHDL_GR4/SOPC/Avalon_PWM/avalon_pwm.vhd --source=C:/altera/M2SME_VHDL_GR4/SOPC/Avalon_PWM/avalon_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/alex/AppData/Local/Temp/alt8561_9206486652428919711.dir/0001_sopcqmap/
-27 oct. 2020 00:54:02 com.altera.utilities.Launcher launch
-INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/altera/M2SME_VHDL_GR4/SOPC/Avalon_Anemo/avalon_anemo.vhd --source=C:/altera/M2SME_VHDL_GR4/SOPC/Avalon_Anemo/avalon_anemo.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/alex/AppData/Local/Temp/alt8561_9206486652428919711.dir/0002_sopcqmap/
-27 oct. 2020 00:54:38 com.altera.utilities.Launcher launch
-INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/altera/M2SME_VHDL_GR4/SOPC/Avalon_Anemo/avalon_anemo.vhd --source=C:/altera/M2SME_VHDL_GR4/SOPC/Avalon_Anemo/avalon_anemo.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/alex/AppData/Local/Temp/alt8561_9206486652428919711.dir/0003_sopcqmap/
+13 déc. 2020 18:45:28 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/altera/91sp2/quartus/M2SME/SOPC/Avalon_PWM/avalon_pwm.vhd --source=C:/altera/91sp2/quartus/M2SME/SOPC/Avalon_PWM/avalon_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/UTILIS~1/AppData/Local/Temp/alt8609_526267617047138862.dir/0001_sopcqmap/
+13 déc. 2020 18:45:31 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/altera/91sp2/quartus/M2SME/SOPC/Avalon_Anemo/avalon_anemo.vhd --source=C:/altera/91sp2/quartus/M2SME/SOPC/Avalon_Anemo/avalon_anemo.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/UTILIS~1/AppData/Local/Temp/alt8609_526267617047138862.dir/0002_sopcqmap/
+13 déc. 2020 18:45:33 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/altera/91sp2/quartus/M2SME/SOPC/Avalon_F7/Avalon_F7.vhd --source=C:/altera/91sp2/quartus/M2SME/SOPC/Avalon_F7/Avalon_F7.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/UTILIS~1/AppData/Local/Temp/alt8609_526267617047138862.dir/0003_sopcqmap/

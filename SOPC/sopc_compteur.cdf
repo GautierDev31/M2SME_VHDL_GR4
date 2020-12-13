@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/altera/M2SME_VHDL_GR4/SOPC/") File("sopc_compteur.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("C:/altera/91sp2/quartus/M2SME/SOPC/") File("sopc_compteur.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

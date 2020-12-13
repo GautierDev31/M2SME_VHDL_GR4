@@ -101,7 +101,7 @@ ACDS_VERSION := 11.1sp2
 # BUILD_NUMBER: 259
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.sopcinfo
+SOPC_FILE := C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

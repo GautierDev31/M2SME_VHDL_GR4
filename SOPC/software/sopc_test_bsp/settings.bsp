@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>22 oct. 2020 23:10:37</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1603401037756</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\altera\M2SME_VHDL_GR4\SOPC\software\sopc_test_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>13 déc. 2020 18:20:15</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1607880015678</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\altera\91sp2\quartus\M2SME\SOPC\software\sopc_test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\altera\M2SME_VHDL_GR4\SOPC\mon_sopc.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>C:\altera\91sp2\quartus\M2SME\SOPC\mon_sopc.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu_0</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -881,14 +881,20 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>Avalon_F7_0</slaveDescriptor>
+                <addressRange>0x00011040 - 0x0001104F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00011040 - 0x00011047</addressRange>
+                <addressRange>0x00011050 - 0x00011057</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid_0</slaveDescriptor>
-                <addressRange>0x00011048 - 0x0001104F</addressRange>
+                <addressRange>0x00011058 - 0x0001105F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>

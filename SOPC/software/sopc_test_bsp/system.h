@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'mon_sopc'
- * SOPC Builder design path: C:/altera/M2SME_VHDL_GR4/SOPC/mon_sopc.sopcinfo
+ * SOPC Builder design path: C:/altera/91sp2/quartus/M2SME/SOPC/mon_sopc.sopcinfo
  *
- * Generated: Thu Oct 22 23:10:38 CEST 2020
+ * Generated: Sun Dec 13 18:20:16 CET 2020
  */
 
 /*
@@ -53,6 +53,20 @@
 
 /* Include definitions from linker script generator */
 #include "linker.h"
+
+
+/*
+ * Avalon_F7_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Avalon_F7_0 Avalon_F7
+#define AVALON_F7_0_BASE 0x11040
+#define AVALON_F7_0_IRQ -1
+#define AVALON_F7_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define AVALON_F7_0_NAME "/dev/Avalon_F7_0"
+#define AVALON_F7_0_SPAN 16
+#define AVALON_F7_0_TYPE "Avalon_F7"
 
 
 /*
@@ -156,6 +170,7 @@
 #define __ALTERA_AVALON_SYSID
 #define __ALTERA_NIOS2
 #define __AVALON_ANEMO
+#define __AVALON_F7
 #define __AVALON_PWM
 
 
@@ -202,19 +217,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x11040
+#define ALT_STDERR_BASE 0x11050
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x11040
+#define ALT_STDIN_BASE 0x11050
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x11040
+#define ALT_STDOUT_BASE 0x11050
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -266,7 +281,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x11040
+#define JTAG_UART_0_BASE 0x11050
 #define JTAG_UART_0_IRQ 16
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -313,13 +328,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid_0 altera_avalon_sysid
-#define SYSID_0_BASE 0x11048
+#define SYSID_0_BASE 0x11058
 #define SYSID_0_ID 0u
 #define SYSID_0_IRQ -1
 #define SYSID_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_0_NAME "/dev/sysid_0"
 #define SYSID_0_SPAN 8
-#define SYSID_0_TIMESTAMP 1603400855u
+#define SYSID_0_TIMESTAMP 1607878241u
 #define SYSID_0_TYPE "altera_avalon_sysid"
 
 #endif /* __SYSTEM_H_ */
