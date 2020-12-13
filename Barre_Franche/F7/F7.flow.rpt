@@ -1,6 +1,6 @@
 Flow report for F7
-Tue Nov 24 11:00:52 2020
-Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+Sun Dec 13 16:30:48 2020
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
 ---------------------
@@ -19,7 +19,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2010 Altera Corporation
+Copyright (C) 1991-2011 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -35,27 +35,26 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Flow Summary                                                                      ;
-+------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 24 11:00:52 2020        ;
-; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
-; Revision Name                      ; F7                                           ;
-; Top-level Entity Name              ; F7                                           ;
-; Family                             ; Cyclone III                                  ;
-; Device                             ; EP3C25Q240C8                                 ;
-; Timing Models                      ; Final                                        ;
-; Met timing requirements            ; N/A                                          ;
-; Total logic elements               ; 98 / 24,624 ( < 1 % )                        ;
-;     Total combinational functions  ; 97 / 24,624 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 41 / 24,624 ( < 1 % )                        ;
-; Total registers                    ; 41                                           ;
-; Total pins                         ; 14 / 149 ( 9 % )                             ;
-; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 0 / 608,256 ( 0 % )                          ;
-; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                              ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                ;
-+------------------------------------+----------------------------------------------+
++------------------------------------------------------------------------------------+
+; Flow Summary                                                                       ;
++------------------------------------+-----------------------------------------------+
+; Flow Status                        ; Successful - Sun Dec 13 16:30:48 2020         ;
+; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
+; Revision Name                      ; F7                                            ;
+; Top-level Entity Name              ; F7                                            ;
+; Family                             ; Cyclone IV E                                  ;
+; Device                             ; EP4CE22F17C6                                  ;
+; Timing Models                      ; Final                                         ;
+; Total logic elements               ; 79 / 22,320 ( < 1 % )                         ;
+;     Total combinational functions  ; 78 / 22,320 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 45 / 22,320 ( < 1 % )                         ;
+; Total registers                    ; 45                                            ;
+; Total pins                         ; 14 / 154 ( 9 % )                              ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                           ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                               ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                 ;
++------------------------------------+-----------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,31 +62,27 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2020 11:00:23 ;
+; Start date & time ; 12/13/2020 16:30:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; F7                  ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+---------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                       ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+---------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 1099358999964.160621202218864         ; --            ; --          ; --             ;
-; CRC_ERROR_OPEN_DRAIN                  ; Off                                   ; On            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT                ; Vhdl                                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                        ; 1 ps                                  ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP                ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP                ; 0                                     ; --            ; --          ; --             ;
-; PARTITION_COLOR                       ; 16764057                              ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE                ; SOURCE                                ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL             ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION         ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 2                                     ; 3             ; --          ; --             ;
-+---------------------------------------+---------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                   ;
++-------------------------------------+-------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                         ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 1099358999964.160787342711716 ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                          ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)        ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                          ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                            ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                             ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                      ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING         ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                        ; --            ; --          ; Top            ;
++-------------------------------------+-------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -95,26 +90,26 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 238 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:17     ; 1.0                     ; 279 MB              ; 00:00:17                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 241 MB              ; 00:00:04                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 244 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 181 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:26                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 365 MB              ; 00:00:04                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 441 MB              ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 361 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 359 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 284 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                            ;
-+---------------------------+------------------+---------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
-+---------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis      ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                    ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler                 ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; Utilisateur-PC   ; Windows Vista ; 6.1        ; x86_64         ;
-+---------------------------+------------------+---------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; Utilisateur-PC   ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------

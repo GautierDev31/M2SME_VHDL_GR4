@@ -5,6 +5,7 @@ use ieee.std_logic_unsigned.all;
 
 
 entity Synchro_F7 is   port( 
+	in_Synchro_clk_1hz : in std_logic;
 	in_Synchro_BP_Barbord : in std_logic;
 	in_Synchro_BP_Tribord : in std_logic;
 	in_Synchro_BP_STBY : in std_logic;
@@ -24,39 +25,39 @@ architecture ar of Synchro_F7 is
 signal mode : integer := 0; -- 0 mode manuel / 1 mode auto
 
 begin
-process(in_Synchro_BP_Barbord , in_Synchro_BP_Tribord, in_Synchro_BP_STBY, in_Synchro_Appuis, in_Synchr_reset)
+process(in_Synchro_BP_Barbord , in_Synchro_BP_Tribord, in_Synchro_BP_STBY, in_Synchro_Appuis, in_Synchr_reset, in_Synchro_clk_1hz)
 begin
-	
-	-- Babord 1° / Mode manuel
-	if (in_Synchro_BP_Barbord = '1' and in_Synchro_Appuis = '0' and mode = 0) then 
-	out_Synchro_code_fonction <= "0100"; -- increment 1°
+
+	-- Babord 1ï¿½ / Mode manuel
+	if (in_Synchro_BP_Barbord = '1' and in_Synchro_Appuis = '0') then 
+	out_Synchro_code_fonction <= "0100"; -- increment 1ï¿½
 	
 	out_Synchro_led_Babord <= '1';
 	out_Synchro_led_Tribord <= '0';
 	out_Synchro_led_STBY <= '0';
 	out_Synchro_led_appuis <= '0';
 	
-	-- Babord 10° / Mode manuel
-	elsif (in_Synchro_BP_Barbord = '1' and in_Synchro_Appuis = '1' and mode = 0) then
-	out_Synchro_code_fonction <= "0101"; -- increment 10°
+	-- Babord 10ï¿½ / Mode manuel
+	elsif (in_Synchro_BP_Barbord = '1' and in_Synchro_Appuis = '1') then
+	out_Synchro_code_fonction <= "0101"; -- increment 10ï¿½
 	
 	out_Synchro_led_Babord <= '1';
 	out_Synchro_led_Tribord <= '0';
 	out_Synchro_led_STBY <= '0';
 	out_Synchro_led_appuis <= '1';
 	
-	-- Tribord 1° / Mode manuel
-	elsif (in_Synchro_BP_Tribord = '1' and in_Synchro_Appuis = '0' and mode = 0) then
-	out_Synchro_code_fonction <= "0111"; -- decrement 1°
+	-- Tribord 1ï¿½ / Mode manuel
+	elsif (in_Synchro_BP_Tribord = '1' and in_Synchro_Appuis = '0') then
+	out_Synchro_code_fonction <= "0111"; -- decrement 1ï¿½
 	
 	out_Synchro_led_Babord <= '0';
 	out_Synchro_led_Tribord <= '1';
 	out_Synchro_led_STBY <= '0';
 	out_Synchro_led_appuis <= '0';
 	
-	-- Tribord 10° / Mode manuel
-	elsif (in_Synchro_BP_Tribord = '1' and in_Synchro_Appuis = '0' and mode = 0) then
-	out_Synchro_code_fonction <= "0110"; -- decrement 10°
+	-- Tribord 10ï¿½ / Mode manuel
+	elsif (in_Synchro_BP_Tribord = '1' and in_Synchro_Appuis = '0') then
+	out_Synchro_code_fonction <= "0110"; -- decrement 10Â°
 	
 	out_Synchro_led_Babord <= '0';
 	out_Synchro_led_Tribord <= '1';
@@ -89,8 +90,17 @@ begin
 	out_Synchro_bip <= '0';
 	out_Synchro_code_fonction <= "0000";
 	
+	else 
+	out_Synchro_led_Babord <= '0';
+	out_Synchro_led_Tribord <= '0';
+	out_Synchro_led_STBY <= '0';
+	out_Synchro_bip <= '0';
+	out_Synchro_code_fonction <= "0000";
+
+	
 	end if; 
 
+	
 
 end process;
 end ar;

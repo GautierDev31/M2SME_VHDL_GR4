@@ -14,7 +14,7 @@ Réalisé dans le cadre du master 2 SME de l'université Paul Sabatier.
 - Terminer la machine à état complète de la fonction synchro 
 - Faire passer "conde fonction" dans le bus avalon
 
-La machine a état n'a pas été completement terminé afin de tester la fonction compteur BP 
+La machine a état n'a pas été completement terminée afin de tester la fonction compteur BP 
 qui détecte si le FPGA reçois un appuis cours ou long.
 
 ## Projet Barre Franche :

@@ -1,6 +1,6 @@
 Assembler report for F7
-Tue Nov 24 11:00:49 2020
-Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+Sun Dec 13 16:30:43 2020
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
 ---------------------
@@ -18,7 +18,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2010 Altera Corporation
+Copyright (C) 1991-2011 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,11 +37,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 24 11:00:49 2020 ;
+; Assembler Status      ; Successful - Sun Dec 13 16:30:43 2020 ;
 ; Revision Name         ; F7                                    ;
 ; Top-level Entity Name ; F7                                    ;
-; Family                ; Cyclone III                           ;
-; Device                ; EP3C25Q240C8                          ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE22F17C6                          ;
 +-----------------------+---------------------------------------+
 
 
@@ -91,9 +91,9 @@ applicable agreement for further details.
 +----------------+----------------------------------------------------------------+
 ; Option         ; Setting                                                        ;
 +----------------+----------------------------------------------------------------+
-; Device         ; EP3C25Q240C8                                                   ;
+; Device         ; EP4CE22F17C6                                                   ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                     ;
-; Checksum       ; 0x001427C1                                                     ;
+; Checksum       ; 0x0013FBFA                                                     ;
 +----------------+----------------------------------------------------------------+
 
 
@@ -101,16 +101,16 @@ applicable agreement for further details.
 ; Assembler Messages ;
 +--------------------+
 Info: *******************************************************************
-Info: Running Quartus II Assembler
-    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Nov 24 11:00:46 2020
+Info: Running Quartus II 32-bit Assembler
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Dec 13 16:30:41 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off F7 -c F7
-Info: Writing out detailed assembly data for power analysis
-Info: Assembler is generating device programming files
-Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 244 megabytes
-    Info: Processing ended: Tue Nov 24 11:00:49 2020
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info (115031): Writing out detailed assembly data for power analysis
+Info (115030): Assembler is generating device programming files
+Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 361 megabytes
+    Info: Processing ended: Sun Dec 13 16:30:43 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

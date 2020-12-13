@@ -1,18 +1,39 @@
 |F7
 clk_50M => Diviseur_50M_1hz:udiv1hz.clkin
-BP_Barbord => CompteurBP:ucompteurbp.inCompteurBP_BP_Babord
-BP_Tribord => CompteurBP:ucompteurbp.inCompteurBP_BP_Tribord
-BP_STBY => CompteurBP:ucompteurbp.inCompteurBP_BP_STBY
-reset => Synchro_F7:usynchro.in_Synchr_reset
-led_Babord <= Synchro_F7:usynchro.out_Synchro_led_Babord
-led_Tribord <= Synchro_F7:usynchro.out_Synchro_led_Tribord
-led_STBY <= Synchro_F7:usynchro.out_Synchro_led_STBY
-led_appuis <= Synchro_F7:usynchro.out_Synchro_led_appuis
-out_bip <= Synchro_F7:usynchro.out_Synchro_bip
-code_fonction[0] <= Synchro_F7:usynchro.out_Synchro_code_fonction[0]
-code_fonction[1] <= Synchro_F7:usynchro.out_Synchro_code_fonction[1]
-code_fonction[2] <= Synchro_F7:usynchro.out_Synchro_code_fonction[2]
-code_fonction[3] <= Synchro_F7:usynchro.out_Synchro_code_fonction[3]
+BP_Barbord => Fonction_F7:uF7.in_F7_BP_Babord
+BP_Tribord => Fonction_F7:uF7.in_F7_BP_Tribord
+BP_STBY => Fonction_F7:uF7.in_F7_BP_STBY
+reset => Fonction_F7:uF7.in_F7_reset
+
+
+|F7|Fonction_F7:uF7
+in_F7_clk_1hz => out_F7_led_STBY~reg0.CLK
+in_F7_clk_1hz => out_F7_led_Tribord~reg0.CLK
+in_F7_clk_1hz => out_F7_bip~reg0.CLK
+in_F7_clk_1hz => out_F7_led_Babord~reg0.CLK
+in_F7_clk_1hz => out_F7_led_appuis~reg0.CLK
+in_F7_clk_1hz => out_F7_code_fonction[0]~reg0.CLK
+in_F7_clk_1hz => out_F7_code_fonction[1]~reg0.CLK
+in_F7_clk_1hz => out_F7_code_fonction[2]~reg0.CLK
+in_F7_clk_1hz => out_F7_code_fonction[3]~reg0.CLK
+in_F7_clk_1hz => state[0].CLK
+in_F7_clk_1hz => state[1].CLK
+in_F7_clk_1hz => state[2].CLK
+in_F7_BP_Babord => Mux7.IN4
+in_F7_BP_Babord => state.OUTPUTSELECT
+in_F7_BP_Babord => state.OUTPUTSELECT
+in_F7_BP_Babord => state.OUTPUTSELECT
+in_F7_BP_Babord => Mux6.IN5
+in_F7_BP_Tribord => Mux6.IN6
+in_F7_BP_Tribord => Mux7.IN5
+in_F7_BP_Tribord => state.OUTPUTSELECT
+in_F7_BP_Tribord => state.OUTPUTSELECT
+in_F7_BP_Tribord => state.OUTPUTSELECT
+in_F7_BP_STBY => Mux7.IN6
+in_F7_BP_STBY => state.OUTPUTSELECT
+in_F7_BP_STBY => state.OUTPUTSELECT
+in_F7_BP_STBY => state.OUTPUTSELECT
+in_F7_reset => ~NO_FANOUT~
 
 
 |F7|Diviseur_50M_1hz:udiv1hz
@@ -81,53 +102,5 @@ clkin => cpt1[28].CLK
 clkin => cpt1[29].CLK
 clkin => cpt1[30].CLK
 clkin => cpt1[31].CLK
-clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|F7|CompteurBP:ucompteurbp
-inCompteurBP_clk_1hz => outCompteurBP_BP_STBY~reg0.CLK
-inCompteurBP_clk_1hz => outCompteurBP_BP_Tribord~reg0.CLK
-inCompteurBP_clk_1hz => outCompteurBP_BP_Appuis~reg0.CLK
-inCompteurBP_clk_1hz => outCompteurBP_BP_Babord~reg0.CLK
-inCompteurBP_clk_1hz => state[0].CLK
-inCompteurBP_clk_1hz => state[1].CLK
-inCompteurBP_clk_1hz => state[2].CLK
-inCompteurBP_BP_Babord => state.OUTPUTSELECT
-inCompteurBP_BP_Babord => state.OUTPUTSELECT
-inCompteurBP_BP_Babord => state.OUTPUTSELECT
-inCompteurBP_BP_Babord => Mux4.IN4
-inCompteurBP_BP_Tribord => state.OUTPUTSELECT
-inCompteurBP_BP_Tribord => state.OUTPUTSELECT
-inCompteurBP_BP_Tribord => state.OUTPUTSELECT
-inCompteurBP_BP_Tribord => Mux4.IN5
-inCompteurBP_BP_STBY => state.OUTPUTSELECT
-inCompteurBP_BP_STBY => state.OUTPUTSELECT
-inCompteurBP_BP_STBY => state.OUTPUTSELECT
-inCompteurBP_BP_STBY => Mux4.IN6
-outCompteurBP_BP_Tribord <= outCompteurBP_BP_Tribord~reg0.DB_MAX_OUTPUT_PORT_TYPE
-outCompteurBP_BP_Babord <= outCompteurBP_BP_Babord~reg0.DB_MAX_OUTPUT_PORT_TYPE
-outCompteurBP_BP_STBY <= outCompteurBP_BP_STBY~reg0.DB_MAX_OUTPUT_PORT_TYPE
-outCompteurBP_BP_Appuis <= outCompteurBP_BP_Appuis~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|F7|Synchro_F7:usynchro
-in_Synchro_BP_Barbord => process_0.IN0
-in_Synchro_BP_Barbord => process_0.IN0
-in_Synchro_BP_Tribord => process_0.IN0
-in_Synchro_BP_STBY => process_0.IN0
-in_Synchro_Appuis => process_0.IN1
-in_Synchro_Appuis => process_0.IN1
-in_Synchro_Appuis => process_0.IN1
-in_Synchro_Appuis => process_0.IN1
-in_Synchr_reset => out_Synchro_led_Babord.IN1
-out_Synchro_led_Babord <= out_Synchro_led_Babord$latch.DB_MAX_OUTPUT_PORT_TYPE
-out_Synchro_led_Tribord <= out_Synchro_led_Tribord$latch.DB_MAX_OUTPUT_PORT_TYPE
-out_Synchro_led_STBY <= out_Synchro_led_STBY$latch.DB_MAX_OUTPUT_PORT_TYPE
-out_Synchro_led_appuis <= out_Synchro_led_appuis$latch.DB_MAX_OUTPUT_PORT_TYPE
-out_Synchro_bip <= <GND>
-out_Synchro_code_fonction[0] <= out_Synchro_code_fonction[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-out_Synchro_code_fonction[1] <= out_Synchro_code_fonction[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-out_Synchro_code_fonction[2] <= out_Synchro_code_fonction[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-out_Synchro_code_fonction[3] <= <GND>
 
 
