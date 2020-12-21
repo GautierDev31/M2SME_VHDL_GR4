@@ -186,15 +186,15 @@ int main()
 
 /*********************** DATA ANEMOMETRE *****************************/
 /*********************************************************************/
-		 *data = *data&0x3FF ;
+		 /* *data = *data&0x3FF ;
 		  printf("reg = 0x%08X\n", *data) ;
-		  alt_printf("config = 0x%x\n", *config) ;
+		  alt_printf("config = 0x%x\n", *config) ;*/
 
 /*********************** CODE FONCTION F7 *****************************/
 /*********************************************************************/
-		/*  *data_F7 = *data_F7&0xF ;
+		  *data_F7 = *data_F7&0xF ;
 		  printf("reg = 0x%08X\n", *data_F7) ;
-		  usleep(20000);*/
+		  usleep(20000);
  	 } // End while(1)
 
 
