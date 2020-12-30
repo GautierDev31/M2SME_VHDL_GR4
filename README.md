@@ -1,21 +1,15 @@
 # Projet de developpement de FPGA en VHDL
 Réalisé dans le cadre du master 2 SME de l'université Paul Sabatier.
 
-## Avancement TP au 26/11
-#### F1 Amémonètre : Fonction terminée et testé avec SOPC
-
-#### F7 Commande barreur : 
-- Schéma fonctionnel terminé
-- Fonction compteur BP terminée et simmulé
-- Fonction Synchro presque terminée
-
-##### A faire :
-- Cabler et tester compteur BP
-- Terminer la machine à état complète de la fonction synchro 
-- Faire passer "conde fonction" dans le bus avalon
-
-La machine a état n'a pas été completement terminée afin de tester la fonction compteur BP 
-qui détecte si le FPGA reçois un appuis cours ou long.
+## Arboressance :
+Barre franche : Contient les codes VHDL des composants et des fonctions
+Barre franche > Components : Contient les différenst codes des components utilisés dans les fonctions
+Barre franche > F1 et F7 : Contient le code des deux fonctions qui est un mappage entre les différents components
+PWM : Code d'un component pour la fonction F1
+SOPC : Code SOPC des fonctions F1 et F7
+TP_Base : Regroupe les codes pour les TB de bases
+images : Images utilisés pour les descriptions
+Rapport et présentation : Contient le rapport, la présentation et la video
 
 ## Projet Barre Franche :
 
