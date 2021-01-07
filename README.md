@@ -1,8 +1,6 @@
 # Projet de developpement de FPGA en VHDL
 Réalisé dans le cadre du master 2 SME de l'université Paul Sabatier.
 
-## Rendu du projet prévu pour le 8 Janvier, le rapport n'est pas dans sa version finale.
-
 ## Arborescence :
 Barre franche : Contient les codes VHDL des composants et des fonctions </br>
 Barre franche > Components : Contient les différenst codes des components utilisés dans les fonctions</br>
